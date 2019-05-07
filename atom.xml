@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>sh1yan&#39;blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://127.0.0.1:4000/"/>
+  <updated>2019-05-07T14:16:35.714Z</updated>
+  <id>http://127.0.0.1:4000/</id>
+  
+  <author>
+    <name>shiyan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>漏洞学习之XXE注入</title>
+    <link href="http://127.0.0.1:4000/2019/05/04/excel-vba-1/"/>
+    <id>http://127.0.0.1:4000/2019/05/04/excel-vba-1/</id>
+    <published>2019-05-04T13:52:55.000Z</published>
+    <updated>2019-05-07T14:16:35.714Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在Excel中快速打开VBA编辑器&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;FN+Alt+F11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;选择开发选项，点击 Visual Basic&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://127.0.0.1:4000/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="vba" scheme="http://127.0.0.1:4000/tags/vba/"/>
+    
+      <category term="Excel" scheme="http://127.0.0.1:4000/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安全审计简述</title>
+    <link href="http://127.0.0.1:4000/2019/03/31/A-Brief-Introduction-to-Safety-Audit/"/>
+    <id>http://127.0.0.1:4000/2019/03/31/A-Brief-Introduction-to-Safety-Audit/</id>
+    <published>2019-03-31T13:52:55.000Z</published>
+    <updated>2019-05-07T14:09:04.658Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;团队3月份的时候，开始每人一周一个分享，因为我最近在安全审计项目上，所以就干脆做了一个关于“什么是安全审计”的简述，虽说我们大部分都是搞渗透测试的，但是我觉得安全审计这个还是都得学一学的，或者说了解一
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="http://127.0.0.1:4000/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="安全审计" scheme="http://127.0.0.1:4000/tags/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最近的一些的感慨</title>
+    <link href="http://127.0.0.1:4000/2019/02/24/Recent-insights-2019-02/"/>
+    <id>http://127.0.0.1:4000/2019/02/24/Recent-insights-2019-02/</id>
+    <published>2019-02-24T08:57:55.000Z</published>
+    <updated>2019-05-07T14:06:55.441Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;emsp;算了算，毕业也半年多了，近期的状态确实颓废的不行，也不能说是近期，去年10月份换到新的驻地后，就很少自己主动的去学习了，可能没换地方以前，一直都是一个人吧，回到住的地方，没人说话，看电视吧，翻了老半天，也没啥可翻的，看电影吧，也没啥可看的。仿佛除了搞搞自己的小兴趣爱好，看看买的《Android软件安全与逆向分析》和《网络攻防实战研究：漏洞利用与提权》，
+    
+    </summary>
+    
+      <category term="心情感悟" scheme="http://127.0.0.1:4000/categories/%E5%BF%83%E6%83%85%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="感悟" scheme="http://127.0.0.1:4000/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>以soul为样本的APP测试总结（待详细）</title>
+    <link href="http://127.0.0.1:4000/2018/11/16/soulapp-test/"/>
+    <id>http://127.0.0.1:4000/2018/11/16/soulapp-test/</id>
+    <published>2018-11-16T09:40:55.000Z</published>
+    <updated>2019-05-07T14:23:12.729Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;1. 安装包签名测试&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;jarsigner.exe -verify G:\soul.apk -verbose -certs&lt;/blockquote&gt;
+
+
+&lt;pre&gt;&lt;code&gt;sm    1091972 Fri Nov 30 00:00:00 CST 1979 resources.arsc
+X.509, CN=shijiu
+  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
+  [CertPath 未验证: Path does not chain with any of the trust anchors]
+
+    1089 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.RSA
+  436847 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.SF
+  s     436804 Fri Nov 30 00:00:00 CST 1979 META-INF/MANIFEST.MF
+    X.509, CN=shijiu
+  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
+  [CertPath 未验证: Path does not chain with any of the trust anchors]
+    s = 已验证签名
+  m = 在清单中列出条目
+  k = 在密钥库中至少找到了一个证书
+  i = 在身份作用域内至少找到了一个证书
+
+- 由 &amp;quot;CN=shijiu&amp;quot; 签名
+摘要算法: SHA1
+签名算法: SHA1withRSA, 2048 位密钥
+
+jar 已验证。
+
+警告:
+此 jar 包含证书链未验证的条目。
+此 jar 包含的签名没有时间戳。如果没有时间戳, 则在签名者证书的到期日期 (2041-03-26) 或以后的任何撤销日期之后, 用户可能无
+法验证此 jar。
+
+&amp;lt;strong&amp;gt;2. 反编译保护&amp;lt;/strong&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;&lt;br&gt;1. soul.apk 修改后缀名为 soul.zip / 或者直接用解压的方式解压&lt;br&gt;2. 把soul.rar 解压后，找见 classes.dex&lt;br&gt;3. java -jar dex2jar.bat G:\soul\classes.dex&lt;/blockquote&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Error: Invalid or corrupt jarfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://127.0.0.1:4000/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="Android" scheme="http://127.0.0.1:4000/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>漏洞学习之XXE注入</title>
+    <link href="http://127.0.0.1:4000/2018/09/15/xxe-study/"/>
+    <id>http://127.0.0.1:4000/2018/09/15/xxe-study/</id>
+    <published>2018-09-15T09:40:55.000Z</published>
+    <updated>2019-05-07T13:19:13.860Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;meta&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;       // XML声明&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE note [                             //定义类型&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT note (to,from,heading,body)&amp;gt;   //定义元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT to (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT from (#PCDATA)&amp;gt;                // 文档类型定义&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT heading (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT body (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;]&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;note&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;lixin&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;shiyan&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;                // 文档元素&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;heading&lt;/span&gt;&amp;gt;&lt;/span&gt;Reminder&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;heading&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;Hurry up and send out XXE&#39;s article&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;note&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。&lt;br&gt;DTD 主要用来解释文档元素的，它有三种应用形式：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="漏洞研究" scheme="http://127.0.0.1:4000/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
+    
+    
+      <category term="web漏洞" scheme="http://127.0.0.1:4000/tags/web%E6%BC%8F%E6%B4%9E/"/>
+    
+      <category term="XXE" scheme="http://127.0.0.1:4000/tags/XXE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对jsonp劫持的一次简单了解</title>
+    <link href="http://127.0.0.1:4000/2018/08/12/jsonp-study/"/>
+    <id>http://127.0.0.1:4000/2018/08/12/jsonp-study/</id>
+    <published>2018-08-12T01:20:56.000Z</published>
+    <updated>2019-05-07T13:46:36.008Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x01&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;jsonp劫持算是一个老漏洞，我老早就想总结一下来着，但是懒所以没弄，最近正好兴趣上来了，就整理整理下把。&lt;/p&gt;
+&lt;p&gt;首先了解jsonp得先大概的了解下json。&lt;/p&gt;
+&lt;p&gt;json全称为&lt;strong&gt;J&lt;/strong&gt;ava&lt;strong&gt;S&lt;/strong&gt;cript &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;N&lt;/strong&gt;otation(JavaScript 对象表示法) ，&lt;br&gt;
+    
+    </summary>
+    
+      <category term="漏洞研究" scheme="http://127.0.0.1:4000/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
+    
+    
+      <category term="jsonp" scheme="http://127.0.0.1:4000/tags/jsonp/"/>
+    
+      <category term="web漏洞" scheme="http://127.0.0.1:4000/tags/web%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对某端口转发工具的一次分析</title>
+    <link href="http://127.0.0.1:4000/2018/07/09/Port-Forwarding-Tool-Analysis/"/>
+    <id>http://127.0.0.1:4000/2018/07/09/Port-Forwarding-Tool-Analysis/</id>
+    <published>2018-07-09T02:40:55.000Z</published>
+    <updated>2019-05-07T13:18:02.472Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;0x00&quot;&gt;&lt;a href=&quot;#0x00&quot; class=&quot;headerlink&quot; title=&quot;0x00&quot;&gt;&lt;/a&gt;0x00&lt;/h5&gt;&lt;p&gt;在上上一篇文章中就计划对一个端口转发工具进行分析的，但是，由于自己懒的原因就一下子拖了好几个月，后来自己再分析的时候出现了分析的逻辑性错误，所以，求助了老P同志，所以转进入正轨。&lt;/p&gt;
+&lt;p&gt;工具名是 rtcp.py ，是2009年知道创宇当时写的一个端口转发工具，工具主要是利用python的socket端口转发，代码的整体编写思路非常值得学习。&lt;/p&gt;
+&lt;h5 id=&quot;0x01&quot;&gt;&lt;a href=&quot;#0x01&quot; class=&quot;headerlink&quot; title=&quot;0x01&quot;&gt;&lt;/a&gt;0x01&lt;/h5&gt;&lt;p&gt;我一开始是从模块开始分析的，忘记了从运行流程上来分析，所以出现卡壳了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="脚本编写" scheme="http://127.0.0.1:4000/categories/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+    
+      <category term="工具分析" scheme="http://127.0.0.1:4000/tags/%E5%B7%A5%E5%85%B7%E5%88%86%E6%9E%90/"/>
+    
+      <category term="端口转发" scheme="http://127.0.0.1:4000/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于mysql下的几种写shell方法</title>
+    <link href="http://127.0.0.1:4000/2018/05/26/mysql-writ-shell/"/>
+    <id>http://127.0.0.1:4000/2018/05/26/mysql-writ-shell/</id>
+    <published>2018-05-26T13:55:32.000Z</published>
+    <updated>2019-05-07T13:42:17.736Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;关于mysql下的写shell方法网上基本很多了，我原本也没打算总结总结的，毕竟网上已经很多了，不过在看 kilon 大佬的博客的时候，给我的感受就是明明一个几句话的东西，总能详细的，有条有理的记录下来，所以也正是如此，才有了这篇文章。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x01&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;利用条件&lt;br&gt;
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://127.0.0.1:4000/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="mysql" scheme="http://127.0.0.1:4000/tags/mysql/"/>
+    
+      <category term="shell" scheme="http://127.0.0.1:4000/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>漏洞学习之XXE注入</title>
+    <link href="http://127.0.0.1:4000/2018/02/19/mysql-Error-injection/"/>
+    <id>http://127.0.0.1:4000/2018/02/19/mysql-Error-injection/</id>
+    <published>2018-02-19T07:40:55.000Z</published>
+    <updated>2019-05-07T13:48:47.673Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x01&lt;/strong&gt; 前言&lt;/p&gt;
+&lt;p&gt;法师的那本代码审计书，我也看到了关于十个报错注入那页（157-161），但是书上并没有特详细说明函数的意思还有剩下的都是点点就过了，再着我想到了 luanmap 就是纯粹的利用报错来注入的工具，所以我就整理整理关于 mysql 报错注入的总结把。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x02&lt;/strong&gt; floor()   // 5.0 , 5.1 , 5.5&lt;/p&gt;
+&lt;p&gt;count() 匹配指定表，库里值的行数，也就是个数&lt;br&gt;concat() 把里面的参数字符串连接起来&lt;br&gt;floor() 向下取整，就是取整数显示&lt;br&gt;rand() 用于产生一个 0~1的随机数&lt;br&gt;group by 根据自己的命名来分组数据，左边为右边的键，右边为值，可以这么理解，具体的自己百度吧&lt;br&gt;
+    
+    </summary>
+    
+      <category term="渗透测试" scheme="http://127.0.0.1:4000/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="mysql" scheme="http://127.0.0.1:4000/tags/mysql/"/>
+    
+      <category term="报错注入" scheme="http://127.0.0.1:4000/tags/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux学习笔记</title>
+    <link href="http://127.0.0.1:4000/2017/07/10/linux-study/"/>
+    <id>http://127.0.0.1:4000/2017/07/10/linux-study/</id>
+    <published>2017-07-10T03:50:55.000Z</published>
+    <updated>2019-05-07T13:50:45.431Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;br&gt;    &lt;strong&gt;文件系统架构&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;ol&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        Linux文件或者目录起始于根目录 &amp;quot; / &amp;quot; 成为树状结构，最顶层由 / 开始&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        文件和目录名是区分大小写的&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        路径通过 &amp;quot; / &amp;quot; 分开&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        &amp;nbsp;&amp;quot; .. &amp;quot; 表示上层目录&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        &amp;nbsp;&amp;quot; . &amp;quot; 表示当前目录&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        隐藏目录或者隐藏文件名以 &amp;quot; . &amp;quot; 开始&lt;br&gt;    &lt;/li&gt;&lt;br&gt;&lt;/ol&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="漏洞研究" scheme="http://127.0.0.1:4000/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
+    
+    
+      <category term="linux" scheme="http://127.0.0.1:4000/tags/linux/"/>
+    
+  </entry>
+  
+</feed>
