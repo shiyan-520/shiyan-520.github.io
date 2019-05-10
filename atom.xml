@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-05-10T15:27:03.123Z</updated>
+  <updated>2019-05-10T15:31:27.224Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -21,19 +21,14 @@
     <link href="shiyan.top/2019/05/10/Various-pits-in-installation-of-oracle/"/>
     <id>shiyan.top/2019/05/10/Various-pits-in-installation-of-oracle/</id>
     <published>2019-05-10T15:23:55.000Z</published>
-    <updated>2019-05-10T15:27:03.123Z</updated>
+    <updated>2019-05-10T15:31:27.224Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;前期因为审计需求，需要本地搭建Oracle数据，但是各种原因安装失败，或者安装成功，但是无法使用pl\sql进行连接操作，故记录下所有踩过的坑。&lt;/p&gt;
-&lt;p&gt;0x01
-        
-      
+&lt;p&gt;0x01 本机版本+安装包&lt;/p&gt;
+&lt;p&gt;Windows 10 专业版 64位&lt;br&gt;
     
     </summary>
     
