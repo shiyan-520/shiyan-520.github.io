@@ -56,7 +56,7 @@
       
         <li><a href="/about">关于</a></li>
       
-        <li><a href="/yqlj">友联</a></li>
+        <li><a href="/yqlj">友链</a></li>
       
         <li><a href="/atom.xml">订阅</a></li>
       
@@ -145,13 +145,7 @@
 
 <ol><br>    <li><br>        只读权限，用 <strong>r</strong> 表示（read）<br>    </li><br>    <li><br>        &nbsp;<strong>r</strong> 权限可以读取文件或者列出目录的内容（ls）<br>    </li><br>    <li><br>        可写权限，用 <strong>w</strong> 表示（write）<br>    </li><br>    <li><br>        <strong>w</strong> 权限可以写，删除文件或者目录<br>    </li><br>    <li><br>        可执行权限，用 <strong>x</strong> 表示（execute）<br>    </li><br>    <li><br>        <strong>x</strong> 权限可以执行可执行文件，可以进入目录并使用 cd 切换进入目录<br>    </li><br>    <li><br>        没有任何权限，用 <strong>-</strong> 表示<br>    </li><br></ol>
 
-<p><br>    <strong>Linux 文件和目录权限解读</strong><br></p>
-
-<p><br>    1，<br></p>
-
-<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;"><br>    <tbody><br>        <tr><br>            <td><br>                d<br>            </td><br>            <td><br>                rwx<br>            </td><br>            <td><br>                rwx<br>            </td><br>            <td><br>                rwx<br>            </td><br>        </tr><br>        <tr><br>            <td><br>                <p><br>                    d:目录<br>                </p><br><br>                <p><br>                    -：文件<br>                </p><br>            </td><br>            <td><br>                u 用户权限<br>            </td><br>            <td><br>                G 群组权限<br>            </td><br>            <td><br>                o 其他所有人权限<br>            </td><br>        </tr><br>    </tbody><br></table>
-
-<p><br>    2， d rwx-w—-<br></p>
+<p><br>    <strong>Linux 文件和目录权限解读</strong><br></p><br>1，<br><br>| d             | rwx        | rwx        | rwx              |<br>| ————- | ———- | ———- | —————- |<br>| d:目录-：文件 | u 用户权限 | G 群组权限 | o 其他所有人权限 |<br><br><p><br>    2， d rwx-w—-<br></p>
 
 <ul><br>    <li><br>        目录<br>    </li><br>    <li><br>        shiyan 权限为可读可写可执行<br>    </li><br>    <li><br>        group 权限为可写<br>    </li><br>    <li><br>        others 没有任何权限<br>    </li><br></ul>
 
@@ -318,12 +312,11 @@ sudo apt-get install rar unrar
 
     <footer class="site-footer">
   <p class="site-info">
-    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
-    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    <a>© 2019 shiyan</a>
     <br>
-    
-    &copy; 2019 shiyan
-    
+	<a>不要因为走了太久而忘记当初为什么出发。</a>
+	<br>
+	<br>
   </p>
 </footer>
     
