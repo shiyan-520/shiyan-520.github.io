@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Excel_2016_VBA学习笔记_工作簿与工作表篇② | sh1yan&#39;blog</title>
+
+  
+  <meta name="author" content="shiyan">
+  
+
+  
+  <meta name="description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+  
+
+  
+  
+  <meta name="keywords" content="vba,Excel">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Excel_2016_VBA学习笔记_工作簿与工作表篇②">
+
+  <meta property="og:site_name" content="sh1yan&#39;blog">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">sh1yan&#39;blog</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+        <li><a href="/yqlj">友链</a></li>
+      
+        <li><a href="/atom.xml">订阅</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Excel_2016_VBA学习笔记_工作簿与工作表篇②</span></h3>
+    
+  
+  
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2019/05/11/excel-vba-2/" rel="bookmark">
+        <time class="entry-date published" datetime="2019-05-11T08:16:55.000Z">
+          2019-05-11
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><strong>1.定义</strong></p>
+<p>工作簿，就是Excel的一个文件，这个文件是由多张工作表组成。</p>
+<p>工作簿可以看做一本书，而工作表可以看做是表里的每一页。</p>
+<p>工作表能建立多少个取决去内存的大小。</p>
+<p>重要性：工作簿（workbook）与工作表（worksheet）是Excel vba中非常重要的两个对象。<br><a id="more"></a></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> workbooke1()</span><br><span class="line">MsgBox Workbooks(<span class="number">1</span>).Name</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> workbooke2()</span><br><span class="line">MsgBox Windows.Count <span class="comment">' 1</span></span><br><span class="line">MsgBox Windows(<span class="number">1</span>).Parent.Name</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<p><strong>2.当前工作簿与活动工作簿</strong></p>
+<p>thisworkbook 当前工作簿，代码所在工作簿</p>
+<p>activeworkbook活动工作簿，别激活的工作簿</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">'当前活动工作簿也可能是活动工作簿，活动工作簿主要为当前打开的使用的工作簿</span></span><br><span class="line"><span class="keyword">Sub</span> 当前与活动工作簿区别()</span><br><span class="line">MsgBox ThisWorkbook.Name &amp; <span class="string">"--"</span> &amp; ActiveWorkbook.Name</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">'path为当前文档所在的目录，fullname为文档具体的路径</span></span><br><span class="line"><span class="keyword">Sub</span> 运行()</span><br><span class="line">MsgBox ThisWorkbook.Path &amp; Chr(<span class="number">10</span>) &amp; ThisWorkbook.FullName</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<p><strong>3.工作簿基本操作</strong></p>
+<p>workbooks由当前所有在内存中打开的workbook对象组成</p>
+<p>向workbooks添加workbook对象</p>
+<p>如果声明的变量是一个对象时，需要在变量前增加一个set</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 新建工作簿()</span><br><span class="line"><span class="keyword">Dim</span> wkb <span class="keyword">As</span> Workbook</span><br><span class="line"><span class="keyword">Set</span> wkb = Workbooks.Add</span><br><span class="line">wkb.SaveAs <span class="string">"C:\Users\shiyan\Desktop\123.xls"</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 打开工作簿()</span><br><span class="line"><span class="keyword">Dim</span> wkb <span class="keyword">As</span> Workbook</span><br><span class="line"><span class="keyword">Set</span> wkb = Workbooks.Open(<span class="string">"C:\Users\shiyan\Desktop\123.xls"</span>)</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 关闭工作簿<span class="number">1</span>()</span><br><span class="line">Workbooks(<span class="string">"123.xls"</span>).Close <span class="literal">True</span>   <span class="comment">' 这个true为默认保存关闭</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Sub</span> 关闭工作簿<span class="number">2</span>()</span><br><span class="line">Workbooks(<span class="string">"123.xls"</span>).Close    <span class="comment">' 这里是关闭，但是如果有新增的内容，在关闭时需要手动点击保存</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 文件复制与删除()</span><br><span class="line">FileCopy <span class="string">"C:\Users\shiyan\Desktop\123.xls"</span>, <span class="string">"C:\Users\shiyan\Desktop\321.xls"</span></span><br><span class="line">Kill <span class="string">"C:\Users\shiyan\Desktop\123.xls"</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+<p><strong>4.工作表的表示方法</strong></p>
+<p>在workbook对象中，有一个sheets集合，其成员时worksheet对象或者chart对象。</p>
+<p>worksheets仅指的是工作表，而sheets包含图表，工作表，宏表，等等</p>
+<p>vba中，经常在工作表之间转换或者对不同工作表中的单元格区域进行操作</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 直接使用工作表名称法()</span><br><span class="line">msgbox worksheets（<span class="string">"我的工作表"</span>）.name</span><br><span class="line">msgbox sheets(<span class="string">"我的图表”).name</span></span><br><span class="line"><span class="string">end sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 索引号表示法()</span><br><span class="line">msgbox worksheets(<span class="number">1</span>).name</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 工作表代码索引号表示法()</span><br><span class="line">msgbox sheets(<span class="number">1</span>).name    <span class="comment">' 该方法只是显示的哪个sheet在第一个顺序就弹出哪个，而不是固定的sheet标识序号。</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 直接取工作代码法()</span><br><span class="line">msgbox sheet1.name</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 活动工作表()</span><br><span class="line">msgbox activesheet.name</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<p>备注：</p>
+<p>当工作簿包括工作表、宏表、图表等时，使用索引号引用工作表如sheets（1）与worksheets（1）引用的可能不是同一个表。</p>
+<p><strong>5.工作表的增加与删除</strong></p>
+<p>sheets.add 方法</p>
+<p>表达式.add(before,after,count,type)</p>
+<p>xlsheettype 常量之一</p>
+<p>xlworksheet    工作表</p>
+<p>xlchart            图表</p>
+<p>xlexcel4macrosheet  宏表</p>
+<p>xlexcel4intlmacrosheet  对话框</p>
+<p>默认值为 xlworksheet</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 新建sheets（)</span><br><span class="line">sheets.add      <span class="comment">' 默认创建一个工作表</span></span><br><span class="line">sheets.add sheets(<span class="string">"abc"</span>)  <span class="comment">'默认创建一个工作表在ABC表前方</span></span><br><span class="line">sheets.add , sheets(<span class="string">"abc"</span>) <span class="comment">'默认创建一个工作表在ABC表后方</span></span><br><span class="line">sheets.add after:=sheets(<span class="string">"abc"</span>) <span class="comment">' 默认创建一个工作表在ABC表后方</span></span><br><span class="line">sheets.add ,,, xlchart      <span class="comment">' 新建一个图表</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 删除工作表()</span><br><span class="line">sheet1.delete</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<p><strong>6.工作表移动与复制</strong></p>
+<p>表达式  .move(before,after)</p>
+<p>表达式  .copy(before,after)</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 移动()</span><br><span class="line">sheet1.move sheet2  <span class="comment">' 移动sheet2到sheet1前面</span></span><br><span class="line">sheet1.move ,sheet2  <span class="comment">' 移动sheet2到sheet1后面</span></span><br><span class="line">sheet1.move after:=sheet2  <span class="comment">' 移动sheet2到sheet1后面</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 复制()</span><br><span class="line">sheet1.copy sheets(sheets.count)   <span class="comment">' 把sheet1复制到当前工作簿中最后一个sheet的前面</span></span><br><span class="line">sheet1.copy sheet3    <span class="comment">' 复制sheet1到sheet3的前面</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<p><strong>7.工作表的选择与激活</strong></p>
+<p>worksheet.select 方法</p>
+<p>选择对象</p>
+<p>worksheet.activate 方法</p>
+<p>使当前工作表成为活动工作表</p>
+<p>工作表的选择select与activate</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 工作表选择()</span><br><span class="line">sheet3.<span class="keyword">select</span>    <span class="comment">' 如果sheet3为隐藏时，则会报错，提示无法选择到该表</span></span><br><span class="line">sheet3.activate  <span class="comment">' 如果sheet3为隐藏时，不会报错，理论已激活选择，但是因为隐藏并未选择显示到改页</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 快速选择所有工作表()</span><br><span class="line">worksheets.<span class="keyword">select</span>   <span class="comment">' 选择当前工作簿中所有工作表，如果有隐藏表时会报错</span></span><br><span class="line">sheets.<span class="keyword">select</span>  <span class="comment">' 选择全部sheet，不管工作表还是图表</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sub</span> 自定义选择()</span><br><span class="line">worksheets(array(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)).<span class="keyword">select</span> <span class="comment">' 只选择自己选择的1,2,3</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">sub</span></span><br></pre></td></tr></table></figure>
+<p><strong>8.关闭警告提示</strong></p>
+<p>application.displayalerts = False   关系警告提示</p>
+<p>application.displayalerts = true    开启警告提示</p>
+<p><strong>9.实战拆分工作簿到其它表</strong></p>
+<p>需求如下，把工作簿1中的所有工作表，拆分到其他新建的工作簿中，实现代码：</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> 拆分到工作簿()</span><br><span class="line"><span class="keyword">Dim</span> wk <span class="keyword">As</span> Workbook, ss$, k%</span><br><span class="line">Application.DisplayAlerts = <span class="literal">False</span></span><br><span class="line"><span class="keyword">For</span> <span class="keyword">Each</span> sht <span class="keyword">In</span> Workbooks(<span class="number">1</span>).Sheets</span><br><span class="line">    <span class="keyword">Set</span> wk = Workbooks.Add</span><br><span class="line">    k = k + <span class="number">1</span></span><br><span class="line">    Workbooks(<span class="number">1</span>).Sheets(k).Copy Workbooks(<span class="number">2</span>).Sheets(<span class="number">1</span>)</span><br><span class="line">    ss = ThisWorkbook.Path &amp; <span class="string">"\"</span> &amp; sht.Name &amp; <span class="string">"xlsx"</span></span><br><span class="line">    wk.SaveAs ss</span><br><span class="line">    wk.Close</span><br><span class="line"><span class="keyword">Next</span></span><br><span class="line">Application.DisplayAlerts = <span class="literal">True</span></span><br><span class="line">MsgBox <span class="string">"拆分工作簿完成"</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/学习笔记/">学习笔记</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/vba/">vba</a><a href="/tags/Excel/">Excel</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+	<a>不要因为走了太久而忘记当初为什么出发。</a>
+    <br>
+	<a>© 2019 shiyan</a>
+	<br>
+  </p>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+<a>「</a>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+<a>  」</a>
+</span>
+    
+  </div>
+</div>
+</body>
+</html>

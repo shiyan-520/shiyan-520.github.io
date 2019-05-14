@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-05-11T01:28:16.676Z</updated>
+  <updated>2019-05-14T15:56:27.386Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Excel_2016_VBA学习笔记_工作簿与工作表篇②</title>
+    <link href="shiyan.top/2019/05/11/excel-vba-2/"/>
+    <id>shiyan.top/2019/05/11/excel-vba-2/</id>
+    <published>2019-05-11T08:16:55.000Z</published>
+    <updated>2019-05-14T15:56:27.386Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;1.定义&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;工作簿，就是Excel的一个文件，这个文件是由多张工作表组成。&lt;/p&gt;
+&lt;p&gt;工作簿可以看做一本书，而工作表可以看做是表里的每一页。&lt;/p&gt;
+&lt;p&gt;工作表能建立多少个取决去内存的大小。&lt;/p&gt;
+&lt;p&gt;重要性：工作簿（workbook）与工作表（worksheet）是Excel vba中非常重要的两个对象。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="shiyan.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="vba" scheme="shiyan.top/tags/vba/"/>
+    
+      <category term="Excel" scheme="shiyan.top/tags/Excel/"/>
+    
+  </entry>
   
   <entry>
     <title>Oracle安装使用中的各种坑</title>
@@ -44,7 +70,7 @@
     <link href="shiyan.top/2019/05/04/excel-vba-1/"/>
     <id>shiyan.top/2019/05/04/excel-vba-1/</id>
     <published>2019-05-04T13:52:55.000Z</published>
-    <updated>2019-05-10T15:23:09.692Z</updated>
+    <updated>2019-05-14T15:50:53.481Z</updated>
     
     <summary type="html">
     
