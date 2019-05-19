@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-05-19T06:44:15.306Z</updated>
+  <updated>2019-05-19T06:47:08.929Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="shiyan.top/2019/05/19/Hash-Passing-Attack-explore/"/>
     <id>shiyan.top/2019/05/19/Hash-Passing-Attack-explore/</id>
     <published>2019-05-19T01:25:55.000Z</published>
-    <updated>2019-05-19T06:44:15.306Z</updated>
+    <updated>2019-05-19T06:47:08.929Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;0x00
-        
-      
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;记得还是在17年11月份的时候，ice老师当时在shepi群里分享了两个技巧，记忆最深的一句话是：&lt;/p&gt;
+&lt;p&gt;“服务器密码解不出来，不用解了，用hash登录”，当时的自己还是停留在web的程度，没有过多的思考，&lt;/p&gt;
+&lt;p&gt;最近想起来了就研究一下为什么这么说。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x01 NTLM-Hash&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;什么是ntlm-hash？&lt;br&gt;
     
     </summary>
     
