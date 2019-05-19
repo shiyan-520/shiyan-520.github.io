@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-05-14T15:56:27.386Z</updated>
+  <updated>2019-05-19T06:44:15.306Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hash传递攻击研究</title>
+    <link href="shiyan.top/2019/05/19/Hash-Passing-Attack-explore/"/>
+    <id>shiyan.top/2019/05/19/Hash-Passing-Attack-explore/</id>
+    <published>2019-05-19T01:25:55.000Z</published>
+    <updated>2019-05-19T06:44:15.306Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;0x00
+        
+      
+    
+    </summary>
+    
+      <category term="漏洞研究" scheme="shiyan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
+    
+    
+      <category term="hash" scheme="shiyan.top/tags/hash/"/>
+    
+  </entry>
   
   <entry>
     <title>Excel_2016_VBA学习笔记_工作簿与工作表篇②</title>
