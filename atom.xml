@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-06-15T17:33:20.426Z</updated>
+  <updated>2019-06-29T08:34:26.385Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>COM组件劫持原理与实践</title>
+    <link href="shiyan.top/2019/06/29/Principle-and-Practice-of-COM-Component-Hijacking/"/>
+    <id>shiyan.top/2019/06/29/Principle-and-Practice-of-COM-Component-Hijacking/</id>
+    <published>2019-06-29T13:50:55.000Z</published>
+    <updated>2019-06-29T08:34:26.385Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在术的道路上，从来都是独善其行，如能结余同行，自当求之不得。&lt;/p&gt;
+&lt;p&gt;玄幻小说的世界结构，放之现代也是同理，望成之所成，念之所念。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x01 什么是COM&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;什么是COM，说白了，就是一堆功能相关的interface，它是某种语言像另一种语言暴露功能的最大单位。&lt;/p&gt;
+&lt;p&gt;COMcomponent（COM组件）是微软公司为了计算机工业的软件生产更加符合人类的行为方式开发的一种新的软件开发技术。&lt;/p&gt;
+&lt;p&gt;在COM构架下，人们可以开发出各种各样的功能专一的组件，然后将它们按照需要组合起来，构成复杂的应用系统。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="漏洞研究" scheme="shiyan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
+    
+    
+      <category term="COM组件劫持" scheme="shiyan.top/tags/COM%E7%BB%84%E4%BB%B6%E5%8A%AB%E6%8C%81/"/>
+    
+  </entry>
   
   <entry>
     <title>DLL劫持原理与实践</title>

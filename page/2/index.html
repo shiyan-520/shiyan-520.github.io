@@ -67,6 +67,97 @@
 
   
     
+    <h3 class="article-title"><a href="/2018/11/16/soulapp-test/"><span>以soul为样本的APP测试总结（待详细）</span></a></h3>
+    
+  
+  
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/11/16/soulapp-test/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-11-16T09:40:55.000Z">
+          2018-11-16
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><strong>1. 安装包签名测试</strong></p>
+<blockquote>jarsigner.exe -verify G:\soul.apk -verbose -certs</blockquote>
+
+
+<pre><code>sm    1091972 Fri Nov 30 00:00:00 CST 1979 resources.arsc
+X.509, CN=shijiu
+  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
+  [CertPath 未验证: Path does not chain with any of the trust anchors]
+
+    1089 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.RSA
+  436847 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.SF
+  s     436804 Fri Nov 30 00:00:00 CST 1979 META-INF/MANIFEST.MF
+    X.509, CN=shijiu
+  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
+  [CertPath 未验证: Path does not chain with any of the trust anchors]
+    s = 已验证签名
+  m = 在清单中列出条目
+  k = 在密钥库中至少找到了一个证书
+  i = 在身份作用域内至少找到了一个证书
+
+- 由 &quot;CN=shijiu&quot; 签名
+摘要算法: SHA1
+签名算法: SHA1withRSA, 2048 位密钥
+
+jar 已验证。
+
+警告:
+此 jar 包含证书链未验证的条目。
+此 jar 包含的签名没有时间戳。如果没有时间戳, 则在签名者证书的到期日期 (2041-03-26) 或以后的任何撤销日期之后, 用户可能无
+法验证此 jar。
+
+&lt;strong&gt;2. 反编译保护&lt;/strong&gt; 
+</code></pre><blockquote><br>1. soul.apk 修改后缀名为 soul.zip / 或者直接用解压的方式解压<br>2. 把soul.rar 解压后，找见 classes.dex<br>3. java -jar dex2jar.bat G:\soul\classes.dex</blockquote><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Invalid or corrupt jarfile</span><br></pre></td></tr></table></figure><br><br>
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/渗透测试/">渗透测试</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/Android/">Android</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/2018/09/15/xxe-study/"><span>漏洞学习之XXE注入</span></a></h3>
     
   
