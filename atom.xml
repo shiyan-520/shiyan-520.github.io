@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-07-11T09:43:47.614Z</updated>
+  <updated>2019-07-20T05:36:49.455Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS之命令笔记篇</title>
+    <link href="shiyan.top/2019/07/20/CS-Command-Notes/"/>
+    <id>shiyan.top/2019/07/20/CS-Command-Notes/</id>
+    <published>2019-07-20T03:50:55.000Z</published>
+    <updated>2019-07-20T05:36:49.455Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00  文件架构&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;│  agscript            拓展应用的脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  c2lint              检查profile的错误异常&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  cobaltstrike        linux下启动脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  cobaltstrike.jar    客户端程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  teamserver          服务端程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  update              更新脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  update.jar          更新程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└─third-party          第三方工具&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        README.vncdll.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vncdll.x64.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vncdll.x86.dll&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="命令备忘" scheme="shiyan.top/categories/%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"/>
+    
+    
+      <category term="Cobalt Strike" scheme="shiyan.top/tags/Cobalt-Strike/"/>
+    
+  </entry>
   
   <entry>
     <title>UAC与ByPass-UAC</title>
@@ -456,27 +477,6 @@ jar 已验证。
       <category term="mysql" scheme="shiyan.top/tags/mysql/"/>
     
       <category term="报错注入" scheme="shiyan.top/tags/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS之命令笔记篇</title>
-    <link href="shiyan.top/2017/07/20/CS-Command-Notes/"/>
-    <id>shiyan.top/2017/07/20/CS-Command-Notes/</id>
-    <published>2017-07-20T03:50:55.000Z</published>
-    <updated>2019-07-20T05:34:22.411Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00  文件架构&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;│  agscript            拓展应用的脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  c2lint              检查profile的错误异常&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  cobaltstrike        linux下启动脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  cobaltstrike.jar    客户端程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  teamserver          服务端程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  update              更新脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  update.jar          更新程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└─third-party          第三方工具&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        README.vncdll.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vncdll.x64.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vncdll.x86.dll&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="命令备忘" scheme="shiyan.top/categories/%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"/>
-    
-    
-      <category term="Cobalt Strike" scheme="shiyan.top/tags/Cobalt-Strike/"/>
     
   </entry>
   
