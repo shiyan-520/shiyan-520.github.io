@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-07-20T05:36:49.455Z</updated>
+  <updated>2019-07-28T09:22:02.399Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MSF之命令笔记篇</title>
+    <link href="shiyan.top/2019/07/28/MSF-Command-Notes/"/>
+    <id>shiyan.top/2019/07/28/MSF-Command-Notes/</id>
+    <published>2019-07-28T15:50:55.000Z</published>
+    <updated>2019-07-28T09:22:02.399Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 一键式安装&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu-System&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; /opt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &amp;gt; msfinstall &amp;amp;&amp;amp; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;chmod &lt;span class=&quot;number&quot;&gt;755&lt;/span&gt; msfinstall &amp;amp;&amp;amp; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;./msfinstall&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="命令备忘" scheme="shiyan.top/categories/%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"/>
+    
+    
+      <category term="metasploit" scheme="shiyan.top/tags/metasploit/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CS之命令笔记篇</title>
     <link href="shiyan.top/2019/07/20/CS-Command-Notes/"/>
     <id>shiyan.top/2019/07/20/CS-Command-Notes/</id>
     <published>2019-07-20T03:50:55.000Z</published>
-    <updated>2019-07-20T05:36:49.455Z</updated>
+    <updated>2019-07-21T08:44:39.451Z</updated>
     
     <summary type="html">
     
