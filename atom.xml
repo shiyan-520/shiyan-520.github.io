@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-07-28T09:22:02.399Z</updated>
+  <updated>2019-08-13T03:53:20.022Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>由安全审计扩展出的思维感悟</title>
+    <link href="shiyan.top/2019/08/13/Thoughts-Expanded-from-Safety-Audit/"/>
+    <id>shiyan.top/2019/08/13/Thoughts-Expanded-from-Safety-Audit/</id>
+    <published>2019-08-13T13:52:55.000Z</published>
+    <updated>2019-08-13T03:53:20.022Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;从今年3月份开始，到现在已经一轮过去了，现在是开始第二轮，虽说不知道这个分享制度还会坚持多长时间，但是毕竟也是对各位好的，个人由衷的还是希望大家都能正确对待这件事，保持好这个良好的传统。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习笔记" scheme="shiyan.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="安全审计" scheme="shiyan.top/tags/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>MSF之命令笔记篇</title>
@@ -499,28 +520,6 @@ jar 已验证。
       <category term="mysql" scheme="shiyan.top/tags/mysql/"/>
     
       <category term="报错注入" scheme="shiyan.top/tags/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux学习笔记</title>
-    <link href="shiyan.top/2017/07/10/linux-study/"/>
-    <id>shiyan.top/2017/07/10/linux-study/</id>
-    <published>2017-07-10T03:50:55.000Z</published>
-    <updated>2019-05-10T07:51:55.323Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;br&gt;    &lt;strong&gt;文件系统架构&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;ol&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        Linux文件或者目录起始于根目录 &amp;quot; / &amp;quot; 成为树状结构，最顶层由 / 开始&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        文件和目录名是区分大小写的&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        路径通过 &amp;quot; / &amp;quot; 分开&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        &amp;nbsp;&amp;quot; .. &amp;quot; 表示上层目录&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        &amp;nbsp;&amp;quot; . &amp;quot; 表示当前目录&lt;br&gt;    &lt;/li&gt;&lt;br&gt;    &lt;li&gt;&lt;br&gt;        隐藏目录或者隐藏文件名以 &amp;quot; . &amp;quot; 开始&lt;br&gt;    &lt;/li&gt;&lt;br&gt;&lt;/ol&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="shiyan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="linux" scheme="shiyan.top/tags/linux/"/>
     
   </entry>
   
