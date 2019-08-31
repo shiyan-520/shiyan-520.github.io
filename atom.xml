@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-08-13T03:53:20.022Z</updated>
+  <updated>2019-08-31T16:38:02.068Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录一次给某脚本增加两个字段的过程</title>
+    <link href="shiyan.top/2019/09/01/Record-the-process-of-adding-two-fields-to-a-script-at-a-time/"/>
+    <id>shiyan.top/2019/09/01/Record-the-process-of-adding-two-fields-to-a-script-at-a-time/</id>
+    <published>2019-08-31T16:35:55.000Z</published>
+    <updated>2019-08-31T16:38:02.068Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;周五快下班的时候，想着终于结束了一周挖坑种树的活，可以休息两天了。没想到，隔壁工地一朋友滴滴我，让我帮忙在一个脚本输出结果上增加两个字段，于是就有了本文。&lt;/p&gt;
+&lt;p&gt;注：学习别人的code编写思路，也是一种成长。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x01 接收脚本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件地址：&lt;a href=&quot;链接: https://pan.baidu.com/s/1Xe496gG8fX2sPDp1CkO8MQ 提取码: p82b 复制这段内容后打开百度网盘手机App，操作更方便哦&quot;&gt;连接（原始和完善后均在）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;接收到脚本后，看到这是一个 nsfocus rsas V6版本的一个漏洞报告转存工具，也就是把HTML页面的漏洞转存为Excel形式。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="脚本编写" scheme="shiyan.top/categories/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+    
+      <category term="安全服务" scheme="shiyan.top/tags/%E5%AE%89%E5%85%A8%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="脚本编写" scheme="shiyan.top/tags/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>由安全审计扩展出的思维感悟</title>
@@ -495,31 +522,6 @@ jar 已验证。
       <category term="mysql" scheme="shiyan.top/tags/mysql/"/>
     
       <category term="shell" scheme="shiyan.top/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql报错注入</title>
-    <link href="shiyan.top/2018/02/19/mysql-Error-injection/"/>
-    <id>shiyan.top/2018/02/19/mysql-Error-injection/</id>
-    <published>2018-02-19T07:40:55.000Z</published>
-    <updated>2019-06-14T12:50:57.901Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x01&lt;/strong&gt; 前言&lt;/p&gt;
-&lt;p&gt;法师的那本代码审计书，我也看到了关于十个报错注入那页（157-161），但是书上并没有特详细说明函数的意思还有剩下的都是点点就过了，再着我想到了 luanmap 就是纯粹的利用报错来注入的工具，所以我就整理整理关于 mysql 报错注入的总结把。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x02&lt;/strong&gt; floor()   // 5.0 , 5.1 , 5.5&lt;/p&gt;
-&lt;p&gt;count() 匹配指定表，库里值的行数，也就是个数&lt;br&gt;concat() 把里面的参数字符串连接起来&lt;br&gt;floor() 向下取整，就是取整数显示&lt;br&gt;rand() 用于产生一个 0~1的随机数&lt;br&gt;group by 根据自己的命名来分组数据，左边为右边的键，右边为值，可以这么理解，具体的自己百度吧&lt;br&gt;
-    
-    </summary>
-    
-      <category term="渗透测试" scheme="shiyan.top/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="mysql" scheme="shiyan.top/tags/mysql/"/>
-    
-      <category term="报错注入" scheme="shiyan.top/tags/%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
