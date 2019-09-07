@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-09-02T03:04:39.907Z</updated>
+  <updated>2019-09-07T08:28:56.306Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>被CVE-2019-0708打扰的一个周末（生活篇）</title>
+    <link href="shiyan.top/2019/09/07/A-Weekend-Disturbed-by-CVE-2019-0708%20(Life-Chapter)/"/>
+    <id>shiyan.top/2019/09/07/A-Weekend-Disturbed-by-CVE-2019-0708 (Life-Chapter)/</id>
+    <published>2019-09-07T09:50:55.000Z</published>
+    <updated>2019-09-07T08:28:56.306Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我的性格一般来说，是很少去复现一些漏洞的，尤其是系统层的，因为水平太菜，复现也就是简单的直接搭环境，然后exp打，想理解原理也理解不了。但是因为这个漏洞前段时间被称为核弹级的漏洞，所以我就凑个热闹来搞搞。&lt;/p&gt;
+&lt;p&gt;文章以叙事性描写，非常规复现篇。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="生活记录" scheme="shiyan.top/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="漏洞复现" scheme="shiyan.top/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+      <category term="生活记录" scheme="shiyan.top/tags/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>记录一次给某脚本增加两个字段的过程</title>
@@ -497,31 +521,6 @@ jar 已验证。
       <category term="工具分析" scheme="shiyan.top/tags/%E5%B7%A5%E5%85%B7%E5%88%86%E6%9E%90/"/>
     
       <category term="端口转发" scheme="shiyan.top/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于mysql下的几种写shell方法</title>
-    <link href="shiyan.top/2018/05/26/mysql-writ-shell/"/>
-    <id>shiyan.top/2018/05/26/mysql-writ-shell/</id>
-    <published>2018-05-26T13:55:32.000Z</published>
-    <updated>2019-05-07T13:42:17.736Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;关于mysql下的写shell方法网上基本很多了，我原本也没打算总结总结的，毕竟网上已经很多了，不过在看 kilon 大佬的博客的时候，给我的感受就是明明一个几句话的东西，总能详细的，有条有理的记录下来，所以也正是如此，才有了这篇文章。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;利用条件&lt;br&gt;
-    
-    </summary>
-    
-      <category term="渗透测试" scheme="shiyan.top/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="mysql" scheme="shiyan.top/tags/mysql/"/>
-    
-      <category term="shell" scheme="shiyan.top/tags/shell/"/>
     
   </entry>
   
