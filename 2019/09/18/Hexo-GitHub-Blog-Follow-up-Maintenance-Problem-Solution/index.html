@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>hexo+GitHub博客后续维护问题解决方案 | sh1yan&#39;blog</title>
+
+  
+  <meta name="author" content="shiyan">
+  
+
+  
+  <meta name="description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+  
+
+  
+  
+  <meta name="keywords" content="博客问题解决">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="hexo+GitHub博客后续维护问题解决方案">
+
+  <meta property="og:site_name" content="sh1yan&#39;blog">
+
+  
+  <meta property="og:image" content="/favicon.ico">
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">sh1yan&#39;blog</a>
+    </h1>
+    <p class="site-description"></p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">归档</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+        <li><a href="/yqlj">友链</a></li>
+      
+        <li><a href="/atom.xml">订阅</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>hexo+GitHub博客后续维护问题解决方案</span></h3>
+    
+  
+  
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2019/09/18/Hexo-GitHub-Blog-Follow-up-Maintenance-Problem-Solution/" rel="bookmark">
+        <time class="entry-date published" datetime="2019-09-18T10:50:55.000Z">
+          2019-09-18
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><strong>0x00 简述</strong></p>
+<p>本帖专门用于记录本博客后期维护中出现的各种问题的解决方案，长期维护更新。<br><a id="more"></a><br><strong>0x01 更新博客提示“Please make sure you have the correct access rights and the repository exists”</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1、重新在git设置一下身份的名字和邮箱</span><br><span class="line">git config --global user.name "yourname"</span><br><span class="line">git config --global user.email 'your@email.com'</span><br><span class="line"></span><br><span class="line">2.删除.ssh文件夹下的know_hosts</span><br><span class="line">注：在C盘用户文件夹下.ssh，点击进入，手动删除know_hosts</span><br><span class="line"></span><br><span class="line">3、git输入命令</span><br><span class="line">$ ssh-keygen -t rsa -C 'your@email.com' </span><br><span class="line">注：填写自己设置的邮箱地址</span><br><span class="line"></span><br><span class="line">4、当本地秘钥成功生成后进入本地C盘用户文件夹目录下 .ssh 文件夹</span><br><span class="line">5、用记事本打开id_rsa.pub，将其全部复制</span><br><span class="line">6、进入github的设置页面，选择SSH and GPS keys选项，删除原有SSH keys。</span><br><span class="line">7、选择 New SSH key，输入刚才复制的秘钥，并保存。</span><br><span class="line">8、进入git命令行下，输入 ssh -T git@github.com 查看是否问题已解决。</span><br></pre></td></tr></table></figure>
+<p><strong>0x02</strong> </p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/博客相关/">博客相关</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/博客问题解决/">博客问题解决</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+	<a>不要因为走了太久而忘记当初为什么出发。</a>
+    <br>
+	<a>© 2019 shiyan</a>
+	<br>
+  </p>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_uv"> 
+<a>「</a>
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+<a>  」</a>
+</span>
+    
+  </div>
+</div>
+</body>
+</html>
