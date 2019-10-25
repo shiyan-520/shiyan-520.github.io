@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-09-18T08:49:01.197Z</updated>
+  <updated>2019-10-25T16:27:46.916Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>或许是而转折，或者随之平常</title>
+    <link href="shiyan.top/2019/10/25/Maybe-it-s-a-turn-or-it-s-just-a-normal-thing/"/>
+    <id>shiyan.top/2019/10/25/Maybe-it-s-a-turn-or-it-s-just-a-normal-thing/</id>
+    <published>2019-10-25T15:50:55.000Z</published>
+    <updated>2019-10-25T16:27:46.916Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;博客已经一个多月没有更新了，但是这段时间经历了却是不少，故此一直想总结一下。&lt;/p&gt;
+&lt;p&gt;感慨篇：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="心情感悟" scheme="shiyan.top/categories/%E5%BF%83%E6%83%85%E6%84%9F%E6%82%9F/"/>
+    
+    
+      <category term="感悟" scheme="shiyan.top/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo+GitHub博客后续维护问题解决方案</title>
@@ -493,31 +514,6 @@ jar 已验证。
       <category term="web漏洞" scheme="shiyan.top/tags/web%E6%BC%8F%E6%B4%9E/"/>
     
       <category term="XXE" scheme="shiyan.top/tags/XXE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对jsonp劫持的一次简单了解</title>
-    <link href="shiyan.top/2018/08/12/jsonp-study/"/>
-    <id>shiyan.top/2018/08/12/jsonp-study/</id>
-    <published>2018-08-12T01:20:56.000Z</published>
-    <updated>2019-05-07T13:46:36.008Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x01&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;jsonp劫持算是一个老漏洞，我老早就想总结一下来着，但是懒所以没弄，最近正好兴趣上来了，就整理整理下把。&lt;/p&gt;
-&lt;p&gt;首先了解jsonp得先大概的了解下json。&lt;/p&gt;
-&lt;p&gt;json全称为&lt;strong&gt;J&lt;/strong&gt;ava&lt;strong&gt;S&lt;/strong&gt;cript &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;N&lt;/strong&gt;otation(JavaScript 对象表示法) ，&lt;br&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="shiyan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="jsonp" scheme="shiyan.top/tags/jsonp/"/>
-    
-      <category term="web漏洞" scheme="shiyan.top/tags/web%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
