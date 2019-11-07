@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-10-25T16:27:46.916Z</updated>
+  <updated>2019-11-07T08:06:08.691Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Python3和Django编写的博客源码</title>
+    <link href="shiyan.top/2019/11/07/Blog-source-code-based-on-Python3-and-Django/"/>
+    <id>shiyan.top/2019/11/07/Blog-source-code-based-on-Python3-and-Django/</id>
+    <published>2019-11-07T03:50:55.000Z</published>
+    <updated>2019-11-07T08:06:08.691Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;很早之前就计划着，以后等有时间一定要自己写一个博客源码出来，然后方便自己使用，主要是受loid大佬的影响，当时他用的博客就是自己写的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Django" scheme="shiyan.top/categories/Django/"/>
+    
+    
+      <category term="博客源码" scheme="shiyan.top/tags/%E5%8D%9A%E5%AE%A2%E6%BA%90%E7%A0%81/"/>
+    
+      <category term="Python3" scheme="shiyan.top/tags/Python3/"/>
+    
+  </entry>
   
   <entry>
     <title>或许是而转折，或者随之平常</title>
@@ -491,29 +514,6 @@ jar 已验证。
     
     
       <category term="Android" scheme="shiyan.top/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>漏洞学习之XXE注入</title>
-    <link href="shiyan.top/2018/09/15/xxe-study/"/>
-    <id>shiyan.top/2018/09/15/xxe-study/</id>
-    <published>2018-09-15T09:40:55.000Z</published>
-    <updated>2019-05-07T13:19:13.860Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;meta&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&lt;/span&gt;       // XML声明&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;meta&quot;&gt;&amp;lt;!DOCTYPE note [                             //定义类型&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT note (to,from,heading,body)&amp;gt;   //定义元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT to (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT from (#PCDATA)&amp;gt;                // 文档类型定义&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT heading (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; 	&amp;lt;!ELEMENT body (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;]&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;note&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;lixin&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;to&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;shiyan&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;from&lt;/span&gt;&amp;gt;&lt;/span&gt;                // 文档元素&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;heading&lt;/span&gt;&amp;gt;&lt;/span&gt;Reminder&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;heading&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;Hurry up and send out XXE&#39;s article&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;body&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;note&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。&lt;br&gt;DTD 主要用来解释文档元素的，它有三种应用形式：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="shiyan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="web漏洞" scheme="shiyan.top/tags/web%E6%BC%8F%E6%B4%9E/"/>
-    
-      <category term="XXE" scheme="shiyan.top/tags/XXE/"/>
     
   </entry>
   

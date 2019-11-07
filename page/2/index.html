@@ -67,6 +67,72 @@
 
   
     
+    <h3 class="article-title"><a href="/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/"><span>DLL劫持原理与实践</span></a></h3>
+    
+  
+  
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/" rel="bookmark">
+        <time class="entry-date published" datetime="2019-06-15T17:25:55.000Z">
+          2019-06-16
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p><strong>0x00 前言</strong></p>
+<p>DLL劫持算是一个老的漏洞，而且乌云漏洞库中也有很多的案例，只不过案例更多的只是验证一下，并没有教如何利用。至于为什么专门抓起来再学一遍了，唉，内网渗透需要。。。</p>
+<p><strong>0x01 什么是DLL</strong></p>
+<p>这里先摘抄一下百度百科的解释：</p>
+<blockquote>
+<p>DLL(Dynamic Link Library)文件为动态链接库文件，又称“应用程序拓展”，是软件文件类型。在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。一个应用程序可使用多个DLL文件，一个DLL文件也可能被不同的应用程序使用，这样的DLL文件被称为共享DLL文件。</p>
+</blockquote>
+<p>还有一段，我觉得更好理解的。<br>
+      
+    </p></div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/漏洞研究/">漏洞研究</a>
+    </span>
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/tags/DLL劫持/">DLL劫持</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/2019/06/09/Windows-Access-Token-Security-Exploration/"><span>Windows访问令牌安全探究</span></a></h3>
     
   
@@ -638,66 +704,6 @@ jar 已验证。
     <span class="post-tags">
       <i class="icon-tags"></i>
         <a href="/tags/Android/">Android</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2018/09/15/xxe-study/"><span>漏洞学习之XXE注入</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/09/15/xxe-study/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-09-15T09:40:55.000Z">
-          2018-09-15
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>       // XML声明</span><br><span class="line"> <span class="meta">&lt;!DOCTYPE note [                             //定义类型</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT note (to,from,heading,body)&gt;   //定义元素</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT to (#PCDATA)&gt;</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT from (#PCDATA)&gt;                // 文档类型定义</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT heading (#PCDATA)&gt;</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT body (#PCDATA)&gt;</span></span><br><span class="line"><span class="meta">]&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">note</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">to</span>&gt;</span>lixin<span class="tag">&lt;/<span class="name">to</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">from</span>&gt;</span>shiyan<span class="tag">&lt;/<span class="name">from</span>&gt;</span>                // 文档元素</span><br><span class="line">  <span class="tag">&lt;<span class="name">heading</span>&gt;</span>Reminder<span class="tag">&lt;/<span class="name">heading</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>Hurry up and send out XXE's article<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。<br>DTD 主要用来解释文档元素的，它有三种应用形式：</p>
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/漏洞研究/">漏洞研究</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/web漏洞/">web漏洞</a><a href="/tags/XXE/">XXE</a>
     </span>
     
 
