@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-11-07T08:06:08.691Z</updated>
+  <updated>2019-11-09T15:06:15.971Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos6.9+Python3+Nginx+Uwsgi+Django2.0</title>
+    <link href="shiyan.top/2019/11/09/Django-deployment-method-one/"/>
+    <id>shiyan.top/2019/11/09/Django-deployment-method-one/</id>
+    <published>2019-11-09T15:50:55.000Z</published>
+    <updated>2019-11-09T15:06:15.971Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本文为 Centos6.9+Python3+Nginx+Uwsgi+Django2.0 下的部署方法，该方法不太适合纯小白直接粘贴复制，因为部分操作需要稍微修改为自己源码环境下路径才可以。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Django" scheme="shiyan.top/categories/Django/"/>
+    
+    
+      <category term="部署上线" scheme="shiyan.top/tags/%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Python3和Django编写的博客源码</title>
@@ -462,58 +483,6 @@
     
     
       <category term="感悟" scheme="shiyan.top/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>以soul为样本的APP测试总结（待详细）</title>
-    <link href="shiyan.top/2018/11/16/soulapp-test/"/>
-    <id>shiyan.top/2018/11/16/soulapp-test/</id>
-    <published>2018-11-16T09:40:55.000Z</published>
-    <updated>2019-05-07T14:23:12.729Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;1. 安装包签名测试&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;jarsigner.exe -verify G:\soul.apk -verbose -certs&lt;/blockquote&gt;
-
-
-&lt;pre&gt;&lt;code&gt;sm    1091972 Fri Nov 30 00:00:00 CST 1979 resources.arsc
-X.509, CN=shijiu
-  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
-  [CertPath 未验证: Path does not chain with any of the trust anchors]
-
-    1089 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.RSA
-  436847 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.SF
-  s     436804 Fri Nov 30 00:00:00 CST 1979 META-INF/MANIFEST.MF
-    X.509, CN=shijiu
-  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
-  [CertPath 未验证: Path does not chain with any of the trust anchors]
-    s = 已验证签名
-  m = 在清单中列出条目
-  k = 在密钥库中至少找到了一个证书
-  i = 在身份作用域内至少找到了一个证书
-
-- 由 &amp;quot;CN=shijiu&amp;quot; 签名
-摘要算法: SHA1
-签名算法: SHA1withRSA, 2048 位密钥
-
-jar 已验证。
-
-警告:
-此 jar 包含证书链未验证的条目。
-此 jar 包含的签名没有时间戳。如果没有时间戳, 则在签名者证书的到期日期 (2041-03-26) 或以后的任何撤销日期之后, 用户可能无
-法验证此 jar。
-
-&amp;lt;strong&amp;gt;2. 反编译保护&amp;lt;/strong&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;&lt;br&gt;1. soul.apk 修改后缀名为 soul.zip / 或者直接用解压的方式解压&lt;br&gt;2. 把soul.rar 解压后，找见 classes.dex&lt;br&gt;3. java -jar dex2jar.bat G:\soul\classes.dex&lt;/blockquote&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Error: Invalid or corrupt jarfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="渗透测试" scheme="shiyan.top/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="Android" scheme="shiyan.top/tags/Android/"/>
     
   </entry>
   
