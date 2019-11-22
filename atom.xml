@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-11-09T15:06:15.971Z</updated>
+  <updated>2019-11-22T12:57:21.470Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Django2.x 学习笔记分享&amp;学习路线推荐</title>
+    <link href="shiyan.top/2019/11/22/My-Django-notes/"/>
+    <id>shiyan.top/2019/11/22/My-Django-notes/</id>
+    <published>2019-11-22T15:50:55.000Z</published>
+    <updated>2019-11-22T12:57:21.470Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;近段时间一直抽空学习 Django ，真心感慨，Django这个Web框架是为完美主义者而生的，一切都是现成的，而且能满足大部分的需求，Python Web 的开发者首推框架。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Django" scheme="shiyan.top/categories/Django/"/>
+    
+    
+      <category term="学习笔记" scheme="shiyan.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Centos6.9+Python3+Nginx+Uwsgi+Django2.0</title>
     <link href="shiyan.top/2019/11/09/Django-deployment-method-one/"/>
     <id>shiyan.top/2019/11/09/Django-deployment-method-one/</id>
     <published>2019-11-09T15:50:55.000Z</published>
-    <updated>2019-11-09T15:06:15.971Z</updated>
+    <updated>2019-11-09T15:13:17.526Z</updated>
     
     <summary type="html">
     
@@ -463,26 +484,6 @@
     
     
       <category term="安全审计" scheme="shiyan.top/tags/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最近的一些的感慨</title>
-    <link href="shiyan.top/2019/02/24/Recent-insights-2019-02/"/>
-    <id>shiyan.top/2019/02/24/Recent-insights-2019-02/</id>
-    <published>2019-02-24T08:57:55.000Z</published>
-    <updated>2019-05-07T14:06:55.441Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&amp;emsp;算了算，毕业也半年多了，近期的状态确实颓废的不行，也不能说是近期，去年10月份换到新的驻地后，就很少自己主动的去学习了，可能没换地方以前，一直都是一个人吧，回到住的地方，没人说话，看电视吧，翻了老半天，也没啥可翻的，看电影吧，也没啥可看的。仿佛除了搞搞自己的小兴趣爱好，看看买的《Android软件安全与逆向分析》和《网络攻防实战研究：漏洞利用与提权》，
-    
-    </summary>
-    
-      <category term="心情感悟" scheme="shiyan.top/categories/%E5%BF%83%E6%83%85%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="感悟" scheme="shiyan.top/tags/%E6%84%9F%E6%82%9F/"/>
     
   </entry>
   
