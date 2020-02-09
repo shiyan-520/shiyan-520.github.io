@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2019-11-22T12:57:21.470Z</updated>
+  <updated>2020-02-09T15:02:34.094Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java代码之读写示例</title>
+    <link href="shiyan.top/2020/02/09/Reading-and-writing-java-code/"/>
+    <id>shiyan.top/2020/02/09/Reading-and-writing-java-code/</id>
+    <published>2020-02-09T14:51:55.000Z</published>
+    <updated>2020-02-09T15:02:34.094Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="编程代码" scheme="shiyan.top/categories/%E7%BC%96%E7%A8%8B%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="java" scheme="shiyan.top/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>Django2.x 学习笔记分享&amp;学习路线推荐</title>
@@ -463,27 +490,6 @@
       <category term="vba" scheme="shiyan.top/tags/vba/"/>
     
       <category term="Excel" scheme="shiyan.top/tags/Excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安全审计简述</title>
-    <link href="shiyan.top/2019/03/31/A-Brief-Introduction-to-Safety-Audit/"/>
-    <id>shiyan.top/2019/03/31/A-Brief-Introduction-to-Safety-Audit/</id>
-    <published>2019-03-31T13:52:55.000Z</published>
-    <updated>2019-05-07T14:09:04.658Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;前言：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;团队3月份的时候，开始每人一周一个分享，因为我最近在安全审计项目上，所以就干脆做了一个关于“什么是安全审计”的简述，虽说我们大部分都是搞渗透测试的，但是我觉得安全审计这个还是都得学一学的，或者说了解一
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="shiyan.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="安全审计" scheme="shiyan.top/tags/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1/"/>
     
   </entry>
   
