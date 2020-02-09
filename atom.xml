@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2020-02-09T15:02:34.094Z</updated>
+  <updated>2020-02-09T15:09:11.851Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -21,18 +21,13 @@
     <link href="shiyan.top/2020/02/09/Reading-and-writing-java-code/"/>
     <id>shiyan.top/2020/02/09/Reading-and-writing-java-code/</id>
     <published>2020-02-09T14:51:55.000Z</published>
-    <updated>2020-02-09T15:02:34.094Z</updated>
+    <updated>2020-02-09T15:09:11.851Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最近这几个月一直在学java，这几天为了搞懂Java的读写代码，特意总结了一下写法和意义。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x01 代码详情&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
