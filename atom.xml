@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2020-02-09T15:09:11.851Z</updated>
+  <updated>2020-03-02T14:26:24.118Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BurpSuite插件编写[入门篇]</title>
+    <link href="shiyan.top/2020/03/02/Writing-the-burpseuite-plug-in-beginner/"/>
+    <id>shiyan.top/2020/03/02/Writing-the-burpseuite-plug-in-beginner/</id>
+    <published>2020-03-02T14:25:55.000Z</published>
+    <updated>2020-03-02T14:26:24.118Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;burp作为web测试中最常用的工具，作为使用者更应该掌握下Extender的写法。这段时间搜集了一下关于插件的写法，发现基于Java的写法好少，基本上都是Python的教程，虽说大体上是一个写法，但是还是想总结总结下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程代码" scheme="shiyan.top/categories/%E7%BC%96%E7%A8%8B%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="burp" scheme="shiyan.top/tags/burp/"/>
+    
+  </entry>
   
   <entry>
     <title>Java代码之读写示例</title>
@@ -459,32 +480,6 @@
     
     
       <category term="Oracle" scheme="shiyan.top/tags/Oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel_2016_VBA学习笔记_基础语法篇①</title>
-    <link href="shiyan.top/2019/05/04/excel-vba-1/"/>
-    <id>shiyan.top/2019/05/04/excel-vba-1/</id>
-    <published>2019-05-04T13:52:55.000Z</published>
-    <updated>2019-05-14T15:50:53.481Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;在Excel中快速打开VBA编辑器&lt;/p&gt;
- &lt;figure class=&quot;highlight vb&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;FN+Alt+F11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;or&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;选择开发选项，点击 Visual Basic&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="shiyan.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="vba" scheme="shiyan.top/tags/vba/"/>
-    
-      <category term="Excel" scheme="shiyan.top/tags/Excel/"/>
     
   </entry>
   
