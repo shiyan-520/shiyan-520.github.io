@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="shiyan.top/"/>
-  <updated>2020-03-02T14:26:24.118Z</updated>
+  <updated>2020-04-11T18:04:44.741Z</updated>
   <id>shiyan.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BurpSuite插件编写[初级篇]</title>
+    <link href="shiyan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/"/>
+    <id>shiyan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/</id>
+    <published>2020-04-11T18:00:55.000Z</published>
+    <updated>2020-04-11T18:04:44.741Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;0x01 debug 前期文件准备&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。&lt;/p&gt;
+&lt;p&gt;因为我们大部分测试者都是使用的破解版，所以在配置调试的时候因为某些原因是不太适用的，故需要下载一个社会版。这里我已经1.7.26版本，2.0的版本的文件太大了。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程代码" scheme="shiyan.top/categories/%E7%BC%96%E7%A8%8B%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="burp" scheme="shiyan.top/tags/burp/"/>
+    
+  </entry>
   
   <entry>
     <title>BurpSuite插件编写[入门篇]</title>
@@ -457,29 +481,6 @@
       <category term="vba" scheme="shiyan.top/tags/vba/"/>
     
       <category term="Excel" scheme="shiyan.top/tags/Excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle安装使用中的各种坑</title>
-    <link href="shiyan.top/2019/05/10/Various-pits-in-installation-of-oracle/"/>
-    <id>shiyan.top/2019/05/10/Various-pits-in-installation-of-oracle/</id>
-    <published>2019-05-10T15:23:55.000Z</published>
-    <updated>2019-05-11T01:28:16.676Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;前期因为审计需求，需要本地搭建Oracle数据，但是各种原因安装失败，或者安装成功，但是无法使用pl\sql进行连接操作，故记录下所有踩过的坑。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01 本机版本+安装包&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Windows 10 专业版 64位&lt;br&gt;
-    
-    </summary>
-    
-      <category term="数据库" scheme="shiyan.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="Oracle" scheme="shiyan.top/tags/Oracle/"/>
     
   </entry>
   
