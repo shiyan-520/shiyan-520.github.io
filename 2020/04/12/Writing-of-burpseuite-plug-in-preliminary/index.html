@@ -8,13 +8,13 @@
   <title>BurpSuite插件编写[初级篇] | sh1yan&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="0x00 前言 上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。 0x01 debug 前期文件准备 在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。 因为我们大部分测试者都是使用的破解版，所以在配置调试的时候因为某些原因是不太适用的，故需要下载一个社会版。这里我已经1.7.26版本，2.0的版">
+  <meta name="description" content="0x00 前言 上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。 0x01 debug 前期文件准备 在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。">
 <meta name="keywords" content="burp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BurpSuite插件编写[初级篇]">
-<meta property="og:url" content="shiyan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/index.html">
+<meta property="og:url" content="sh1yan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/index.html">
 <meta property="og:site_name" content="sh1yan&#39;blog">
-<meta property="og:description" content="0x00 前言 上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。 0x01 debug 前期文件准备 在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。 因为我们大部分测试者都是使用的破解版，所以在配置调试的时候因为某些原因是不太适用的，故需要下载一个社会版。这里我已经1.7.26版本，2.0的版">
+<meta property="og:description" content="0x00 前言 上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。 0x01 debug 前期文件准备 在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\2.jpg">
 <meta property="og:image" content="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\3.jpg">
@@ -28,10 +28,10 @@
 <meta property="og:image" content="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\11.jpg">
 <meta property="og:image" content="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\12.jpg">
 <meta property="og:image" content="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\13.png">
-<meta property="og:updated_time" content="2020-04-11T18:04:44.741Z">
+<meta property="og:updated_time" content="2020-04-11T18:19:47.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BurpSuite插件编写[初级篇]">
-<meta name="twitter:description" content="0x00 前言 上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。 0x01 debug 前期文件准备 在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。 因为我们大部分测试者都是使用的破解版，所以在配置调试的时候因为某些原因是不太适用的，故需要下载一个社会版。这里我已经1.7.26版本，2.0的版">
+<meta name="twitter:description" content="0x00 前言 上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。 0x01 debug 前期文件准备 在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。">
 <meta name="twitter:image" content="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="sh1yan&#39;blog" type="application/atom+xml">
@@ -71,7 +71,7 @@
         
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="shiyan.top"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="sh1yan.top"></form>
       </div>
     </div>
   </div>
@@ -111,7 +111,7 @@
         <div class="article-sharing">
   <ul>
     <li>
-      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="shiyan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/"></div>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="sh1yan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/"></div>
     </li>
   </ul>
 </div>
@@ -122,8 +122,8 @@
         <p><strong>0x00 前言</strong></p>
 <p>上一篇文章主要是介绍burp插件的基本情况，对插件编写有一个入门的了解，本篇将以调试分析的角度，记录一下学习方法和编写流程。</p>
 <p><strong>0x01 debug 前期文件准备</strong></p>
-<p>在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。</p>
-<p>因为我们大部分测试者都是使用的破解版，所以在配置调试的时候因为某些原因是不太适用的，故需要下载一个社会版。这里我已经1.7.26版本，2.0的版本的文件太大了。<br><a id="more"></a><br><img src="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\2.jpg" alt="2"></p>
+<p>在编写插件代码的时候，若不进行一步步的调试的话，只能是凭空造轮子，耗时耗力。<br><a id="more"></a><br>因为我们大部分测试者都是使用的破解版，所以在配置调试的时候因为某些原因是不太适用的，故需要下载一个社会版。这里我已经1.7.26版本，2.0的版本的文件太大了。</p>
+<p><img src="http:\\sh1yan.top\photo\Writing-of-burpseuite-plug-in-preliminary\2.jpg" alt="2"></p>
 <p>下载地址：<a href="https://portswigger.net/burp/releases/professional-community-1-7-26" target="_blank" rel="noopener">https://portswigger.net/burp/releases/professional-community-1-7-26</a></p>
 <p>网盘版地址：链接: <a href="https://pan.baidu.com/s/10rwx1eWdNCEQWqw4KpqtEw" target="_blank" rel="noopener">https://pan.baidu.com/s/10rwx1eWdNCEQWqw4KpqtEw</a> 提取码: xtnt</p>
 <p>正因为我们使用的社区版，所以在挑选现成的burp插件的时候，需要避开那些要使用到专业版或者企业版的API的插件。</p>
@@ -219,7 +219,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="shiyan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/" data-id="ck8vxkv5p004sy8w1rvkit1lo" class="article-share-link">Share</a>
+        <a data-url="sh1yan.top/2020/04/12/Writing-of-burpseuite-plug-in-preliminary/" data-id="ck97rt1dl004u5ow1vrb72x6k" class="article-share-link">Share</a>
       
       
       
