@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sh1yan.top/"/>
-  <updated>2020-04-11T18:19:47.957Z</updated>
+  <updated>2020-05-22T09:53:52.614Z</updated>
   <id>sh1yan.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安全审计之Pandas常用代码</title>
+    <link href="sh1yan.top/2020/05/22/Common-codes-of-pandas-in-security-audit/"/>
+    <id>sh1yan.top/2020/05/22/Common-codes-of-pandas-in-security-audit/</id>
+    <published>2020-05-22T15:50:55.000Z</published>
+    <updated>2020-05-22T09:53:52.614Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在审计中除了使用Excel和SQL来进行处理分析一些数据，也会经常用到Pandas来做一些分析，而使用Pandas做分析的定位主要分为两点：1、当数据量过大的时候，普通Excel已经很难便捷的进行审计分析；2、当审计场景已经流程化，则需要固话成自动化的时候。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="安全审计" scheme="sh1yan.top/categories/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1/"/>
+    
+    
+      <category term="Python" scheme="sh1yan.top/tags/Python/"/>
+    
+      <category term="pandas" scheme="sh1yan.top/tags/pandas/"/>
+    
+  </entry>
   
   <entry>
     <title>BurpSuite插件编写[初级篇]</title>
@@ -454,32 +477,6 @@
     
     
       <category term="hash" scheme="sh1yan.top/tags/hash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel_2016_VBA学习笔记_工作簿与工作表篇②</title>
-    <link href="sh1yan.top/2019/05/11/excel-vba-2/"/>
-    <id>sh1yan.top/2019/05/11/excel-vba-2/</id>
-    <published>2019-05-11T08:16:55.000Z</published>
-    <updated>2019-05-14T15:56:27.386Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;1.定义&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;工作簿，就是Excel的一个文件，这个文件是由多张工作表组成。&lt;/p&gt;
-&lt;p&gt;工作簿可以看做一本书，而工作表可以看做是表里的每一页。&lt;/p&gt;
-&lt;p&gt;工作表能建立多少个取决去内存的大小。&lt;/p&gt;
-&lt;p&gt;重要性：工作簿（workbook）与工作表（worksheet）是Excel vba中非常重要的两个对象。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="sh1yan.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="vba" scheme="sh1yan.top/tags/vba/"/>
-    
-      <category term="Excel" scheme="sh1yan.top/tags/Excel/"/>
     
   </entry>
   
