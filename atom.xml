@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sh1yan.top/"/>
-  <updated>2020-05-22T09:53:52.614Z</updated>
+  <updated>2020-05-30T09:48:55.393Z</updated>
   <id>sh1yan.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BurpSuite插件编写[中级篇]</title>
+    <link href="sh1yan.top/2020/05/30/Burpseuite-plug-in-writing-intermediate/"/>
+    <id>sh1yan.top/2020/05/30/Burpseuite-plug-in-writing-intermediate/</id>
+    <published>2020-05-30T14:25:55.000Z</published>
+    <updated>2020-05-30T09:48:55.393Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在初级篇中，我们分别介绍了burp的debug的方法和一个官方插件库中的一个burp插件源码分析，而该中级篇则将讲的是开发一个基于被动或者主动识别漏洞路径关键词插件，而该插件可以在我开着burp流量网站的时候，替我们主动或被动识别出可能存在相关漏洞的URL路径。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="编程代码" scheme="sh1yan.top/categories/%E7%BC%96%E7%A8%8B%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="burp" scheme="sh1yan.top/tags/burp/"/>
+    
+  </entry>
   
   <entry>
     <title>安全审计之Pandas常用代码</title>
@@ -452,31 +473,6 @@
       <category term="域渗透" scheme="sh1yan.top/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/"/>
     
       <category term="Kerberos认证" scheme="sh1yan.top/tags/Kerberos%E8%AE%A4%E8%AF%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hash传递攻击研究</title>
-    <link href="sh1yan.top/2019/05/19/Hash-Passing-Attack-explore/"/>
-    <id>sh1yan.top/2019/05/19/Hash-Passing-Attack-explore/</id>
-    <published>2019-05-19T01:25:55.000Z</published>
-    <updated>2019-05-19T06:53:35.617Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;记得还是在17年11月份的时候，ice老师当时在shepi群里分享了两个技巧，记忆最深的一句话是：&lt;/p&gt;
-&lt;p&gt;“服务器密码解不出来，不用解了，用hash登录”，当时的自己还是停留在web的程度，没有过多的思考，&lt;/p&gt;
-&lt;p&gt;最近想起来了就研究一下为什么这么说。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01 NTLM-Hash&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;什么是ntlm-hash？&lt;br&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="hash" scheme="sh1yan.top/tags/hash/"/>
     
   </entry>
   
