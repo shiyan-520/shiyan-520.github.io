@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sh1yan.top/"/>
-  <updated>2020-05-30T09:48:55.393Z</updated>
+  <updated>2020-06-06T11:34:35.319Z</updated>
   <id>sh1yan.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java反射机制探究</title>
+    <link href="sh1yan.top/2020/06/10/Reflection-mechanism-of-Java/"/>
+    <id>sh1yan.top/2020/06/10/Reflection-mechanism-of-Java/</id>
+    <published>2020-06-10T14:50:55.000Z</published>
+    <updated>2020-06-06T11:34:35.319Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 什么是反射&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;反射机制是在程序运行状态中，对于任意一个类，都能够获取这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取信息以及动态调用对象的方法的功能称为java语言的反射机制。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="漏洞复现" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+      <category term="JavaWeb" scheme="sh1yan.top/tags/JavaWeb/"/>
+    
+      <category term="反射" scheme="sh1yan.top/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
   
   <entry>
     <title>BurpSuite插件编写[中级篇]</title>
@@ -448,31 +471,6 @@
       <category term="access token" scheme="sh1yan.top/tags/access-token/"/>
     
       <category term="令牌伪造" scheme="sh1yan.top/tags/%E4%BB%A4%E7%89%8C%E4%BC%AA%E9%80%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>白银票据与黄金票据探究</title>
-    <link href="sh1yan.top/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/"/>
-    <id>sh1yan.top/2019/06/03/Discussion-on-Silver-Bill-and-Gold-Bill/</id>
-    <published>2019-06-03T15:52:55.000Z</published>
-    <updated>2019-06-03T15:09:14.900Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00  前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在域渗透时，肯定会接触到两个最常见的概念，白银票据和黄金票据，而这两个票据主要是围绕着Kerberos这个认证协议所产生的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01  Kerberos认证&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Kerberos 是一种网络认证协议，其设计目标是通过&lt;a href=&quot;https://baike.baidu.com/item/%E5%AF%86%E9%92%A5&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;密钥&lt;/a&gt;系统为客户机 / 服务器应用程序提供强大的认证服务。该认证过程的实现不依赖于&lt;a href=&quot;https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;主机操作系统&lt;/a&gt;的认证，无需基于&lt;a href=&quot;https://baike.baidu.com/item/%E4%B8%BB%E6%9C%BA%E5%9C%B0%E5%9D%80&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;主机地址&lt;/a&gt;的信任，不要求网络上所有主机的物理安全，并假定网络上传送的&lt;a href=&quot;https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%8C%85&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;数据包&lt;/a&gt;可以被任意地读取、修改和插入数据。在以上情况下， Kerberos 作为一种可信任的第三方认证服务，是通过传统的&lt;a href=&quot;https://baike.baidu.com/item/%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;密码技术&lt;/a&gt;（如：共享密钥）执行认证服务的。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="学习笔记" scheme="sh1yan.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="域渗透" scheme="sh1yan.top/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/"/>
-    
-      <category term="Kerberos认证" scheme="sh1yan.top/tags/Kerberos%E8%AE%A4%E8%AF%81/"/>
     
   </entry>
   
