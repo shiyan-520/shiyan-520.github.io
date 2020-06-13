@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sh1yan.top/"/>
-  <updated>2020-06-07T12:24:03.048Z</updated>
+  <updated>2020-06-13T14:46:16.173Z</updated>
   <id>sh1yan.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java动态代理模式</title>
+    <link href="sh1yan.top/2020/06/13/Java-Dynamic-agent-mode/"/>
+    <id>sh1yan.top/2020/06/13/Java-Dynamic-agent-mode/</id>
+    <published>2020-06-13T15:50:55.000Z</published>
+    <updated>2020-06-13T14:46:16.173Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;基础知识决定上层建筑，我计划是先把JavaWeb RCE漏洞相关的基础概念都总结一遍后，再开始复现学习一些RCE的漏洞文章。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="漏洞复现" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+      <category term="JavaWeb" scheme="sh1yan.top/tags/JavaWeb/"/>
+    
+      <category term="动态代理" scheme="sh1yan.top/tags/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Java序列化机制探究</title>
@@ -442,33 +465,6 @@
     
     
       <category term="COM组件劫持" scheme="sh1yan.top/tags/COM%E7%BB%84%E4%BB%B6%E5%8A%AB%E6%8C%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DLL劫持原理与实践</title>
-    <link href="sh1yan.top/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/"/>
-    <id>sh1yan.top/2019/06/16/The-Principle-and-Practice-of-DLL-Hijacking/</id>
-    <published>2019-06-15T17:25:55.000Z</published>
-    <updated>2019-06-15T17:33:20.426Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;DLL劫持算是一个老的漏洞，而且乌云漏洞库中也有很多的案例，只不过案例更多的只是验证一下，并没有教如何利用。至于为什么专门抓起来再学一遍了，唉，内网渗透需要。。。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01 什么是DLL&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这里先摘抄一下百度百科的解释：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;DLL(Dynamic Link Library)文件为动态链接库文件，又称“应用程序拓展”，是软件文件类型。在Windows中，许多应用程序并不是一个完整的可执行文件，它们被分割成一些相对独立的动态链接库，即DLL文件，放置于系统中。当我们执行某一个程序时，相应的DLL文件就会被调用。一个应用程序可使用多个DLL文件，一个DLL文件也可能被不同的应用程序使用，这样的DLL文件被称为共享DLL文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;还有一段，我觉得更好理解的。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="DLL劫持" scheme="sh1yan.top/tags/DLL%E5%8A%AB%E6%8C%81/"/>
     
   </entry>
   
