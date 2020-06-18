@@ -65,6 +65,76 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Phpaacms0.5-of-PHP-code-audit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/14/Phpaacms0.5-of-PHP-code-audit/" class="article-date">
+  <time datetime="2018-01-14T03:50:55.000Z" itemprop="datePublished">2018-01-14</time>
+</a>
+
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/代码审计/">代码审计</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/14/Phpaacms0.5-of-PHP-code-audit/">PHP代码审计之PHPAACMS0.5</a>
+    </h1>
+  
+
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div class="article-sharing">
+  <ul>
+    <li>
+      <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="verdana" data-href="sh1yan.top/2018/01/14/Phpaacms0.5-of-PHP-code-audit/"></div>
+    </li>
+  </ul>
+</div>
+
+      
+      
+        <p><strong>0x00</strong></p>
+<p>这个cms是在一期周报里看到的，不过周报里是0.3版本的，而且是最简单的一个GET注入，所以响应上一篇审计ZZCMS时我在群里说过的豪言，像ZZCMS这样子的，给我来一打，我能打十个！（#斜眼笑。。。）</p>
+<p><strong>0x01</strong></p>
+<p>那我们根据他周报里出现的最简单的GET注入的位置，看看他是如何修复的。<br>show.php   1行 – 6行</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">include_once</span> <span class="string">'global.php'</span>;</span><br><span class="line"></span><br><span class="line">$id = !<span class="keyword">empty</span>($id) ? intval($id) : <span class="number">0</span>;</span><br><span class="line">$arc = getArticleInfo($id);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2018/01/14/Phpaacms0.5-of-PHP-code-audit/#more">Read More</a>
+          </p>
+        
+      
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="sh1yan.top/2018/01/14/Phpaacms0.5-of-PHP-code-audit/" data-id="ckbkwfc9i002ylow1dsnimnk0" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CMS/">CMS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Zzcms8.1-of-PHP-code-audit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/03/Zzcms8.1-of-PHP-code-audit/" class="article-date">
@@ -121,7 +191,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="sh1yan.top/2017/11/03/Zzcms8.1-of-PHP-code-audit/" data-id="ckb6bqgwr002dosw1mu8ky0k4" class="article-share-link">Share</a>
+        <a data-url="sh1yan.top/2017/11/03/Zzcms8.1-of-PHP-code-audit/" data-id="ckbkwfc9u003blow1ja6xbmt2" class="article-share-link">Share</a>
       
       
       
@@ -190,7 +260,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="sh1yan.top/2017/08/01/sqlmap-tamper-to-write/" data-id="ckb6bqgvt000yosw1oytynmn1" class="article-share-link">Share</a>
+        <a data-url="sh1yan.top/2017/08/01/sqlmap-tamper-to-write/" data-id="ckbkwfc840014low1lo9rpbjb" class="article-share-link">Share</a>
       
       
       
@@ -258,7 +328,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="sh1yan.top/2017/07/10/linux-study/" data-id="ckb6bqgy20050osw19jocwoa7" class="article-share-link">Share</a>
+        <a data-url="sh1yan.top/2017/07/10/linux-study/" data-id="ckbkwfcbs005glow1p7u745uc" class="article-share-link">Share</a>
       
       
       
@@ -320,7 +390,7 @@
   <div class="widget-wrap">
     <h3 id="widget-title-tagcloud" class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/ByPass-UAC/" style="font-size: 10px;">ByPass-UAC</a> <a href="/tags/CMS/" style="font-size: 15px;">CMS</a> <a href="/tags/COM组件劫持/" style="font-size: 10px;">COM组件劫持</a> <a href="/tags/Cobalt-Strike/" style="font-size: 10px;">Cobalt Strike</a> <a href="/tags/DLL劫持/" style="font-size: 10px;">DLL劫持</a> <a href="/tags/Excel/" style="font-size: 15px;">Excel</a> <a href="/tags/JavaWeb/" style="font-size: 20px;">JavaWeb</a> <a href="/tags/Kerberos认证/" style="font-size: 10px;">Kerberos认证</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 15px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/XXE/" style="font-size: 10px;">XXE</a> <a href="/tags/access-token/" style="font-size: 10px;">access token</a> <a href="/tags/burp/" style="font-size: 20px;">burp</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jsonp/" style="font-size: 10px;">jsonp</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/metasploit/" style="font-size: 10px;">metasploit</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sqlmap/" style="font-size: 10px;">sqlmap</a> <a href="/tags/vba/" style="font-size: 15px;">vba</a> <a href="/tags/web漏洞/" style="font-size: 15px;">web漏洞</a> <a href="/tags/令牌伪造/" style="font-size: 10px;">令牌伪造</a> <a href="/tags/动态代理/" style="font-size: 10px;">动态代理</a> <a href="/tags/博客源码/" style="font-size: 10px;">博客源码</a> <a href="/tags/博客问题解决/" style="font-size: 10px;">博客问题解决</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a> <a href="/tags/域渗透/" style="font-size: 10px;">域渗透</a> <a href="/tags/学习笔记/" style="font-size: 10px;">学习笔记</a> <a href="/tags/安全审计/" style="font-size: 15px;">安全审计</a> <a href="/tags/安全服务/" style="font-size: 10px;">安全服务</a> <a href="/tags/工具分析/" style="font-size: 10px;">工具分析</a> <a href="/tags/序列化/" style="font-size: 10px;">序列化</a> <a href="/tags/感悟/" style="font-size: 15px;">感悟</a> <a href="/tags/报错注入/" style="font-size: 10px;">报错注入</a> <a href="/tags/漏洞复现/" style="font-size: 10px;">漏洞复现</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/端口转发/" style="font-size: 10px;">端口转发</a> <a href="/tags/脚本编写/" style="font-size: 10px;">脚本编写</a> <a href="/tags/部署上线/" style="font-size: 10px;">部署上线</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/ByPass-UAC/" style="font-size: 10px;">ByPass-UAC</a> <a href="/tags/CMS/" style="font-size: 13.33px;">CMS</a> <a href="/tags/COM组件劫持/" style="font-size: 10px;">COM组件劫持</a> <a href="/tags/Cobalt-Strike/" style="font-size: 10px;">Cobalt Strike</a> <a href="/tags/DLL劫持/" style="font-size: 10px;">DLL劫持</a> <a href="/tags/Excel/" style="font-size: 13.33px;">Excel</a> <a href="/tags/JavaWeb/" style="font-size: 20px;">JavaWeb</a> <a href="/tags/Kerberos认证/" style="font-size: 10px;">Kerberos认证</a> <a href="/tags/Oracle/" style="font-size: 10px;">Oracle</a> <a href="/tags/PHP/" style="font-size: 13.33px;">PHP</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Rmi协议/" style="font-size: 10px;">Rmi协议</a> <a href="/tags/UAC/" style="font-size: 10px;">UAC</a> <a href="/tags/XXE/" style="font-size: 10px;">XXE</a> <a href="/tags/access-token/" style="font-size: 10px;">access token</a> <a href="/tags/burp/" style="font-size: 16.67px;">burp</a> <a href="/tags/hash/" style="font-size: 10px;">hash</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jsonp/" style="font-size: 10px;">jsonp</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/metasploit/" style="font-size: 10px;">metasploit</a> <a href="/tags/mysql/" style="font-size: 13.33px;">mysql</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sqlmap/" style="font-size: 10px;">sqlmap</a> <a href="/tags/vba/" style="font-size: 13.33px;">vba</a> <a href="/tags/web漏洞/" style="font-size: 13.33px;">web漏洞</a> <a href="/tags/令牌伪造/" style="font-size: 10px;">令牌伪造</a> <a href="/tags/动态代理/" style="font-size: 10px;">动态代理</a> <a href="/tags/博客源码/" style="font-size: 10px;">博客源码</a> <a href="/tags/博客问题解决/" style="font-size: 10px;">博客问题解决</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a> <a href="/tags/域渗透/" style="font-size: 10px;">域渗透</a> <a href="/tags/学习笔记/" style="font-size: 10px;">学习笔记</a> <a href="/tags/安全审计/" style="font-size: 13.33px;">安全审计</a> <a href="/tags/安全服务/" style="font-size: 10px;">安全服务</a> <a href="/tags/工具分析/" style="font-size: 10px;">工具分析</a> <a href="/tags/序列化/" style="font-size: 10px;">序列化</a> <a href="/tags/感悟/" style="font-size: 13.33px;">感悟</a> <a href="/tags/报错注入/" style="font-size: 10px;">报错注入</a> <a href="/tags/漏洞复现/" style="font-size: 10px;">漏洞复现</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/端口转发/" style="font-size: 10px;">端口转发</a> <a href="/tags/脚本编写/" style="font-size: 10px;">脚本编写</a> <a href="/tags/部署上线/" style="font-size: 10px;">部署上线</a>
     </div>
   </div>
 
@@ -331,6 +401,10 @@
     <h3 id="widget-title-recent-posts" class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/06/18/Java-RMI-protocol-learning/">Java Rmi协议学习</a>
+          </li>
         
           <li>
             <a href="/2020/06/13/Java-Dynamic-agent-mode/">Java动态代理模式</a>
@@ -346,10 +420,6 @@
         
           <li>
             <a href="/2020/05/30/Burpseuite-plug-in-writing-intermediate/">BurpSuite插件编写[中级篇]</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/22/Common-codes-of-pandas-in-security-audit/">安全审计之Pandas常用代码</a>
           </li>
         
       </ul>

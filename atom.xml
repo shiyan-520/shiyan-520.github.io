@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sh1yan.top/"/>
-  <updated>2020-06-13T14:46:16.173Z</updated>
+  <updated>2020-06-18T14:43:12.294Z</updated>
   <id>sh1yan.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java Rmi协议学习</title>
+    <link href="sh1yan.top/2020/06/18/Java-RMI-protocol-learning/"/>
+    <id>sh1yan.top/2020/06/18/Java-RMI-protocol-learning/</id>
+    <published>2020-06-18T15:50:55.000Z</published>
+    <updated>2020-06-18T14:43:12.294Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 Rmi介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;RMI(Remote Method Invocation)即 Java 远程方法调用，RMI 用于构建分布式应用程序，RMI 实现了 Java 程序之间跨 JVM 的远程通信。&lt;/p&gt;
+&lt;p&gt;而JAVA本身提供了一种RPC框架 RMI及Java 远程方法调用(Java Remote Method Invocation),可以在不同的Java 虚拟机之间进行对象间的通讯,RMI是基于JRMP协议(Java Remote Message Protocol Java远程消息交换协议)去实现的。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="漏洞复现" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+      <category term="JavaWeb" scheme="sh1yan.top/tags/JavaWeb/"/>
+    
+      <category term="Rmi协议" scheme="sh1yan.top/tags/Rmi%E5%8D%8F%E8%AE%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Java动态代理模式</title>
@@ -439,32 +463,6 @@
       <category term="UAC" scheme="sh1yan.top/tags/UAC/"/>
     
       <category term="ByPass-UAC" scheme="sh1yan.top/tags/ByPass-UAC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>COM组件劫持原理与实践</title>
-    <link href="sh1yan.top/2019/06/29/Principle-and-Practice-of-COM-Component-Hijacking/"/>
-    <id>sh1yan.top/2019/06/29/Principle-and-Practice-of-COM-Component-Hijacking/</id>
-    <published>2019-06-29T13:50:55.000Z</published>
-    <updated>2019-06-29T12:59:45.835Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在术的道路上，从来都是独善其行，如能结余同行，自当求之不得。&lt;/p&gt;
-&lt;p&gt;玄幻小说的世界结构，放之现代也是同理，望成之所成，念之所念。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01 什么是COM&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;什么是COM，说白了，就是一堆功能相关的interface，它是某种语言向另一种语言暴露功能的最大单位。&lt;/p&gt;
-&lt;p&gt;COMcomponent（COM组件）是微软公司为了计算机工业的软件生产更加符合人类的行为方式开发的一种新的软件开发技术。&lt;/p&gt;
-&lt;p&gt;在COM构架下，人们可以开发出各种各样的功能专一的组件，然后将它们按照需要组合起来，构成复杂的应用系统。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="COM组件劫持" scheme="sh1yan.top/tags/COM%E7%BB%84%E4%BB%B6%E5%8A%AB%E6%8C%81/"/>
     
   </entry>
   
