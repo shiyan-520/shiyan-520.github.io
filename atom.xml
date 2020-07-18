@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="sh1yan.top/"/>
-  <updated>2020-06-18T14:43:12.294Z</updated>
+  <updated>2020-07-18T13:43:35.921Z</updated>
   <id>sh1yan.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次对JavaWeb-SMBMS的审计</title>
+    <link href="sh1yan.top/2020/07/18/An-audit-of-Java-Web-smbms/"/>
+    <id>sh1yan.top/2020/07/18/An-audit-of-Java-Web-smbms/</id>
+    <published>2020-07-18T15:50:55.000Z</published>
+    <updated>2020-07-18T13:43:35.921Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在跟着网上培训视频学习完无框架的JavaWeb的时候，都会让做一个内容管理系统，这里我是跟着B站狂神的视频走的，最后是做一个SMBMS项目，故针对该源码代码审计一波，也是考验下自己学的JavaWeb扎实不扎实。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="代码审计" scheme="sh1yan.top/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/"/>
+    
+    
+      <category term="JavaWeb" scheme="sh1yan.top/tags/JavaWeb/"/>
+    
+      <category term="SMBMS" scheme="sh1yan.top/tags/SMBMS/"/>
+    
+  </entry>
   
   <entry>
     <title>Java Rmi协议学习</title>
@@ -438,31 +461,6 @@
     
     
       <category term="Cobalt Strike" scheme="sh1yan.top/tags/Cobalt-Strike/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UAC与ByPass-UAC</title>
-    <link href="sh1yan.top/2019/07/11/UAC-and-ByPass-UAC/"/>
-    <id>sh1yan.top/2019/07/11/UAC-and-ByPass-UAC/</id>
-    <published>2019-07-11T14:50:55.000Z</published>
-    <updated>2019-07-11T09:43:47.614Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;0x00 前言&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;用户账号控制（UAC），这机制自win7以来就一直存在了，同时因内网渗透需要，所以我就开始继续补坑（完善知识积累）了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0x01 什么是UAC&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;UAC 是微软在 Windows Vista 以后版本引入的一种安全机制，通过 UAC，应用程序和任务可始终在非管理员帐户的安全上下文中运行，除非管理员特别授予管理员级别的系统访问权限。UAC 可以阻止未经授权的应用程序自动进行安装，并防止无意中更改系统设置。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="漏洞研究" scheme="sh1yan.top/categories/%E6%BC%8F%E6%B4%9E%E7%A0%94%E7%A9%B6/"/>
-    
-    
-      <category term="UAC" scheme="sh1yan.top/tags/UAC/"/>
-    
-      <category term="ByPass-UAC" scheme="sh1yan.top/tags/ByPass-UAC/"/>
     
   </entry>
   
