@@ -332,27 +332,6 @@
   </entry>
   
   <entry>
-    <title>或许是而转折，或者随之平常</title>
-    <link href="sh1yan.top/2019/10/25/Maybe-it-s-a-turn-or-it-s-just-a-normal-thing/"/>
-    <id>sh1yan.top/2019/10/25/Maybe-it-s-a-turn-or-it-s-just-a-normal-thing/</id>
-    <published>2019-10-25T15:50:55.000Z</published>
-    <updated>2019-10-25T16:27:46.916Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;博客已经一个多月没有更新了，但是这段时间经历了却是不少，故此一直想总结一下。&lt;/p&gt;
-&lt;p&gt;感慨篇：&lt;br&gt;
-    
-    </summary>
-    
-      <category term="心情感悟" scheme="sh1yan.top/categories/%E5%BF%83%E6%83%85%E6%84%9F%E6%82%9F/"/>
-    
-    
-      <category term="感悟" scheme="sh1yan.top/tags/%E6%84%9F%E6%82%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo+GitHub博客后续维护问题解决方案</title>
     <link href="sh1yan.top/2019/09/18/Hexo-GitHub-Blog-Follow-up-Maintenance-Problem-Solution/"/>
     <id>sh1yan.top/2019/09/18/Hexo-GitHub-Blog-Follow-up-Maintenance-Problem-Solution/</id>
@@ -464,6 +443,27 @@
     
     
       <category term="metasploit" scheme="sh1yan.top/tags/metasploit/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS之命令笔记篇</title>
+    <link href="sh1yan.top/2019/07/20/CS-Command-Notes/"/>
+    <id>sh1yan.top/2019/07/20/CS-Command-Notes/</id>
+    <published>2019-07-20T03:50:55.000Z</published>
+    <updated>2019-07-21T08:44:39.451Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;0x00  文件架构&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;│  agscript            拓展应用的脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  c2lint              检查profile的错误异常&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  cobaltstrike        linux下启动脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  cobaltstrike.jar    客户端程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  teamserver          服务端程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  update              更新脚本&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│  update.jar          更新程序&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;│&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└─third-party          第三方工具&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        README.vncdll.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vncdll.x64.dll&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        vncdll.x86.dll&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="命令备忘" scheme="sh1yan.top/categories/%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98/"/>
+    
+    
+      <category term="Cobalt Strike" scheme="sh1yan.top/tags/Cobalt-Strike/"/>
     
   </entry>
   
